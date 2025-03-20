@@ -1,5 +1,5 @@
-
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 interface Node {
   x: number;
@@ -18,11 +18,11 @@ interface Edge {
 }
 
 interface AIVisualizerProps {
-  type?: 'neural-network' | 'connections' | 'particles';
+  type?: "neural-network" | "connections" | "particles";
   className?: string;
 }
 
-const AIVisualizer = ({ type = 'neural-network', className = '' }: AIVisualizerProps) => {
+const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const nodes: Node[] = useRef<Node[]>([]).current;
   const edges: Edge[] = useRef<Edge[]>([]).current;
@@ -31,39 +31,75 @@ const AIVisualizer = ({ type = 'neural-network', className = '' }: AIVisualizerP
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    
-    const ctx = canvas.getContext('2d');
+
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    
-    // Set canvas dimensions
+
     const resizeCanvas = () => {
       const dpr = window.devicePixelRatio || 1;
       canvas.width = canvas.clientWidth * dpr;
       canvas.height = canvas.clientHeight * dpr;
       ctx.scale(dpr, dpr);
     };
-    
-    window.addEventListener('resize', resizeCanvas);
+
+    window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
-    
-    // Initialize nodes and edges based on visualization type
-    if (type === 'neural-network') {
+
+    if (type === "neural-network") {
       initializeNeuralNetwork();
-    } else if (type === 'connections') {
+    } else if (type === "connections") {
       initializeConnections();
     } else {
       initializeParticles();
     }
-    
-    // Animation loop
-    const animate = () => {
+
+    // Start GSAP animations
+    animateWithGSAP();
+    animateCanvas();
+
+    return () => {
+      window.removeEventListener("resize", resizeCanvas);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [type]);
+
+  // 🔥 **GSAP ANIMATIONS**
+  const animateWithGSAP = () => {
+    gsap.to(nodes, {
+      x: "+=10",
+      y: "+=10",
+      duration: 2,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+      stagger: 0.1
+    });
+
+    gsap.to(edges, {
+      alpha: 1,
+      duration: 1.5,
+      repeat: -1,
+      yoyo: true,
+      stagger: 0.2
+    });
+  };
+
+  // **Canvas Animation Loop**
+  const animateCanvas = () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Draw edges
+
       for (const edge of edges) {
         const fromNode = nodes[edge.from];
         const toNode = nodes[edge.to];
-        
+
         ctx.beginPath();
         ctx.strokeStyle = `rgba(100, 149, 237, ${edge.alpha})`;
         ctx.lineWidth = edge.width;
@@ -71,74 +107,44 @@ const AIVisualizer = ({ type = 'neural-network', className = '' }: AIVisualizerP
         ctx.lineTo(toNode.x, toNode.y);
         ctx.stroke();
       }
-      
-      // Draw and update nodes
-      for (let i = 0; i < nodes.length; i++) {
-        const node = nodes[i];
-        
-        // Update position
-        if (type !== 'neural-network') {
-          node.x += node.vx;
-          node.y += node.vy;
-          
-          // Boundary checks
-          if (node.x < node.radius || node.x > canvas.clientWidth - node.radius) {
-            node.vx *= -1;
-          }
-          
-          if (node.y < node.radius || node.y > canvas.clientHeight - node.radius) {
-            node.vy *= -1;
-          }
-        }
-        
-        // Draw node
+
+      for (const node of nodes) {
         ctx.beginPath();
         ctx.fillStyle = node.color;
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
         ctx.fill();
       }
-      
-      animationRef.current = requestAnimationFrame(animate);
+
+      animationRef.current = requestAnimationFrame(draw);
     };
-    
-    animate();
-    
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }, [type]);
-  
-  // Initialize nodes and edges for neural network visualization
+
+    draw();
+  };
+
+  // **Initialize Neural Network**
   const initializeNeuralNetwork = () => {
     nodes.length = 0;
     edges.length = 0;
-    
+
     const layers = 4;
     const nodesPerLayer = [4, 6, 6, 2];
     let nodeIndex = 0;
-    
-    // Create nodes
+
     for (let layer = 0; layer < layers; layer++) {
       const numNodes = nodesPerLayer[layer];
       const xPos = (layer + 1) * (canvasRef.current!.clientWidth / (layers + 1));
-      
+
       for (let i = 0; i < numNodes; i++) {
         const yPos = ((i + 1) * canvasRef.current!.clientHeight) / (numNodes + 1);
         nodes.push({
           x: xPos,
           y: yPos,
           radius: 6,
-          color: layer === 0 ? 'rgba(64, 156, 255, 0.8)' : 
-                 layer === layers - 1 ? 'rgba(157, 80, 255, 0.8)' : 
-                 'rgba(100, 180, 255, 0.6)',
+          color: layer === 0 ? "rgba(64, 156, 255, 0.8)" : layer === layers - 1 ? "rgba(157, 80, 255, 0.8)" : "rgba(100, 180, 255, 0.6)",
           vx: 0,
           vy: 0
         });
-        
-        // Connect to previous layer
+
         if (layer > 0) {
           const prevLayerStart = nodeIndex - nodesPerLayer[layer - 1];
           for (let j = prevLayerStart; j < nodeIndex; j++) {
@@ -151,33 +157,30 @@ const AIVisualizer = ({ type = 'neural-network', className = '' }: AIVisualizerP
           }
         }
       }
-      
       nodeIndex += numNodes;
     }
   };
-  
-  // Initialize nodes and edges for connection visualization
+
+  // **Initialize Connections**
   const initializeConnections = () => {
     nodes.length = 0;
     edges.length = 0;
-    
+
     const numNodes = 20;
     const width = canvasRef.current!.clientWidth;
     const height = canvasRef.current!.clientHeight;
-    
-    // Create nodes
+
     for (let i = 0; i < numNodes; i++) {
       nodes.push({
         x: Math.random() * width,
         y: Math.random() * height,
         radius: Math.random() * 4 + 2,
-        color: `rgba(${Math.floor(Math.random() * 100 + 100)}, ${Math.floor(Math.random() * 100 + 100)}, 255, 0.7)`,
+        color: "rgba(100, 149, 237, 0.7)",
         vx: (Math.random() - 0.5) * 1,
         vy: (Math.random() - 0.5) * 1
       });
     }
-    
-    // Create edges
+
     for (let i = 0; i < numNodes; i++) {
       const numConnections = Math.floor(Math.random() * 3) + 1;
       for (let j = 0; j < numConnections; j++) {
@@ -191,35 +194,8 @@ const AIVisualizer = ({ type = 'neural-network', className = '' }: AIVisualizerP
       }
     }
   };
-  
-  // Initialize nodes for particle visualization
-  const initializeParticles = () => {
-    nodes.length = 0;
-    edges.length = 0;
-    
-    const numNodes = 30;
-    const width = canvasRef.current!.clientWidth;
-    const height = canvasRef.current!.clientHeight;
-    
-    // Create nodes
-    for (let i = 0; i < numNodes; i++) {
-      nodes.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        radius: Math.random() * 5 + 1,
-        color: `rgba(${Math.floor(Math.random() * 100 + 150)}, ${Math.floor(Math.random() * 50 + 100)}, 255, ${Math.random() * 0.5 + 0.3})`,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2
-      });
-    }
-  };
 
-  return (
-    <canvas 
-      ref={canvasRef} 
-      className={`w-full h-full ${className}`}
-    />
-  );
+  return <canvas ref={canvasRef} className={`w-full h-full ${className}`} />;
 };
 
 export default AIVisualizer;
