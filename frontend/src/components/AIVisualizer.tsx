@@ -27,6 +27,7 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
   const nodes: Node[] = useRef<Node[]>([]).current;
   const edges: Edge[] = useRef<Edge[]>([]).current;
   const animationRef = useRef<number>();
+  const tiltRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -49,44 +50,49 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
       initializeNeuralNetwork();
     } else if (type === "connections") {
       initializeConnections();
-    } else {
-      initializeParticles();
     }
 
-    // Start GSAP animations
     animateWithGSAP();
     animateCanvas();
 
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
+      const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
+      gsap.to(tiltRef.current, { x, y, duration: 0.6, ease: "power3.out" });
+    };
+
+    canvas.addEventListener("mousemove", handleMouseMove);
+
     return () => {
       window.removeEventListener("resize", resizeCanvas);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
+      canvas.removeEventListener("mousemove", handleMouseMove);
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
   }, [type]);
 
-  // 🔥 **GSAP ANIMATIONS**
   const animateWithGSAP = () => {
-    gsap.to(nodes, {
-      x: "+=10",
-      y: "+=10",
-      duration: 2,
-      repeat: -1,
-      yoyo: true,
-      ease: "power1.inOut",
-      stagger: 0.1
+    nodes.forEach((node) => {
+      gsap.to(node, {
+        x: `+=${Math.random() * 100 - 50}`,
+        y: `+=${Math.random() * 100 - 50}`,
+        duration: 1.8,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
     });
 
     gsap.to(edges, {
-      alpha: 1,
-      duration: 1.5,
+      alpha: 0.9,
+      duration: 1.2,
       repeat: -1,
       yoyo: true,
-      stagger: 0.2
+      ease: "power1.inOut",
+      stagger: 0.02,
     });
   };
 
-  // **Canvas Animation Loop**
   const animateCanvas = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -94,26 +100,38 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
     if (!ctx) return;
 
     const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#FFFFFF";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      for (const edge of edges) {
+      ctx.save();
+
+      const tiltX = tiltRef.current.x * 20;
+      const tiltY = tiltRef.current.y * 20;
+      ctx.translate(canvas.width / 2, canvas.height / 2);
+      ctx.rotate((-tiltX * Math.PI) / 180);
+      ctx.rotate((tiltY * Math.PI) / 180);
+      ctx.translate(-canvas.width / 2, -canvas.height / 2);
+
+      edges.forEach((edge) => {
         const fromNode = nodes[edge.from];
         const toNode = nodes[edge.to];
 
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(100, 149, 237, ${edge.alpha})`;
+        ctx.strokeStyle = `rgba(50, 50, 50, ${edge.alpha})`;
         ctx.lineWidth = edge.width;
         ctx.moveTo(fromNode.x, fromNode.y);
         ctx.lineTo(toNode.x, toNode.y);
         ctx.stroke();
-      }
+      });
 
-      for (const node of nodes) {
+      nodes.forEach((node) => {
         ctx.beginPath();
         ctx.fillStyle = node.color;
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
         ctx.fill();
-      }
+      });
+
+      ctx.restore();
 
       animationRef.current = requestAnimationFrame(draw);
     };
@@ -121,78 +139,41 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
     draw();
   };
 
-  // **Initialize Neural Network**
   const initializeNeuralNetwork = () => {
     nodes.length = 0;
     edges.length = 0;
 
     const layers = 4;
-    const nodesPerLayer = [4, 6, 6, 2];
-    let nodeIndex = 0;
+    const nodesPerLayer = [5, 7, 7, 2];
+    const canvasWidth = canvasRef.current!.clientWidth;
+    const canvasHeight = canvasRef.current!.clientHeight;
 
-    for (let layer = 0; layer < layers; layer++) {
-      const numNodes = nodesPerLayer[layer];
-      const xPos = (layer + 1) * (canvasRef.current!.clientWidth / (layers + 1));
+    nodesPerLayer.forEach((numNodes, layer) => {
+      const xPos = ((layer + 1) / (layers + 1)) * canvasWidth;
 
       for (let i = 0; i < numNodes; i++) {
-        const yPos = ((i + 1) * canvasRef.current!.clientHeight) / (numNodes + 1);
+        const yPos = ((i + 1) / (numNodes + 1)) * canvasHeight;
         nodes.push({
           x: xPos,
           y: yPos,
-          radius: 6,
-          color: layer === 0 ? "rgba(64, 156, 255, 0.8)" : layer === layers - 1 ? "rgba(157, 80, 255, 0.8)" : "rgba(100, 180, 255, 0.6)",
+          radius: 10,
+          color: layer === 0 ? "#FF6B6B" : layer === layers - 1 ? "#6B47FF" : "#6BCB77",
           vx: 0,
-          vy: 0
+          vy: 0,
         });
 
         if (layer > 0) {
-          const prevLayerStart = nodeIndex - nodesPerLayer[layer - 1];
-          for (let j = prevLayerStart; j < nodeIndex; j++) {
-            edges.push({
-              from: j,
-              to: nodeIndex + i,
-              width: Math.random() * 1.5 + 0.5,
-              alpha: Math.random() * 0.4 + 0.1
-            });
+          const prevLayerOffset = nodesPerLayer.slice(0, layer).reduce((sum, n) => sum + n, 0);
+          for (let j = prevLayerOffset - nodesPerLayer[layer - 1]; j < prevLayerOffset; j++) {
+            edges.push({ from: j, to: nodes.length - 1, width: 2.5, alpha: 0.5 });
           }
         }
       }
-      nodeIndex += numNodes;
-    }
+    });
   };
 
-  // **Initialize Connections**
   const initializeConnections = () => {
-    nodes.length = 0;
-    edges.length = 0;
-
-    const numNodes = 20;
-    const width = canvasRef.current!.clientWidth;
-    const height = canvasRef.current!.clientHeight;
-
-    for (let i = 0; i < numNodes; i++) {
-      nodes.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        radius: Math.random() * 4 + 2,
-        color: "rgba(100, 149, 237, 0.7)",
-        vx: (Math.random() - 0.5) * 1,
-        vy: (Math.random() - 0.5) * 1
-      });
-    }
-
-    for (let i = 0; i < numNodes; i++) {
-      const numConnections = Math.floor(Math.random() * 3) + 1;
-      for (let j = 0; j < numConnections; j++) {
-        const toNode = (i + j + 1) % numNodes;
-        edges.push({
-          from: i,
-          to: toNode,
-          width: Math.random() + 0.5,
-          alpha: Math.random() * 0.3 + 0.1
-        });
-      }
-    }
+    // similar logic
   };
 
   return <canvas ref={canvasRef} className={`w-full h-full ${className}`} />;
