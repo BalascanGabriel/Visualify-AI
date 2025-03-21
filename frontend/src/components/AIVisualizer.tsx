@@ -17,6 +17,16 @@ interface Edge {
   alpha: number;
 }
 
+interface Orbital {
+  nodeIndex: number;
+  angle: number;
+  radius: number;
+  speed: number;
+  size: number;
+  color: string;
+  isStatic?: boolean;
+}
+
 interface AIVisualizerProps {
   type?: "neural-network" | "connections" | "particles";
   className?: string;
@@ -24,15 +34,18 @@ interface AIVisualizerProps {
 
 const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const nodes: Node[] = useRef<Node[]>([]).current;
-  const edges: Edge[] = useRef<Edge[]>([]).current;
+  const nodes = useRef<Node[]>([]);
+  const edges = useRef<Edge[]>([]);
+  const orbitals = useRef<Orbital[]>([]);
   const animationRef = useRef<number>();
   const tiltRef = useRef({ x: 0, y: 0 });
+  const pan = useRef({ x: 0, y: 0 });
+  const isDragging = useRef(false);
+  const dragOrbital = useRef<number | null>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
@@ -40,16 +53,19 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
       const dpr = window.devicePixelRatio || 1;
       canvas.width = canvas.clientWidth * dpr;
       canvas.height = canvas.clientHeight * dpr;
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
     };
 
     window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
 
+    nodes.current = [];
+    edges.current = [];
+    orbitals.current = [];
+
     if (type === "neural-network") {
       initializeNeuralNetwork();
-    } else if (type === "connections") {
-      initializeConnections();
     }
 
     animateWithGSAP();
@@ -57,74 +73,154 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
 
     const handleMouseMove = (e: MouseEvent) => {
       const rect = canvas.getBoundingClientRect();
-      const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
-      const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
-      gsap.to(tiltRef.current, { x, y, duration: 0.6, ease: "power3.out" });
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      gsap.to(tiltRef.current, {
+        x: (x - rect.width / 2) / rect.width,
+        y: (y - rect.height / 2) / rect.height,
+        duration: 0.4,
+        ease: "power2.out"
+      });
+
+      if (isDragging.current && dragOrbital.current !== null) {
+        const orbital = orbitals.current[dragOrbital.current];
+        const node = nodes.current[orbital.nodeIndex];
+        const dx = x - node.x;
+        const dy = y - node.y;
+        orbital.radius = Math.sqrt(dx * dx + dy * dy);
+        orbital.angle = Math.atan2(dy, dx);
+        orbital.isStatic = true;
+      }
+    };
+
+    const handleMouseDown = (e: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      orbitals.current.forEach((orbital, index) => {
+        const node = nodes.current[orbital.nodeIndex];
+        const ox = node.x + Math.cos(orbital.angle) * orbital.radius;
+        const oy = node.y + Math.sin(orbital.angle) * orbital.radius;
+        const dx = ox - x;
+        const dy = oy - y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < orbital.size * 5) {
+          dragOrbital.current = index;
+          isDragging.current = true;
+          orbital.isStatic = true;
+        }
+      });
+    };
+
+    const handleMouseUp = () => {
+      isDragging.current = false;
+      if (dragOrbital.current !== null) {
+        orbitals.current[dragOrbital.current].isStatic = false;
+      }
+      dragOrbital.current = null;
+    };
+
+    const handleClick = (e: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      nodes.current.forEach((node) => {
+        const dx = node.x - x;
+        const dy = node.y - y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < node.radius * 2) {
+          gsap.to(node, {
+            radius: node.radius + 10,
+            duration: 0.3,
+            yoyo: true,
+            repeat: 1,
+            ease: "power2.inOut"
+          });
+        }
+      });
     };
 
     canvas.addEventListener("mousemove", handleMouseMove);
+    canvas.addEventListener("mousedown", handleMouseDown);
+    canvas.addEventListener("mouseup", handleMouseUp);
+    canvas.addEventListener("click", handleClick);
 
     return () => {
       window.removeEventListener("resize", resizeCanvas);
       canvas.removeEventListener("mousemove", handleMouseMove);
+      canvas.removeEventListener("mousedown", handleMouseDown);
+      canvas.removeEventListener("mouseup", handleMouseUp);
+      canvas.removeEventListener("click", handleClick);
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
   }, [type]);
 
   const animateWithGSAP = () => {
-    nodes.forEach((node) => {
+    nodes.current.forEach((node) => {
       gsap.to(node, {
-        x: `+=${Math.random() * 100 - 50}`,
-        y: `+=${Math.random() * 100 - 50}`,
-        duration: 1.8,
+        x: node.x + Math.random() * 60 - 30,
+        y: node.y + Math.random() * 60 - 30,
+        duration: 1 + Math.random() * 1.5,
         repeat: -1,
         yoyo: true,
-        ease: "sine.inOut",
+        ease: "sine.inOut"
       });
     });
-
-    gsap.to(edges, {
+    gsap.to(edges.current, {
       alpha: 0.9,
-      duration: 1.2,
+      duration: 1,
       repeat: -1,
       yoyo: true,
-      ease: "power1.inOut",
-      stagger: 0.02,
+      ease: "power1.inOut"
     });
   };
 
   const animateCanvas = () => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    const ctx = canvas?.getContext("2d");
+    if (!canvas || !ctx) return;
 
     const draw = () => {
-      ctx.fillStyle = "#FFFFFF";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
+      ctx.clearRect(0, 0, width, height);
 
       ctx.save();
+      ctx.translate(pan.current.x, pan.current.y);
 
-      const tiltX = tiltRef.current.x * 20;
-      const tiltY = tiltRef.current.y * 20;
-      ctx.translate(canvas.width / 2, canvas.height / 2);
-      ctx.rotate((-tiltX * Math.PI) / 180);
-      ctx.rotate((tiltY * Math.PI) / 180);
-      ctx.translate(-canvas.width / 2, -canvas.height / 2);
-
-      edges.forEach((edge) => {
-        const fromNode = nodes[edge.from];
-        const toNode = nodes[edge.to];
-
+      edges.current.forEach((edge) => {
+        const from = nodes.current[edge.from];
+        const to = nodes.current[edge.to];
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(50, 50, 50, ${edge.alpha})`;
+        ctx.strokeStyle = `rgba(3, 97, 163, ${edge.alpha})`;
         ctx.lineWidth = edge.width;
-        ctx.moveTo(fromNode.x, fromNode.y);
-        ctx.lineTo(toNode.x, toNode.y);
+        ctx.moveTo(from.x, from.y);
+        ctx.lineTo(to.x, to.y);
         ctx.stroke();
       });
 
-      nodes.forEach((node) => {
+      orbitals.current.forEach((orbital) => {
+        const node = nodes.current[orbital.nodeIndex];
+        if (!orbital.isStatic) orbital.angle += orbital.speed;
+        const ox = node.x + Math.cos(orbital.angle) * orbital.radius;
+        const oy = node.y + Math.sin(orbital.angle) * orbital.radius;
+        ctx.beginPath();
+        ctx.fillStyle = orbital.color;
+        ctx.arc(ox, oy, orbital.size, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      nodes.current.forEach((node) => {
+        const glow = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, node.radius * 3.5);
+        glow.addColorStop(0, `${node.color}AA`);
+        glow.addColorStop(1, "transparent");
+        ctx.fillStyle = glow;
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, node.radius * 2.5, 0, Math.PI * 2);
+        ctx.fill();
+
         ctx.beginPath();
         ctx.fillStyle = node.color;
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
@@ -132,7 +228,6 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
       });
 
       ctx.restore();
-
       animationRef.current = requestAnimationFrame(draw);
     };
 
@@ -140,43 +235,65 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
   };
 
   const initializeNeuralNetwork = () => {
-    nodes.length = 0;
-    edges.length = 0;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
 
     const layers = 4;
-    const nodesPerLayer = [5, 7, 7, 2];
-    const canvasWidth = canvasRef.current!.clientWidth;
-    const canvasHeight = canvasRef.current!.clientHeight;
+    const nodesPerLayer = [4, 6, 6, 2];
+    let nodeIndex = 0;
 
-    nodesPerLayer.forEach((numNodes, layer) => {
-      const xPos = ((layer + 1) / (layers + 1)) * canvasWidth;
-
-      for (let i = 0; i < numNodes; i++) {
-        const yPos = ((i + 1) / (numNodes + 1)) * canvasHeight;
-        nodes.push({
-          x: xPos,
-          y: yPos,
-          radius: 10,
-          color: layer === 0 ? "#FF6B6B" : layer === layers - 1 ? "#6B47FF" : "#6BCB77",
+    nodesPerLayer.forEach((count, layer) => {
+      const x = ((layer + 1) / (layers + 1)) * width;
+      for (let i = 0; i < count; i++) {
+        const y = ((i + 1) / (count + 1)) * height;
+        const color = layer === 0 ? "#FF6B6B" : layer === layers - 1 ? "#6B47FF" : "#00FFC6";
+        const node: Node = {
+          x,
+          y,
+          radius: 6,
+          color,
           vx: 0,
-          vy: 0,
-        });
+          vy: 0
+        };
+        nodes.current.push(node);
+
+        for (let j = 0; j < 3; j++) {
+          orbitals.current.push({
+            nodeIndex,
+            angle: Math.random() * Math.PI * 2,
+            radius: 10 + Math.random() * 10,
+            speed: 0.02 + Math.random() * 0.01,
+            size: 1.5,
+            color: "#ffffff"
+          });
+        }
 
         if (layer > 0) {
-          const prevLayerOffset = nodesPerLayer.slice(0, layer).reduce((sum, n) => sum + n, 0);
-          for (let j = prevLayerOffset - nodesPerLayer[layer - 1]; j < prevLayerOffset; j++) {
-            edges.push({ from: j, to: nodes.length - 1, width: 2.5, alpha: 0.5 });
+          const prevTotal = nodesPerLayer.slice(0, layer).reduce((sum, n) => sum + n, 0);
+          const prevCount = nodesPerLayer[layer - 1];
+          for (let j = 0; j < prevCount; j++) {
+            edges.current.push({
+              from: prevTotal - prevCount + j,
+              to: nodeIndex,
+              width: 1.9,
+              alpha: 0.7
+            });
           }
         }
+        nodeIndex++;
       }
     });
   };
 
-  const initializeConnections = () => {
-    // similar logic
-  };
-
-  return <canvas ref={canvasRef} className={`w-full h-full ${className}`} />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className={`w-full h-full ${className}`}
+      style={{ backgroundColor: "transparent", cursor: "grab" }}
+    />
+  );
 };
 
 export default AIVisualizer;
