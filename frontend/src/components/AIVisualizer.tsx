@@ -1,6 +1,15 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
+interface Particle {
+  x: number;
+  y: number;
+  alpha: number;
+  radius: number;
+  vx: number;
+  vy: number;
+}
+
 interface Node {
   x: number;
   y: number;
@@ -25,6 +34,8 @@ interface Orbital {
   size: number;
   color: string;
   isStatic?: boolean;
+  spark?: number;
+  exploded?: boolean;
 }
 
 interface AIVisualizerProps {
@@ -37,6 +48,7 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
   const nodes = useRef<Node[]>([]);
   const edges = useRef<Edge[]>([]);
   const orbitals = useRef<Orbital[]>([]);
+  const particles = useRef<Particle[]>([]);
   const animationRef = useRef<number>();
   const tiltRef = useRef({ x: 0, y: 0 });
   const pan = useRef({ x: 0, y: 0 });
@@ -63,6 +75,7 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
     nodes.current = [];
     edges.current = [];
     orbitals.current = [];
+    particles.current = [];
 
     if (type === "neural-network") {
       initializeNeuralNetwork();
@@ -110,6 +123,21 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
           dragOrbital.current = index;
           isDragging.current = true;
           orbital.isStatic = true;
+          orbital.color = "#FFD700";
+          orbital.spark = 1;
+          orbital.exploded = true;
+
+          for (let i = 0; i < 12; i++) {
+            const angle = (Math.PI * 2 * i) / 12;
+            particles.current.push({
+              x: ox,
+              y: oy,
+              alpha: 1,
+              radius: 1 + Math.random() * 2,
+              vx: Math.cos(angle) * 2,
+              vy: Math.sin(angle) * 2
+            });
+          }
         }
       });
     };
@@ -118,8 +146,8 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
       isDragging.current = false;
       if (dragOrbital.current !== null) {
         orbitals.current[dragOrbital.current].isStatic = false;
+        dragOrbital.current = null;
       }
-      dragOrbital.current = null;
     };
 
     const handleClick = (e: MouseEvent) => {
@@ -201,13 +229,34 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
         ctx.stroke();
       });
 
+      particles.current = particles.current.filter(p => p.alpha > 0);
+      particles.current.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.alpha -= 0.02;
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(${Math.floor(Math.random()*200)}, ${Math.floor(Math.random()*200)}, ${Math.floor(Math.random()*200)}, ${p.alpha})`;
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
       orbitals.current.forEach((orbital) => {
         const node = nodes.current[orbital.nodeIndex];
         if (!orbital.isStatic) orbital.angle += orbital.speed;
         const ox = node.x + Math.cos(orbital.angle) * orbital.radius;
         const oy = node.y + Math.sin(orbital.angle) * orbital.radius;
+
+        if (orbital.spark && orbital.spark > 0) {
+          ctx.fillStyle = "#FF69B4";
+          ctx.beginPath();
+          ctx.arc(ox, oy, orbital.size * 2.5 * orbital.spark, 0, Math.PI * 2);
+          ctx.fill();
+          orbital.spark -= 0.05;
+          if (orbital.spark <= 0) orbital.spark = 0;
+        }
+
         ctx.beginPath();
-        ctx.fillStyle = orbital.color;
+        ctx.fillStyle = orbital.color || "#ffffff";
         ctx.arc(ox, oy, orbital.size, 0, Math.PI * 2);
         ctx.fill();
       });
@@ -252,21 +301,22 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
         const node: Node = {
           x,
           y,
-          radius: 6,
+          radius: 8,
           color,
           vx: 0,
           vy: 0
         };
         nodes.current.push(node);
 
-        for (let j = 0; j < 3; j++) {
+        for (let j = 0; j < 2; j++) {
           orbitals.current.push({
             nodeIndex,
             angle: Math.random() * Math.PI * 2,
             radius: 10 + Math.random() * 10,
-            speed: 0.02 + Math.random() * 0.01,
-            size: 1.5,
-            color: "#ffffff"
+            speed: 0.005 + Math.random() * 0.005,
+            size: 2.5,
+            color: "#7777FF",
+            spark: 0
           });
         }
 
