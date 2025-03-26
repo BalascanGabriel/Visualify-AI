@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
 interface Node {
   x: number;
@@ -18,22 +18,23 @@ interface Edge {
 }
 
 interface AIVisualizerProps {
-  type?: "neural-network" | "connections" | "particles";
+  type?: 'neural-network' | 'connections' | 'particles';
   className?: string;
 }
 
-const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerProps) => {
+const AIVisualizer = ({ type = 'neural-network', className = '' }: AIVisualizerProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const nodes: Node[] = useRef<Node[]>([]).current;
   const edges: Edge[] = useRef<Edge[]>([]).current;
   const animationRef = useRef<number>();
   const tiltRef = useRef({ x: 0, y: 0 });
+  const rotationRef = useRef(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     const resizeCanvas = () => {
@@ -43,12 +44,12 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
       ctx.scale(dpr, dpr);
     };
 
-    window.addEventListener("resize", resizeCanvas);
+    window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    if (type === "neural-network") {
+    if (type === 'neural-network') {
       initializeNeuralNetwork();
-    } else if (type === "connections") {
+    } else if (type === 'connections') {
       initializeConnections();
     }
 
@@ -59,14 +60,21 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
       const rect = canvas.getBoundingClientRect();
       const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
       const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
-      gsap.to(tiltRef.current, { x, y, duration: 0.6, ease: "power3.out" });
+      gsap.to(tiltRef.current, { x, y, duration: 0.6, ease: 'power3.out' });
     };
 
-    canvas.addEventListener("mousemove", handleMouseMove);
+    canvas.addEventListener('mousemove', handleMouseMove);
+
+    gsap.to(rotationRef, {
+      current: Math.PI * 2,
+      repeat: -1,
+      ease: 'none',
+      duration: 20
+    });
 
     return () => {
-      window.removeEventListener("resize", resizeCanvas);
-      canvas.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener('resize', resizeCanvas);
+      canvas.removeEventListener('mousemove', handleMouseMove);
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
     };
   }, [type]);
@@ -79,7 +87,7 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
         duration: 1.8,
         repeat: -1,
         yoyo: true,
-        ease: "sine.inOut",
+        ease: 'sine.inOut',
       });
     });
 
@@ -88,7 +96,7 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
       duration: 1.2,
       repeat: -1,
       yoyo: true,
-      ease: "power1.inOut",
+      ease: 'power1.inOut',
       stagger: 0.02,
     });
   };
@@ -96,11 +104,11 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
   const animateCanvas = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     const draw = () => {
-      ctx.fillStyle = "#FFFFFF";
+      ctx.fillStyle = '#FFFFFF';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       ctx.save();
@@ -110,6 +118,7 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
       ctx.translate(canvas.width / 2, canvas.height / 2);
       ctx.rotate((-tiltX * Math.PI) / 180);
       ctx.rotate((tiltY * Math.PI) / 180);
+      ctx.rotate(rotationRef.current / 500);
       ctx.translate(-canvas.width / 2, -canvas.height / 2);
 
       edges.forEach((edge) => {
@@ -157,7 +166,7 @@ const AIVisualizer = ({ type = "neural-network", className = "" }: AIVisualizerP
           x: xPos,
           y: yPos,
           radius: 10,
-          color: layer === 0 ? "#FF6B6B" : layer === layers - 1 ? "#6B47FF" : "#6BCB77",
+          color: layer === 0 ? '#FF6B6B' : layer === layers - 1 ? '#6B47FF' : '#6BCB77',
           vx: 0,
           vy: 0,
         });

@@ -90,7 +90,7 @@ const ElectricalVisualizer = ({ type = 'circuit', className = '' }: ElectricalVi
             
             ctx.beginPath();
             ctx.fillStyle = 'rgba(255, 255, 160, 0.8)';
-            ctx.arc(particleX, particleY, 2, 0, Math.PI * 2);
+            ctx.arc(particleX, particleY, 3, 1, Math.PI * 2);
             ctx.fill();
           }
         }
@@ -121,11 +121,11 @@ const ElectricalVisualizer = ({ type = 'circuit', className = '' }: ElectricalVi
           ctx.beginPath();
           ctx.fillStyle = node.color;
           ctx.strokeStyle = '#444';
-          ctx.lineWidth = 2;
+          ctx.lineWidth = 3;
           
           // Draw rectangle
           ctx.fillRect(node.x - 20, node.y - 10, 40, 20);
-          ctx.strokeRect(node.x - 20, node.y - 10, 40, 20);
+          ctx.strokeRect(node.x - 20, node.y - 10, 50, 20);
           
           // Draw zigzag pattern inside
           ctx.beginPath();
@@ -357,7 +357,7 @@ const ElectricalVisualizer = ({ type = 'circuit', className = '' }: ElectricalVi
       {
         from: 2, // Bulb
         to: 3,   // Switch
-        width: 3,
+        width: 4,
         alpha: 0.8,
         current: 0.6
       },
@@ -365,7 +365,7 @@ const ElectricalVisualizer = ({ type = 'circuit', className = '' }: ElectricalVi
         from: 3, // Switch
         to: 0,   // Battery
         width: 3,
-        alpha: 0.8,
+        alpha: 1,
         current: 1
       }
     );
