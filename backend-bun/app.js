@@ -20,7 +20,6 @@ const generateRoutes = require('./routes/generate');
 app.use('/api/generate', generateRoutes);
 
 
-
 // Health check
 app.get('/', (req, res) => {
   res.send('🚀 Backend is alive!');
