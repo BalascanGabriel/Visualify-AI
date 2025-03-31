@@ -1,0 +1,8 @@
+✅ Deci da, frontend-ul poate să deseneze direct MindMap-ul folosind orice librărie gen:
+
+React Flow
+
+D3.js
+
+Cytoscape.js
+
