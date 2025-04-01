@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/vizitator/Desktop/BACKEND/Visualify-AI/backend-bun/media/videos/Scene1_ce_este_inteligența_artificială/480p15/partial_movie_files/Scene1_ce_este_inteligența_artificială/1185818338_2361261164_223132457.mp4'
+file 'file:C:/Users/vizitator/Desktop/BACKEND/Visualify-AI/backend-bun/media/videos/Scene1_ce_este_inteligența_artificială/480p15/partial_movie_files/Scene1_ce_este_inteligența_artificială/624642324_1839128356_1613402732.mp4'
+file 'file:C:/Users/vizitator/Desktop/BACKEND/Visualify-AI/backend-bun/media/videos/Scene1_ce_este_inteligența_artificială/480p15/partial_movie_files/Scene1_ce_este_inteligența_artificială/624642324_4096203162_3470781916.mp4'
+file 'file:C:/Users/vizitator/Desktop/BACKEND/Visualify-AI/backend-bun/media/videos/Scene1_ce_este_inteligența_artificială/480p15/partial_movie_files/Scene1_ce_este_inteligența_artificială/624642324_1734327179_2407874072.mp4'

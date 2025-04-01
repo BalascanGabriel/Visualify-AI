@@ -1,0 +1,877 @@
+{
+  "rezumat": "Acest suport de curs oferă o introducere în limba spaniolă, concentrându-se pe pronunție, reguli de accent și gramatică de bază.  Sunt prezentate regulile de pronunție ale consoanelor și vocalelor, cu accent pe diferențele față de limba română.  Sunt explicate regulile de accent grafic și utilizarea acestuia pentru a distinge cuvintele omonime.  Gramatica de bază acoperă articolele hotărâte și nehotărâte, genul și pluralul substantivelor, precum și utilizarea verbelor  *ser* și *estar*.  Lecțiile includ exemple și exerciții practice, ilustrând conceptele gramaticale prin texte literare și situații cotidiene.",
+  "structura": [
+      {
+          "capitol": "Lecția 1: Bodegón (Natură moartă)",
+          "subcapitole": [
+              {
+                  "subcapitol": "Reguli de pronunție: Vocale",
+                  "concepte": [
+                      "Cinci vocale (a, e, i, o, u), pronunțate similar cu româna",
+                      "Absenta pronunției scurte a lui 'i' înainte de 'e'"
+                  ]
+              },
+              {
+                  "subcapitol": "Reguli de pronunție: Consoane (b, v, c, ch, d, f, g, h, j, k, l, ll, m, n, ñ, p, q, r, rr, s, t, x, y, z)",
+                  "concepte": [
+                      "Pronunția lui 'b' și 'v'",
+                      "Pronunția lui 'c' înainte de 'a, o, u' vs. 'e, i'",
+                      "Pronunția lui 'ch'",
+                      "Pronunția lui 'd' în diferite poziții",
+                      "Pronunția lui 'g' înainte de 'a, o, u' vs. 'e, i'",
+                      "Pronunția lui 'h'",
+                      "Pronunția lui 'j'",
+                      "Pronunția lui 'll'",
+                      "Pronunția lui 'ñ'",
+                      "Pronunția lui 'r' și 'rr'",
+                      "Pronunția lui 's'",
+                      "Pronunția lui 'x'",
+                      "Pronunția lui 'y'",
+                      "Pronunția lui 'z'"
+                  ]
+              },
+              {
+                  "subcapitol": "Diferențe față de limba română",
+                  "concepte": [
+                      "Confuzia 'b' și 'v'",
+                      "Pronunția variabilă a lui 'c'",
+                      "Pronunția variabilă a lui 'g'",
+                      "Pronunția lui 'h'",
+                      "Pronunția lui 'j'",
+                      "Pronunția lui 'll'",
+                      "Pronunția lui 'ñ'",
+                      "Pronunția lui 'q'",
+                      "Pronunția lui 'r' și 'rr'",
+                      "Pronunția lui 'x'",
+                      "Pronunția lui 'z'"
+                  ]
+              },
+              {
+                  "subcapitol": "Accentul",
+                  "concepte": [
+                      "Accent pe penultima silabă (cuvinte în -a, -o, -n, -s)",
+                      "Accent pe ultima silabă (cuvinte în alte consoane, -y)",
+                      "Accent grafic pentru excepții și diferențierea omonimelor",
+                      "Accent pentru hiat"
+                  ]
+              },
+              {
+                  "subcapitol": "Semnele de punctuație",
+                  "concepte": [
+                      "Semnul întrebării și exclamării la început și sfârșit"
+                  ]
+              }
+          ]
+      },
+      {
+          "capitol": "Lecția 2: Amor y amistad (Dragoste și prietenie)",
+          "subcapitole": [
+              {
+                  "subcapitol": "Vocabular",
+                  "concepte": [
+                      "Cuvinte noi și expresii"
+                  ]
+              },
+              {
+                  "subcapitol": "Articolul hotărât și nehotărât",
+                  "concepte": [
+                      "Utilizarea articolului 'el' înainte de substantive feminine începând cu 'a' sau 'ha' accentuat"
+                  ]
+              },
+              {
+                  "subcapitol": "Genul substantivelor",
+                  "concepte": [
+                      "Genul masculin și feminin",
+                      "Excepții la regulile de gen",
+                      "Formarea femininului la substantivele care denumesc ființe"
+                  ]
+              },
+              {
+                  "subcapitol": "Pluralul substantivelor",
+                  "concepte": [
+                      "Formarea pluralului la substantivele terminate în vocală vs. consoană",
+                      "Excepții la formarea pluralului"
+                  ]
+              }
+          ]
+      },
+      {
+          "capitol": "Lecția 3: Yo soy ésta (Eu sunt aceasta)",
+          "subcapitole": [
+              {
+                  "subcapitol": "Vocabular",
+                  "concepte": [
+                      "Cuvinte noi și expresii"
+                  ]
+              },
+              {
+                  "subcapitol": "Anotimpuri, luni, zile",
+                  "concepte": [
+                      "Numele anotimpurilor și lunilor în spaniolă",
+                      "Numele zilelor săptămânii în spaniolă"
+                  ]
+              },
+              {
+                  "subcapitol": "Pronume demonstrative",
+                  "concepte": [
+                      "Pronume demonstrative: *éste*, *ése*, *aquél*",
+                      "Utilizarea pronumelor demonstrative în timp"
+                  ]
+              },
+              {
+                  "subcapitol": "Verbul",
+                  "concepte": [
+                      "Cele trei conjugări verbale",
+                      "Perifraze verbale"
+                  ]
+              }
+          ]
+      },
+      {
+          "capitol": "Lecția 4: Si los profesores supieran... (Dacă profesorii ar ști...)",
+          "subcapitole": [
+              {
+                  "subcapitol": "Vocabular",
+                  "concepte": [
+                      "Cuvinte noi și expresii"
+                  ]
+              },
+              {
+                  "subcapitol": "Verbele *ser* și *estar*",
+                  "concepte": [
+                      "Diferențele dintre *ser* și *estar*",
+                      "Utilizarea verbelor *ser* și *estar* cu adjective"
+                  ]
+              }
+          ]
+      },
+      {
+          "capitol": "Lecția 5: España, mi amor (Spania, dragostea mea)",
+          "subcapitole": [
+              {
+                  "subcapitol": "Vocabular",
+                  "concepte": [
+                      "Cuvinte noi și expresii"
+                  ]
+              }
+          ]
+      },
+      {
+          "capitol": "Lecția 6: Es duro ser mujer (E greu să fii femeie)",
+          "subcapitole": [
+              {
+                  "subcapitol": "Vocabular",
+                  "concepte": [
+                      "Cuvinte noi și expresii"
+                  ]
+              },
+              {
+                  "subcapitol": "Bijuterii",
+                  "concepte": [
+                      "Numele unor bijuterii în spaniolă"
+                  ]
+              },
+              {
+                  "subcapitol": "Indicativ prezent - neregularități (diftongare, alternanță e-i)",
+                  "concepte": [
+                      "Diftongarea vocalelor 'e' și 'o'",
+                      "Alternanța 'e' - 'i' la unele verbe"
+                  ]
+              }
+          ]
+      }
+  ],
+  "mindmap": {
+      "nodes": [
+          {
+              "id": "1",
+              "label": "Lecția 1: Bodegón (Natură moartă)",
+              "parent": null
+          },
+          {
+              "id": "2",
+              "label": "Reguli de pronunție: Vocale",
+              "parent": "1"
+          },
+          {
+              "id": "3",
+              "label": "Cinci vocale (a, e, i, o, u), pronunțate similar cu româna",
+              "parent": "2"
+          },
+          {
+              "id": "4",
+              "label": "Absenta pronunției scurte a lui 'i' înainte de 'e'",
+              "parent": "2"
+          },
+          {
+              "id": "5",
+              "label": "Reguli de pronunție: Consoane (b, v, c, ch, d, f, g, h, j, k, l, ll, m, n, ñ, p, q, r, rr, s, t, x, y, z)",
+              "parent": "1"
+          },
+          {
+              "id": "6",
+              "label": "Pronunția lui 'b' și 'v'",
+              "parent": "5"
+          },
+          {
+              "id": "7",
+              "label": "Pronunția lui 'c' înainte de 'a, o, u' vs. 'e, i'",
+              "parent": "5"
+          },
+          {
+              "id": "8",
+              "label": "Pronunția lui 'ch'",
+              "parent": "5"
+          },
+          {
+              "id": "9",
+              "label": "Pronunția lui 'd' în diferite poziții",
+              "parent": "5"
+          },
+          {
+              "id": "10",
+              "label": "Pronunția lui 'g' înainte de 'a, o, u' vs. 'e, i'",
+              "parent": "5"
+          },
+          {
+              "id": "11",
+              "label": "Pronunția lui 'h'",
+              "parent": "5"
+          },
+          {
+              "id": "12",
+              "label": "Pronunția lui 'j'",
+              "parent": "5"
+          },
+          {
+              "id": "13",
+              "label": "Pronunția lui 'll'",
+              "parent": "5"
+          },
+          {
+              "id": "14",
+              "label": "Pronunția lui 'ñ'",
+              "parent": "5"
+          },
+          {
+              "id": "15",
+              "label": "Pronunția lui 'r' și 'rr'",
+              "parent": "5"
+          },
+          {
+              "id": "16",
+              "label": "Pronunția lui 's'",
+              "parent": "5"
+          },
+          {
+              "id": "17",
+              "label": "Pronunția lui 'x'",
+              "parent": "5"
+          },
+          {
+              "id": "18",
+              "label": "Pronunția lui 'y'",
+              "parent": "5"
+          },
+          {
+              "id": "19",
+              "label": "Pronunția lui 'z'",
+              "parent": "5"
+          },
+          {
+              "id": "20",
+              "label": "Diferențe față de limba română",
+              "parent": "1"
+          },
+          {
+              "id": "21",
+              "label": "Confuzia 'b' și 'v'",
+              "parent": "20"
+          },
+          {
+              "id": "22",
+              "label": "Pronunția variabilă a lui 'c'",
+              "parent": "20"
+          },
+          {
+              "id": "23",
+              "label": "Pronunția variabilă a lui 'g'",
+              "parent": "20"
+          },
+          {
+              "id": "24",
+              "label": "Pronunția lui 'h'",
+              "parent": "20"
+          },
+          {
+              "id": "25",
+              "label": "Pronunția lui 'j'",
+              "parent": "20"
+          },
+          {
+              "id": "26",
+              "label": "Pronunția lui 'll'",
+              "parent": "20"
+          },
+          {
+              "id": "27",
+              "label": "Pronunția lui 'ñ'",
+              "parent": "20"
+          },
+          {
+              "id": "28",
+              "label": "Pronunția lui 'q'",
+              "parent": "20"
+          },
+          {
+              "id": "29",
+              "label": "Pronunția lui 'r' și 'rr'",
+              "parent": "20"
+          },
+          {
+              "id": "30",
+              "label": "Pronunția lui 'x'",
+              "parent": "20"
+          },
+          {
+              "id": "31",
+              "label": "Pronunția lui 'z'",
+              "parent": "20"
+          },
+          {
+              "id": "32",
+              "label": "Accentul",
+              "parent": "1"
+          },
+          {
+              "id": "33",
+              "label": "Accent pe penultima silabă (cuvinte în -a, -o, -n, -s)",
+              "parent": "32"
+          },
+          {
+              "id": "34",
+              "label": "Accent pe ultima silabă (cuvinte în alte consoane, -y)",
+              "parent": "32"
+          },
+          {
+              "id": "35",
+              "label": "Accent grafic pentru excepții și diferențierea omonimelor",
+              "parent": "32"
+          },
+          {
+              "id": "36",
+              "label": "Accent pentru hiat",
+              "parent": "32"
+          },
+          {
+              "id": "37",
+              "label": "Semnele de punctuație",
+              "parent": "1"
+          },
+          {
+              "id": "38",
+              "label": "Semnul întrebării și exclamării la început și sfârșit",
+              "parent": "37"
+          },
+          {
+              "id": "39",
+              "label": "Lecția 2: Amor y amistad (Dragoste și prietenie)",
+              "parent": null
+          },
+          {
+              "id": "40",
+              "label": "Vocabular",
+              "parent": "39"
+          },
+          {
+              "id": "41",
+              "label": "Cuvinte noi și expresii",
+              "parent": "40"
+          },
+          {
+              "id": "42",
+              "label": "Articolul hotărât și nehotărât",
+              "parent": "39"
+          },
+          {
+              "id": "43",
+              "label": "Utilizarea articolului 'el' înainte de substantive feminine începând cu 'a' sau 'ha' accentuat",
+              "parent": "42"
+          },
+          {
+              "id": "44",
+              "label": "Genul substantivelor",
+              "parent": "39"
+          },
+          {
+              "id": "45",
+              "label": "Genul masculin și feminin",
+              "parent": "44"
+          },
+          {
+              "id": "46",
+              "label": "Excepții la regulile de gen",
+              "parent": "44"
+          },
+          {
+              "id": "47",
+              "label": "Formarea femininului la substantivele care denumesc ființe",
+              "parent": "44"
+          },
+          {
+              "id": "48",
+              "label": "Pluralul substantivelor",
+              "parent": "39"
+          },
+          {
+              "id": "49",
+              "label": "Formarea pluralului la substantivele terminate în vocală vs. consoană",
+              "parent": "48"
+          },
+          {
+              "id": "50",
+              "label": "Excepții la formarea pluralului",
+              "parent": "48"
+          },
+          {
+              "id": "51",
+              "label": "Lecția 3: Yo soy ésta (Eu sunt aceasta)",
+              "parent": null
+          },
+          {
+              "id": "52",
+              "label": "Vocabular",
+              "parent": "51"
+          },
+          {
+              "id": "53",
+              "label": "Cuvinte noi și expresii",
+              "parent": "52"
+          },
+          {
+              "id": "54",
+              "label": "Anotimpuri, luni, zile",
+              "parent": "51"
+          },
+          {
+              "id": "55",
+              "label": "Numele anotimpurilor și lunilor în spaniolă",
+              "parent": "54"
+          },
+          {
+              "id": "56",
+              "label": "Numele zilelor săptămânii în spaniolă",
+              "parent": "54"
+          },
+          {
+              "id": "57",
+              "label": "Pronume demonstrative",
+              "parent": "51"
+          },
+          {
+              "id": "58",
+              "label": "Pronume demonstrative: *éste*, *ése*, *aquél*",
+              "parent": "57"
+          },
+          {
+              "id": "59",
+              "label": "Utilizarea pronumelor demonstrative în timp",
+              "parent": "57"
+          },
+          {
+              "id": "60",
+              "label": "Verbul",
+              "parent": "51"
+          },
+          {
+              "id": "61",
+              "label": "Cele trei conjugări verbale",
+              "parent": "60"
+          },
+          {
+              "id": "62",
+              "label": "Perifraze verbale",
+              "parent": "60"
+          },
+          {
+              "id": "63",
+              "label": "Lecția 4: Si los profesores supieran... (Dacă profesorii ar ști...)",
+              "parent": null
+          },
+          {
+              "id": "64",
+              "label": "Vocabular",
+              "parent": "63"
+          },
+          {
+              "id": "65",
+              "label": "Cuvinte noi și expresii",
+              "parent": "64"
+          },
+          {
+              "id": "66",
+              "label": "Verbele *ser* și *estar*",
+              "parent": "63"
+          },
+          {
+              "id": "67",
+              "label": "Diferențele dintre *ser* și *estar*",
+              "parent": "66"
+          },
+          {
+              "id": "68",
+              "label": "Utilizarea verbelor *ser* și *estar* cu adjective",
+              "parent": "66"
+          },
+          {
+              "id": "69",
+              "label": "Lecția 5: España, mi amor (Spania, dragostea mea)",
+              "parent": null
+          },
+          {
+              "id": "70",
+              "label": "Vocabular",
+              "parent": "69"
+          },
+          {
+              "id": "71",
+              "label": "Cuvinte noi și expresii",
+              "parent": "70"
+          },
+          {
+              "id": "72",
+              "label": "Lecția 6: Es duro ser mujer (E greu să fii femeie)",
+              "parent": null
+          },
+          {
+              "id": "73",
+              "label": "Vocabular",
+              "parent": "72"
+          },
+          {
+              "id": "74",
+              "label": "Cuvinte noi și expresii",
+              "parent": "73"
+          },
+          {
+              "id": "75",
+              "label": "Bijuterii",
+              "parent": "72"
+          },
+          {
+              "id": "76",
+              "label": "Numele unor bijuterii în spaniolă",
+              "parent": "75"
+          },
+          {
+              "id": "77",
+              "label": "Indicativ prezent - neregularități (diftongare, alternanță e-i)",
+              "parent": "72"
+          },
+          {
+              "id": "78",
+              "label": "Diftongarea vocalelor 'e' și 'o'",
+              "parent": "77"
+          },
+          {
+              "id": "79",
+              "label": "Alternanța 'e' - 'i' la unele verbe",
+              "parent": "77"
+          }
+      ],
+      "links": [
+          {
+              "source": "1",
+              "target": "2"
+          },
+          {
+              "source": "2",
+              "target": "3"
+          },
+          {
+              "source": "2",
+              "target": "4"
+          },
+          {
+              "source": "1",
+              "target": "5"
+          },
+          {
+              "source": "5",
+              "target": "6"
+          },
+          {
+              "source": "5",
+              "target": "7"
+          },
+          {
+              "source": "5",
+              "target": "8"
+          },
+          {
+              "source": "5",
+              "target": "9"
+          },
+          {
+              "source": "5",
+              "target": "10"
+          },
+          {
+              "source": "5",
+              "target": "11"
+          },
+          {
+              "source": "5",
+              "target": "12"
+          },
+          {
+              "source": "5",
+              "target": "13"
+          },
+          {
+              "source": "5",
+              "target": "14"
+          },
+          {
+              "source": "5",
+              "target": "15"
+          },
+          {
+              "source": "5",
+              "target": "16"
+          },
+          {
+              "source": "5",
+              "target": "17"
+          },
+          {
+              "source": "5",
+              "target": "18"
+          },
+          {
+              "source": "5",
+              "target": "19"
+          },
+          {
+              "source": "1",
+              "target": "20"
+          },
+          {
+              "source": "20",
+              "target": "21"
+          },
+          {
+              "source": "20",
+              "target": "22"
+          },
+          {
+              "source": "20",
+              "target": "23"
+          },
+          {
+              "source": "20",
+              "target": "24"
+          },
+          {
+              "source": "20",
+              "target": "25"
+          },
+          {
+              "source": "20",
+              "target": "26"
+          },
+          {
+              "source": "20",
+              "target": "27"
+          },
+          {
+              "source": "20",
+              "target": "28"
+          },
+          {
+              "source": "20",
+              "target": "29"
+          },
+          {
+              "source": "20",
+              "target": "30"
+          },
+          {
+              "source": "20",
+              "target": "31"
+          },
+          {
+              "source": "1",
+              "target": "32"
+          },
+          {
+              "source": "32",
+              "target": "33"
+          },
+          {
+              "source": "32",
+              "target": "34"
+          },
+          {
+              "source": "32",
+              "target": "35"
+          },
+          {
+              "source": "32",
+              "target": "36"
+          },
+          {
+              "source": "1",
+              "target": "37"
+          },
+          {
+              "source": "37",
+              "target": "38"
+          },
+          {
+              "source": "39",
+              "target": "40"
+          },
+          {
+              "source": "40",
+              "target": "41"
+          },
+          {
+              "source": "39",
+              "target": "42"
+          },
+          {
+              "source": "42",
+              "target": "43"
+          },
+          {
+              "source": "39",
+              "target": "44"
+          },
+          {
+              "source": "44",
+              "target": "45"
+          },
+          {
+              "source": "44",
+              "target": "46"
+          },
+          {
+              "source": "44",
+              "target": "47"
+          },
+          {
+              "source": "39",
+              "target": "48"
+          },
+          {
+              "source": "48",
+              "target": "49"
+          },
+          {
+              "source": "48",
+              "target": "50"
+          },
+          {
+              "source": "51",
+              "target": "52"
+          },
+          {
+              "source": "52",
+              "target": "53"
+          },
+          {
+              "source": "51",
+              "target": "54"
+          },
+          {
+              "source": "54",
+              "target": "55"
+          },
+          {
+              "source": "54",
+              "target": "56"
+          },
+          {
+              "source": "51",
+              "target": "57"
+          },
+          {
+              "source": "57",
+              "target": "58"
+          },
+          {
+              "source": "57",
+              "target": "59"
+          },
+          {
+              "source": "51",
+              "target": "60"
+          },
+          {
+              "source": "60",
+              "target": "61"
+          },
+          {
+              "source": "60",
+              "target": "62"
+          },
+          {
+              "source": "63",
+              "target": "64"
+          },
+          {
+              "source": "64",
+              "target": "65"
+          },
+          {
+              "source": "63",
+              "target": "66"
+          },
+          {
+              "source": "66",
+              "target": "67"
+          },
+          {
+              "source": "66",
+              "target": "68"
+          },
+          {
+              "source": "69",
+              "target": "70"
+          },
+          {
+              "source": "70",
+              "target": "71"
+          },
+          {
+              "source": "72",
+              "target": "73"
+          },
+          {
+              "source": "73",
+              "target": "74"
+          },
+          {
+              "source": "72",
+              "target": "75"
+          },
+          {
+              "source": "75",
+              "target": "76"
+          },
+          {
+              "source": "72",
+              "target": "77"
+          },
+          {
+              "source": "77",
+              "target": "78"
+          },
+          {
+              "source": "77",
+              "target": "79"
+          }
+      ]
+  }
+}
