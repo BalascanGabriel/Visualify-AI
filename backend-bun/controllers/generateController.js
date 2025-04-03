@@ -40,11 +40,16 @@ exports.generateCourseFromFile = async (req, res) => {
     }
 
     const mindmap = buildMindMap(parsedData.structura);
+    
+    // Adăugăm generarea animațiilor
+    const conceptMapperAgent = require('../agents/conceptMapperAgent');
+    await conceptMapperAgent.generateConceptAnimations(parsedData.structura);
 
     res.status(200).json({
       rezumat: parsedData.rezumat,
       structura: parsedData.structura,
-      mindmap
+      mindmap,
+      message: "Animațiile Manim au fost generate cu succes!"
     });
 
   } catch (error) {

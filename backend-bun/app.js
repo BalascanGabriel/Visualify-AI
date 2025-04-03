@@ -19,6 +19,8 @@ app.use('/api/parse', parseRoutes);
 const generateRoutes = require('./routes/generate');
 app.use('/api/generate', generateRoutes);
 
+const renderRoutes = require('./routes/render');
+app.use('/api/render', renderRoutes);
 
 // Health check
 app.get('/', (req, res) => {

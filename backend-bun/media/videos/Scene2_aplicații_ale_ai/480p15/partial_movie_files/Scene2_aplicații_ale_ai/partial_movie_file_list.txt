@@ -1,5 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Users/vizitator/Desktop/BACKEND/Visualify-AI/backend-bun/media/videos/Scene2_aplicații_ale_ai/480p15/partial_movie_files/Scene2_aplicații_ale_ai/1185818338_930410671_223132457.mp4'
-file 'file:C:/Users/vizitator/Desktop/BACKEND/Visualify-AI/backend-bun/media/videos/Scene2_aplicații_ale_ai/480p15/partial_movie_files/Scene2_aplicații_ale_ai/624642324_1839128356_1246027368.mp4'
-file 'file:C:/Users/vizitator/Desktop/BACKEND/Visualify-AI/backend-bun/media/videos/Scene2_aplicații_ale_ai/480p15/partial_movie_files/Scene2_aplicații_ale_ai/624642324_1342423088_1134976712.mp4'
-file 'file:C:/Users/vizitator/Desktop/BACKEND/Visualify-AI/backend-bun/media/videos/Scene2_aplicații_ale_ai/480p15/partial_movie_files/Scene2_aplicații_ale_ai/624642324_1734327179_3949159038.mp4'

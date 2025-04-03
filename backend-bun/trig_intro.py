@@ -1,83 +1,76 @@
 from manim import *
 
 class TrigonometrieIntro(Scene):
+    def clean_slate(self):
+        self.play(*[FadeOut(mob) for mob in self.mobjects])
+        self.wait(0.5)
+
     def construct(self):
-        # Titlu general
-        title = Title("Introducere în Trigonometrie", include_underline=True)
-        self.play(Write(title))
+        # Titlu principal
+        title = Text("Introducere în Trigonometrie", font_size=48)
+        self.play(FadeIn(title))
         self.wait(1)
+        self.clean_slate()
 
-        # Subcapitol: Cum se utilizează acest manual
-        sub1 = Text("Cum se utilizează acest manual", font_size=36).next_to(title, DOWN)
-        concept1 = Text("→ Practica și exercițiile sunt cheia înțelegerii!", font_size=28).next_to(sub1, DOWN)
-        self.play(Write(sub1))
-        self.play(FadeIn(concept1, shift=RIGHT))
+        # === Subcapitol 1 ===
+        sc1 = Text("Cum se utilizează acest manual", font_size=36)
+        sc1_desc = Text("➡ Practica și exercițiile sunt cheia înțelegerii!", font_size=28).next_to(sc1, DOWN)
+        self.play(Write(sc1))
+        self.play(FadeIn(sc1_desc))
         self.wait(2)
-        self.play(FadeOut(sub1), FadeOut(concept1))
+        self.clean_slate()
 
-        # Subcapitol: Obiectivele
-        sub2 = Text("Obiectivele acestui capitol", font_size=36).next_to(title, DOWN)
-        self.play(Write(sub2))
-        self.wait(1)
+        # === Subcapitol 2: Conversie radiani/grade ===
+        sc2 = Text("Conversia dintre radiani și grade", font_size=36)
+        self.play(FadeIn(sc2.to_edge(UP)))
 
-        # ===== Concept 1: Conversia dintre radiani și grade =====
-        conversie = Text("Conversia dintre radiani și grade", font_size=30).to_edge(UP)
-        self.play(Transform(sub2, conversie))
-
-        # Cercul trigonometric
         circle = Circle(radius=2, color=BLUE)
-        radius1 = Line(ORIGIN, [2, 0, 0], color=WHITE)
-        radius2 = Line(ORIGIN, [2 * np.cos(PI / 3), 2 * np.sin(PI / 3), 0], color=WHITE)
+        r1 = Line(ORIGIN, [2, 0, 0], color=WHITE)
+        r2 = Line(ORIGIN, [2 * np.cos(PI/3), 2 * np.sin(PI/3), 0], color=WHITE)
         arc = Arc(radius=2, start_angle=0, angle=PI/3, color=GREEN)
-        deg_label = MathTex("60^\\circ").next_to([2, 0, 0], DOWN)
-        rad_label = MathTex("\\frac{\\pi}{3}~rad").next_to([2 * np.cos(PI/3), 2 * np.sin(PI/3), 0], UP)
+        deg = MathTex("60^\\circ").next_to([2, 0, 0], DOWN)
+        rad = MathTex("\\frac{\\pi}{3}~rad").next_to([2 * np.cos(PI/3), 2 * np.sin(PI/3), 0], UP)
 
-        self.play(Create(circle))
-        self.play(Create(radius1), Create(radius2))
-        self.play(Create(arc))
-        self.play(Write(deg_label), Write(rad_label))
-        self.wait(3)
-        self.play(*[FadeOut(m) for m in [circle, radius1, radius2, arc, deg_label, rad_label]])
+        self.play(Create(circle), Create(r1), Create(r2), Create(arc))
+        self.play(Write(deg), Write(rad))
+        self.wait(2)
+        self.clean_slate()
 
-        # ===== Concept 2: Graficul funcției sinus =====
-        titlu_sin = Text("Graficul funcției sinus", font_size=30).to_edge(UP)
-        self.play(Transform(sub2, titlu_sin))
+        # === Subcapitol 3: Graficul sinus ===
+        sc3 = Text("Graficul funcției sinus", font_size=36)
+        self.play(Write(sc3.to_edge(UP)))
 
         axes = Axes(
-            x_range=[0, 2 * PI, PI/2],
+            x_range=[0, 2 * PI, PI / 2],
             y_range=[-1.5, 1.5, 0.5],
             x_length=8,
             y_length=3,
             axis_config={"color": WHITE},
-        )
-        labels = axes.get_axis_labels(x_label="x", y_label="sin(x)")
-
+        ).to_edge(DOWN)
         sin_graph = axes.plot(lambda x: np.sin(x), color=YELLOW)
-        graph_label = axes.get_graph_label(sin_graph, label="\\sin(x)")
+        label = axes.get_graph_label(sin_graph, label="\\sin(x)")
 
-        self.play(Create(axes), Write(labels))
-        self.play(Create(sin_graph), Write(graph_label))
-        self.wait(3)
-        self.play(*[FadeOut(m) for m in [axes, sin_graph, graph_label, labels]])
-
-        # ===== Concept 3: Derivarea funcției sinus =====
-        titlu_deriv = Text("Derivarea funcției sinus", font_size=30).to_edge(UP)
-        self.play(Transform(sub2, titlu_deriv))
-
-        deriv_text = MathTex(r"\frac{d}{dx} \sin(x) = \cos(x)").scale(1.5)
-        self.play(Write(deriv_text))
+        self.play(Create(axes), Create(sin_graph), Write(label))
         self.wait(2)
-        self.play(FadeOut(deriv_text))
+        self.clean_slate()
 
-        # ===== Concept 4: Funcții trigonometrice inverse =====
-        titlu_inv = Text("Funcțiile trigonometrice inverse", font_size=30).to_edge(UP)
-        self.play(Transform(sub2, titlu_inv))
-
-        inverse_text = MathTex(r"\arcsin(x),~\arccos(x),~\arctan(x)").scale(1.2)
-        self.play(Write(inverse_text))
+        # === Subcapitol 4: Derivarea sinusului ===
+        sc4 = Text("Derivarea funcției sinus", font_size=36)
+        formula = MathTex(r"\frac{d}{dx} \sin(x) = \cos(x)").scale(1.5)
+        self.play(FadeIn(sc4.to_edge(UP)))
+        self.play(Write(formula))
         self.wait(2)
+        self.clean_slate()
 
-        # Încheiere
-        recap = Text("Acestea sunt conceptele cheie din introducere!", font_size=30, color=YELLOW).to_edge(DOWN)
-        self.play(Write(recap))
+        # === Subcapitol 5: Funcții inverse ===
+        sc5 = Text("Funcțiile trigonometrice inverse", font_size=36)
+        inv = MathTex(r"\arcsin(x),\quad \arccos(x),\quad \arctan(x)").scale(1.2)
+        self.play(FadeIn(sc5.to_edge(UP)))
+        self.play(Write(inv))
+        self.wait(2)
+        self.clean_slate()
+
+        # === Final ===
+        final = Text("Bravo! Ai parcurs conceptele-cheie din Introducere! 🎉", font_size=32, color=YELLOW)
+        self.play(Write(final))
         self.wait(3)
