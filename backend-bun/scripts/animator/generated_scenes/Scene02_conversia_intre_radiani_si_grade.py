@@ -1,58 +1,51 @@
 from manim import *
 
+config.tex_template.add_to_preamble(r"""
+\usepackage{amsmath}
+\usepackage{amssymb}
+""")
+
 class Scene02_conversia_intre_radiani_si_grade(Scene):
     def construct(self):
-        from manim import *
-        
-        class RadianDegreeConversion(Scene):
-            def construct(self):
-                # Title
-                title = Text("Conversia între Radiani și Grade", color=BLUE)
-                title.to_edge(UP)
-                self.play(Write(title))
-        
-                # Explanatory Text
-                explanation = Tex(r"$\text{180}^\circ = \pi \text{ radiani}$", color=WHITE)
-                explanation.to_edge(LEFT).shift(DOWN)
-                self.play(Write(explanation))
-        
-                # Circle for visualization
-                circle = Circle(radius=1, color=YELLOW)
-                circle.move_to(ORIGIN)
-                self.play(Create(circle))
-        
-                # Degree Arc
-                degree_arc = Arc(radius=1, start_angle=0, angle=PI, color=RED)
-                degree_text = Tex(r"$180^\circ$", color=RED)
-                degree_text.next_to(degree_arc, DOWN)
-        
-                # Radian Arc
-                radian_arc = Arc(radius=1, start_angle=0, angle=PI, color=GREEN)
-                radian_text = Tex(r"$\pi$", color=GREEN)
-                radian_text.next_to(radian_arc, UP)
-        
-                # Conversion Formula
-                formula1 = MathTex(r"\text{Grade} = \frac{180^\circ}{\pi} \times \text{Radiani}", color=WHITE)
-                formula2 = MathTex(r"\text{Radiani} = \frac{\pi}{180^\circ} \times \text{Grade}", color=WHITE)
-                formula1.next_to(circle, DOWN)
-                formula2.next_to(formula1, DOWN)
-        
-                # Animations
-                self.play(Create(degree_arc), Write(degree_text))
-                self.wait(1)
-                self.play(Transform(degree_arc, radian_arc), Transform(degree_text, radian_text))
-                self.wait(1)
-                self.play(Write(formula1))
-                self.wait(1)
-                self.play(Write(formula2))
-                self.wait(2)
-        
-        
-                # Example conversion
-                example = Tex(r"$\text{Convertim } 90^\circ \text{ în radiani:}$", color=WHITE)
-                example.next_to(formula2, DOWN)
-                self.play(Write(example))
-                calculation = MathTex(r"\frac{\pi}{180^\circ} \times 90^\circ = \frac{\pi}{2}", color=WHITE)
-                calculation.next_to(example, DOWN)
-                self.play(Write(calculation))
-                self.wait(2)
+        title = Text("Conversia între radiani și grade", color=BLUE_A)
+        title.scale(1.2).to_edge(UP)
+        self.play(Write(title))
+        explanation = Text("Un cerc complet are 360 de grade sau 2π radiani.", color=WHITE)
+        explanation.next_to(title, DOWN, buff=1)
+        self.play(Write(explanation))
+        formula1 = MathTex(r"360^\circ = 2\pi \text{ radiani}")
+        formula1.next_to(explanation, DOWN, buff=1)
+        self.play(Write(formula1))
+        formula2 = MathTex(r"1^\circ = \frac{2\pi}{360} \text{ radiani} = \frac{\pi}{180} \text{ radiani}")
+        formula2.next_to(formula1, DOWN, buff=1)
+        self.play(Write(formula2))
+        formula3 = MathTex(r"1 \text{ radian} = \frac{360}{2\pi} ^\circ = \frac{180}{\pi} ^\circ")
+        formula3.next_to(formula2, DOWN, buff=1)
+        self.play(Write(formula3))
+        example_degrees = Text("Exemplu: Convertim 45° în radiani:", color=WHITE)
+        example_degrees.next_to(formula3, DOWN, buff=1)
+        self.play(Write(example_degrees))
+        example_calculation = MathTex(r"45^\circ = 45 \times \frac{\pi}{180} \text{ radiani} = \frac{\pi}{4} \text{ radiani}")
+        example_calculation.next_to(example_degrees, DOWN, buff=1)
+        self.play(Write(example_calculation))
+        example_radians = Text("Exemplu: Convertim π/2 radiani în grade:", color=WHITE)
+        example_radians.next_to(example_calculation, DOWN, buff=1)
+        self.play(Write(example_radians))
+        example_calculation2 = MathTex(r"\frac{\pi}{2} \text{ radiani} = \frac{\pi}{2} \times \frac{180}{\pi} ^\circ = 90^\circ")
+        example_calculation2.next_to(example_radians, DOWN, buff=1)
+        self.play(Write(example_calculation2))
+        circle = Circle(radius=2, color=YELLOW)
+        self.play(Create(circle))
+        self.wait(1)
+        self.play(
+        FadeOut(title),
+        FadeOut(explanation),
+        FadeOut(formula1),
+        FadeOut(formula2),
+        FadeOut(formula3),
+        FadeOut(example_degrees),
+        FadeOut(example_calculation),
+        FadeOut(example_radians),
+        FadeOut(example_calculation2),
+        FadeOut(circle)
+        )

@@ -1,71 +1,56 @@
 from manim import *
 
+config.tex_template.add_to_preamble(r"""
+\usepackage{amsmath}
+\usepackage{amssymb}
+""")
+
 class Scene05_extinderea_definitiei_functiilor_trigonometrice_la(Scene):
     def construct(self):
-        from manim import *
-        
-        class TrigonometricExtension(Scene):
-            def construct(self):
-                # Titlu
-                title = Text("Extinderea definiției funcțiilor trigonometrice la numere reale", color=BLUE)
-                title.to_edge(UP)
-                self.play(Write(title))
-        
-                # Text explicativ
-                explanation = Tex(r"Funcțiile trigonometrice sunt inițial definite pentru unghiuri în triunghiuri dreptunghice.", color=WHITE)
-                explanation.to_edge(LEFT).shift(DOWN)
-                self.play(Write(explanation))
-        
-                # Cerc trigonometric
-                circle = Circle(radius=2, color=YELLOW)
-                self.play(Create(circle))
-        
-                # Punct pe cerc
-                dot = Dot(color=RED)
-                dot.move_to(circle.point(0))
-                self.play(Create(dot))
-        
-                # Segment de la origine la punct
-                line = Line(ORIGIN, dot.get_center(), color=GREEN)
-                self.play(Create(line))
-        
-                # Unghi
-                arc = Arc(radius=0.5, start_angle=0, angle=PI/4, color=BLUE)
-                arc.move_to(ORIGIN)
-                self.play(Create(arc))
-        
-                # Text unghi
-                angle_text = MathTex(r"\theta", color=WHITE)
-                angle_text.next_to(arc, RIGHT)
-                self.play(Write(angle_text))
-        
-                # Explicație extindere
-                extension_explanation = Tex(r"Definim aceste funcții pentru orice număr real $x$ folosind cercul trigonometric. $x$ reprezintă lungimea arcului de cerc.", color=WHITE)
-                extension_explanation.next_to(explanation, DOWN, buff=1)
-                self.play(Write(extension_explanation))
-        
-        
-                # Animație mișcare punct pe cerc
-                self.play(
-                    MoveAlongPath(dot, circle),
-                    UpdateFromFunc(line, lambda l: l.become(Line(ORIGIN, dot.get_center(), color=GREEN))),
-                    run_time=5
-                )
-        
-        
-                # Formulă sin x
-                sin_formula = MathTex(r"\sin(x) = \frac{y}{r}", color=WHITE)
-                sin_formula.next_to(circle, DOWN, buff=1)
-                self.play(Write(sin_formula))
-        
-                # Formulă cos x
-                cos_formula = MathTex(r"\cos(x) = \frac{x}{r}", color=WHITE)
-                cos_formula.next_to(sin_formula, DOWN, buff=0.5)
-                self.play(Write(cos_formula))
-        
-                # Explicație r=1
-                r_explanation = Tex(r"Pentru simplitate, considerăm $r=1$ (cerc unitate).", color=WHITE)
-                r_explanation.next_to(cos_formula, DOWN, buff=0.5)
-                self.play(Write(r_explanation))
-        
-                self.wait(2)
+        title = Text("Extinderea definiției funcțiilor trigonometrice la numere reale", color=BLUE_A)
+        title.scale(1.2).to_edge(UP)
+        self.play(Write(title))
+        explanation1 = Text("Funcțiile trigonometrice sunt inițial definite pentru unghiuri în triunghiuri dreptunghice.", color=WHITE)
+        explanation1.next_to(title, DOWN, buff=1)
+        self.play(Write(explanation1))
+        formula1 = MathTex(r"\sin(\theta) = \frac{\text{latura opusă}}{\text{hipotenuză}}", r"\quad", r"\cos(\theta) = \frac{\text{latura adiacentă}}{\text{hipotenuză}}", r"\quad", r"\tan(\theta) = \frac{\text{latura opusă}}{\text{latura adiacentă}}")
+        formula1.next_to(explanation1, DOWN)
+        self.play(Write(formula1))
+        explanation2 = Text("Însă, putem extinde definiția acestora la numere reale folosind cercul trigonometric.", color=WHITE)
+        explanation2.next_to(formula1, DOWN, buff=1)
+        self.play(Write(explanation2))
+        circle = Circle(radius=2, color=YELLOW)
+        self.play(Create(circle))
+        line = Line(ORIGIN, 2*RIGHT)
+        self.play(Create(line))
+        dot = Dot(2*RIGHT)
+        self.play(Create(dot))
+        theta = MathTex(r"\theta")
+        theta.next_to(line, UP, buff=0.2)
+        self.play(Write(theta))
+        arc = Arc(radius=2, start_angle=0, angle=PI/3, color=RED)
+        self.play(Create(arc))
+        explanation3 = Text("Un număr real  \\theta  reprezintă un unghi în radiani.", color=WHITE)
+        explanation3.next_to(explanation2, DOWN, buff=1)
+        self.play(Write(explanation3))
+        formula2 = MathTex(r"\sin(\theta) = y", r"\quad", r"\cos(\theta) = x")
+        formula2.next_to(explanation3, DOWN)
+        self.play(Write(formula2))
+        explanation4 = Text("unde (x, y) sunt coordonatele punctului de intersecție dintre cerc și linia care formează unghiul \\theta cu axa x.", color=WHITE)
+        explanation4.next_to(formula2, DOWN)
+        self.play(Write(explanation4))
+        self.wait(2)
+        self.play(
+        FadeOut(title),
+        FadeOut(explanation1),
+        FadeOut(formula1),
+        FadeOut(explanation2),
+        FadeOut(circle),
+        FadeOut(line),
+        FadeOut(dot),
+        FadeOut(theta),
+        FadeOut(arc),
+        FadeOut(explanation3),
+        FadeOut(formula2),
+        FadeOut(explanation4)
+        )

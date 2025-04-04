@@ -77,79 +77,58 @@ const reconstructSceneOrder = async () => {
 exports.renderManimScenes = async (req, res) => {
   try {
     const scenesDir = path.join(__dirname, '../scripts/animator/generated_scenes');
-    const mediaDir = path.join(__dirname, '../media'); // Director media principal
-    const outputDir = path.join(mediaDir, 'animations'); // Director pentru animații
+    const sceneFiles = fs.readdirSync(scenesDir).filter(file => file.endsWith('.py'));
+    console.log('🐍 Scripturi Python găsite:', sceneFiles);
 
-    // Asigură-te că toate directoarele există
-    if (!fs.existsSync(mediaDir)) {
-      fs.mkdirSync(mediaDir, { recursive: true });
-    }
-    if (!fs.existsSync(outputDir)) {
-      fs.mkdirSync(outputDir, { recursive: true });
-    }
-
-    // Verificăm dacă avem scripturi Python
-    const pythonFiles = fs.readdirSync(scenesDir)
-      .filter(file => file.endsWith('.py'));
-
-    console.log('🐍 Scripturi Python găsite:', pythonFiles);
-
-    if (pythonFiles.length === 0) {
-      return res.status(400).json({
-        message: 'Nu s-au găsit scripturi pentru randat',
-        error: 'NO_SCRIPTS_FOUND'
-      });
-    }
-
-    // Citim ordinea scenelor
-    const orderFile = path.join(scenesDir, 'scene_order.json');
-    const sceneOrder = JSON.parse(fs.readFileSync(orderFile, 'utf8'));
-
-    // Randăm fiecare scenă
     const renderResults = [];
-    for (const scene of sceneOrder) {
+
+    for (const sceneFile of sceneFiles) {
+      const sceneName = path.basename(sceneFile, '.py');
+      console.log(`🎬 Randare pentru scena: ${sceneName}`);
+      
       try {
-        console.log(`🎬 Randare pentru scena: ${scene.sceneName}`);
-        
-        // Folosim -ql și specificăm output-ul direct
-        const command = `manim -ql "${scene.filePath}" ${scene.sceneName}`;
+        const command = `manim -ql --format=mp4 "${path.join(scenesDir, sceneFile)}" ${sceneName}`;
         console.log('🚀 Rulare comandă:', command);
         
-        const { stdout, stderr } = await execPromise(command);
+        const { stdout } = await execPromise(command);
         console.log('📺 Output Manim:', stdout);
-        if (stderr) console.error('⚠️ Erori Manim:', stderr);
+
+        // Calea corectă către fișierul generat
+        const sourceVideoPath = path.join(__dirname, '../media/videos', sceneName, '480p15', `${sceneName}.mp4`);
         
-        // Verificăm dacă fișierul a fost generat în locația corectă
-        const expectedOutput = path.join(outputDir, `${scene.sceneName}.mp4`);
-        if (fs.existsSync(expectedOutput)) {
+        if (fs.existsSync(sourceVideoPath)) {
+          // Copiem în directorul animations
+          const animationDir = path.join(__dirname, '../media/animations');
+          if (!fs.existsSync(animationDir)) {
+            fs.mkdirSync(animationDir, { recursive: true });
+          }
+          
+          const finalPath = path.join(animationDir, `${sceneName}.mp4`);
+          fs.copyFileSync(sourceVideoPath, finalPath);
+
           renderResults.push({
-            scene: scene.sceneName,
+            scene: sceneName,
             status: 'success',
-            path: `/media/animations/${scene.sceneName}.mp4`
+            path: `/media/animations/${sceneName}.mp4`
           });
+          
+          console.log(`✅ Video generat și copiat: ${finalPath}`);
         } else {
-          throw new Error(`Fișierul nu a fost generat: ${expectedOutput}`);
+          throw new Error(`Video-ul nu a fost generat la: ${sourceVideoPath}`);
         }
 
-        // După randare, mută fișierele în locația corectă
-        const videoPath = path.join(mediaDir, 'videos', path.basename(scene.filePath, '.py'), '480p15', `${scene.sceneName}.mp4`);
-        const targetPath = path.join(outputDir, `${scene.sceneName}.mp4`);
-
-        if (fs.existsSync(videoPath)) {
-          fs.renameSync(videoPath, targetPath);
-          console.log(`✅ Video mutat: ${videoPath} -> ${targetPath}`);
-        }
-
-        // Pauză între scene
-        await new Promise(resolve => setTimeout(resolve, 1000));
       } catch (error) {
-        console.error(`❌ Eroare la randarea scenei ${scene.sceneName}:`, error);
+        console.error(`❌ Eroare la randarea scenei ${sceneName}:`, error);
         renderResults.push({
-          scene: scene.sceneName,
+          scene: sceneName,
           status: 'error',
           error: error.message
         });
+        // Continuăm cu următoarea scenă chiar dacă aceasta a eșuat
       }
+
+      // Pauză mică între scene pentru a evita supraîncărcarea
+      await new Promise(resolve => setTimeout(resolve, 500));
     }
 
     res.json({
@@ -361,49 +340,47 @@ exports.resetScenes = async (req, res) => {
   try {
     const scenesDir = path.join(__dirname, '../scripts/animator/generated_scenes');
     const animationsDir = path.join(__dirname, '../media/animations');
+    const videosDir = path.join(__dirname, '../media/videos');  // Adăugat
     const coursesDir = path.join(__dirname, '../media/courses');
     const tempDir = path.join(__dirname, '../temp');
     
-    // Ștergem toate fișierele Python
-    if (fs.existsSync(scenesDir)) {
-      fs.readdirSync(scenesDir)
-        .filter(file => file.endsWith('.py') || file === 'scene_order.json')
-        .forEach(file => {
-          fs.unlinkSync(path.join(scenesDir, file));
+    // Funcție helper pentru ștergerea recursivă
+    const cleanDirectory = (dir) => {
+      if (fs.existsSync(dir)) {
+        fs.readdirSync(dir).forEach(file => {
+          const curPath = path.join(dir, file);
+          if (fs.lstatSync(curPath).isDirectory()) {
+            // Șterge recursiv subdirectoarele
+            cleanDirectory(curPath);
+            fs.rmdirSync(curPath);
+          } else {
+            // Șterge fișierele
+            fs.unlinkSync(curPath);
+          }
         });
-    }
-    
-    // Ștergem toate MP4-urile
-    if (fs.existsSync(animationsDir)) {
-      fs.readdirSync(animationsDir)
-        .filter(file => file.endsWith('.mp4'))
-        .forEach(file => {
-          fs.unlinkSync(path.join(animationsDir, file));
-        });
-    }
+      }
+    };
 
-    // Ștergem cursurile
-    if (fs.existsSync(coursesDir)) {
-      fs.readdirSync(coursesDir)
-        .filter(file => file.endsWith('.mp4'))
-        .forEach(file => {
-          fs.unlinkSync(path.join(coursesDir, file));
-        });
-    }
+    // Curăță toate directoarele
+    cleanDirectory(scenesDir);
+    cleanDirectory(animationsDir);
+    cleanDirectory(videosDir);     // Adăugat
+    cleanDirectory(coursesDir);
+    cleanDirectory(tempDir);
 
-    // Ștergem fișierele temporare
-    if (fs.existsSync(tempDir)) {
-      fs.readdirSync(tempDir)
-        .forEach(file => {
-          fs.unlinkSync(path.join(tempDir, file));
-        });
-    }
+    // Recreează directoarele goale
+    [scenesDir, animationsDir, videosDir, coursesDir, tempDir].forEach(dir => {
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+    });
 
     res.json({ 
       message: 'Reset complet efectuat',
       status: {
         scenesDeleted: true,
         animationsDeleted: true,
+        videosDeleted: true,      // Adăugat
         coursesDeleted: true,
         tempDeleted: true
       }

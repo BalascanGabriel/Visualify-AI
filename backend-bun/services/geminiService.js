@@ -1,7 +1,7 @@
 const axios = require('axios');
 require('dotenv').config();
 
-exports.sendToGemini = async (prompt) => {
+const sendToGemini = async (prompt) => {
   try {
     console.log('🤖 Prompt către Gemini:', prompt.slice(0, 100) + '...');
 
@@ -28,7 +28,12 @@ exports.sendToGemini = async (prompt) => {
     const jsonMatch = raw.match(/```json\n?([\s\S]*?)\n?```/);
     if (jsonMatch) {
       try {
-        return JSON.parse(jsonMatch[1].trim());
+        // Eliminăm comentariile înainte de parsare
+        const jsonText = jsonMatch[1]
+          .split('\n')
+          .filter(line => !line.trim().startsWith('//'))
+          .join('\n');
+        return JSON.parse(jsonText);
       } catch (e) {
         console.error('❌ Eroare la parsarea JSON-ului extras:', e);
       }
@@ -41,8 +46,13 @@ exports.sendToGemini = async (prompt) => {
       console.warn('⚠️ Nu s-a putut parsa JSON-ul, returnăm răspunsul brut');
       return { raw };
     }
+
   } catch (error) {
     console.error("❌ Error from Gemini:", error.response?.data || error.message);
     throw new Error('Failed to fetch response from Gemini');
   }
+};
+
+module.exports = {
+  sendToGemini
 };

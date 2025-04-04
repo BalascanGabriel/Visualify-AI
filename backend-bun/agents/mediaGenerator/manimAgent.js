@@ -2,12 +2,26 @@ const fs = require('fs');
 const path = require('path');
 const { sendToGemini } = require('../../services/geminiService');
 
-const TEMPLATE = (sceneName, geminiCode) => `from manim import *
+const TEMPLATE = (sceneName, geminiCode) => {
+  // Curățăm codul primit de la Gemini
+  const cleanedCode = geminiCode
+    .split('\n')
+    .map(line => line.trim()) // Eliminăm spațiile de la început și sfârșit
+    .filter(line => line) // Eliminăm liniile goale
+    .join('\n');
+
+  return `from manim import *
+
+config.tex_template.add_to_preamble(r"""
+\\usepackage{amsmath}
+\\usepackage{amssymb}
+""")
 
 class ${sceneName}(Scene):
     def construct(self):
-${geminiCode.split('\n').map(line => '        ' + line).join('\n')}
+${cleanedCode.split('\n').map(line => '        ' + line).join('\n')}
 `;
+};
 
 const slugify = (text) => {
   if (typeof text !== 'string') {
@@ -22,79 +36,71 @@ const slugify = (text) => {
 };
 
 const cleanPythonCode = (code) => {
-  // Verificăm dacă avem un obiect în loc de string
-  if (typeof code === 'object' && code.raw) {
-    code = code.raw;
+  // Verificăm dacă avem răspuns de la Gemini în format obiect
+  if (typeof code === 'object') {
+    if (code.raw) {
+      code = code.raw;
+    } else if (code.text) {
+      code = code.text;
+    }
   }
-
+  
   // Ne asigurăm că avem un string
   code = String(code);
 
-  // Extragem codul dintre marcajele ```python și ```
-  const match = code.match(/```python\n?([\s\S]*?)\n?```/);
-  if (match) {
-    code = match[1];
+  // Extragem codul Python dintre marcaje ```python
+  const pythonMatch = code.match(/```python\n?([\s\S]*?)\n?```/);
+  if (pythonMatch) {
+    return pythonMatch[1].trim();
   }
 
-  return code
-    .replace(/```python\n?/g, '')
-    .replace(/```\n?/g, '')
-    .replace(/°/g, 'degree')
-    .trim();
+  // Dacă nu găsim marcaje, returnăm codul așa cum e
+  return code.trim();
 };
 
 const getPromptForConcept = (conceptText) => {
   return `Generează cod Python Manim pentru a explica conceptul: "${conceptText}".
-Răspunde DOAR cu un bloc de cod Python între marcaje \`\`\`python și \`\`\`.
+Folosește MathTex pentru formule matematice și Text pentru text normal.
 
-Folosește acest format pentru animații:
-
-1. LAYOUT:
-   - Titlul sus (to_edge(UP))
-   - Textul explicativ în stânga sau dreapta
-   - Animațiile în centru
-   - Formulele sub animații
-
-2. CULORI ȘI STIL:
-   - Folosește culori diferite pentru evidențiere (BLUE, RED, YELLOW, GREEN)
-   - Text alb pe fundal închis pentru contrast
-
-3. ANIMAȚII:
-   - FadeIn/FadeOut pentru tranziții line
-   - Transform pentru modificări elegante
-   - Create pentru desene progresive
-
-4. POZIȚIONARE:
-   - arrange_submobjects pentru aliniere
-   - next_to pentru poziționare relativă
-   - shift pentru ajustări fine
-
-Exemplu de răspuns așteptat:
-
-\`\`\`python
+Exemplu format corect:
 # Titlu
-title = Text("${conceptText}", color=BLUE)
-title.to_edge(UP)
+title = Text("${conceptText}", color=BLUE_A)
+title.scale(1.2).to_edge(UP)
 self.play(Write(title))
 
-# Text explicativ în stânga
-explanation = Text("Explicație", color=WHITE)
-explanation.to_edge(LEFT)
+# Explicație
+explanation = Text("Explicație simplă", color=WHITE)
+explanation.next_to(title, DOWN)
 self.play(FadeIn(explanation))
 
-# Animație principală în centru
-main_animation = Circle(color=YELLOW)
-main_animation.move_to(ORIGIN)
-self.play(Create(main_animation))
-
-# Formulă sub animație
-formula = MathTex("f(x)", color=WHITE)
-formula.next_to(main_animation, DOWN)
+# Formule matematice (folosește MathTex, nu Tex)
+formula = MathTex(r"\\sin(\\theta) = \\frac{a}{c}")
+formula.next_to(explanation, DOWN)
 self.play(Write(formula))
-\`\`\``;
+
+# Demonstrație
+circle = Circle(color=YELLOW)
+self.play(Create(circle))
+
+# Final
+self.wait()
+self.play(
+    FadeOut(title),
+    FadeOut(explanation),
+    FadeOut(formula),
+    FadeOut(circle)
+)
+
+IMPORTANT:
+1. Folosește MathTex pentru ORICE formulă matematică
+2. Folosește Text pentru text normal
+3. Pune întotdeauna r"" pentru stringurile LaTeX
+4. Include \\ înainte de simbolurile LaTeX (\\sin, \\cos, \\tan, etc.)
+
+Returnează DOAR codul Python pentru interiorul metodei construct(), fără alte elemente.`;
 };
 
-exports.generateManimScenes = async (concepts = []) => {
+const generateManimScenes = async (concepts = []) => {
   try {
     console.log(`🎬 Începe generarea pentru ${concepts.length} concepte...`);
     
@@ -115,15 +121,34 @@ exports.generateManimScenes = async (concepts = []) => {
         console.log(`\n🎯 Generare scenă ${sceneNumber}: ${conceptText}`);
 
         const prompt = getPromptForConcept(conceptText);
-
         console.log('📝 Trimitere prompt către Gemini...');
         
-        const geminiResponse = await sendToGemini(prompt);
-        const cleanCode = cleanPythonCode(geminiResponse);
+        let attempts = 0;
+        let pythonCode;
         
-        const pythonCode = TEMPLATE(sceneName, cleanCode);
+        while (attempts < 3) {
+          try {
+            const geminiResponse = await sendToGemini(prompt);
+            const cleanCode = cleanPythonCode(geminiResponse);
+            
+            // Verificăm dacă avem cod Python valid
+            if (cleanCode && cleanCode.includes('title =') && !cleanCode.includes('[object Object]')) {
+              pythonCode = TEMPLATE(sceneName, cleanCode);
+              break;
+            }
+            throw new Error('Cod Python invalid');
+          } catch (error) {
+            attempts++;
+            console.log(`⚠️ Încercare ${attempts}/3 eșuată:`, error.message);
+            await new Promise(resolve => setTimeout(resolve, 1000));
+          }
+        }
+
+        if (!pythonCode) {
+          throw new Error('Nu s-a putut genera cod Python valid după 3 încercări');
+        }
+
         const outputFile = path.join(outputDir, `${sceneName}.py`);
-        
         fs.writeFileSync(outputFile, pythonCode);
         console.log(`✅ Script generat: ${outputFile}`);
         
@@ -159,4 +184,11 @@ exports.generateManimScenes = async (concepts = []) => {
     console.error('❌ Eroare generală:', error);
     throw error;
   }
+};
+
+module.exports = {
+  generateManimScenes,
+  cleanPythonCode,
+  getPromptForConcept,
+  slugify
 };
