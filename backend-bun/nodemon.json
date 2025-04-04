@@ -1,0 +1,15 @@
+{
+  "ignore": [
+    "scripts/*",
+    "media/*",
+    "temp/*",
+    "uploads/*",
+    "*.py",
+    "*.json",
+    "*.test.js"
+  ],
+  "delay": "2500",
+  "env": {
+    "NODE_OPTIONS": "--max-old-space-size=4096"
+  }
+} 

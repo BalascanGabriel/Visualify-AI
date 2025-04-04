@@ -1,0 +1,47 @@
+### Șterge toate scenele și începe de la zero
+# Curăță toate fișierele generate anterior
+POST http://localhost:3001/api/render/reset
+
+### Verifică statusul generării
+# Arată:
+# - Câte scene au fost generate
+# - Câte au fost randate
+# - Progresul general
+# - Dacă există curs final
+GET http://localhost:3001/api/render/status
+
+### Verifică ordinea scenelor
+# Arată lista conceptelor în ordinea în care vor fi randate
+# Include și contextul (capitol, subcapitol) pentru fiecare scenă
+GET http://localhost:3001/api/render/scene-order
+
+### Randează scenele Manim
+# Generează fișierele MP4 pentru fiecare concept
+# Rezultatele vor fi în /media/animations/
+# Durează câteva minute, în funcție de numărul de scene
+POST http://localhost:3001/api/render/manim
+
+### Combină toate videoclipurile
+# Ia toate MP4-urile generate și le combină într-un singur curs
+# Rezultatul final va fi în /media/courses/
+# Rulează doar după ce toate scenele au fost randate
+POST http://localhost:3001/api/render/combine
+
+### Notă pentru /api/generate:
+# Acest endpoint necesită upload de fișier PDF și nu poate fi testat din .rest
+# Folosește Postman sau un formular HTML pentru a testa
+# POST http://localhost:3001/api/generate
+# Content-Type: multipart/form-data
+# file: <fișier PDF>
+
+### Flux normal de utilizare:
+# 1. POST /api/render/reset (opțional, doar dacă vrei să ștergi tot)
+# 2. POST /api/generate (din Postman, cu PDF)
+# 3. GET /api/render/status (verifică dacă scripturile au fost generate)
+# 4. POST /api/render/manim (randează scenele)
+# 5. GET /api/render/status (verifică progresul randării)
+# 6. POST /api/render/combine (combină toate în video final)
+
+### Test Gemini API
+# Verifică dacă serviciul Gemini funcționează corect
+POST http://localhost:3001/api/render/test-gemini
