@@ -1,31 +1,35 @@
 {
-  "rezumat": "Acest document explică măsurarea unghiurilor în grade și radiani.  Se definește radianul ca lungimea arcului circular pe un cerc unitar, iar relația dintre grade și radiani este stabilită (2π radiani = 360 grade).  Documentul evidențiază importanța radianilor în calcul și arată cum se convertesc unghiurile între grade și radiani. De asemenea, explică reprezentarea numerelor reale ca măsuri în radiani, folosind cercul unitar pentru a vizualiza unghiuri pozitive și negative.",
+  "rezumat": "Acest material didactic explică măsurarea unghiurilor în grade și radiani.  Se definește radianul ca lungimea arcului de cerc unitate corespunzător unghiului.  Se prezintă conversia între grade și radiani, cu exemple și exerciții. Se subliniază importanța radianilor în calcul diferențial și integral și se arată cum se reprezintă numere reale ca măsuri în radiani, asociind fiecare număr real unui punct pe cercul unitate.",
   "structura": [
     {
       "capitol": "Măsurarea Unghiurilor",
       "subcapitole": [
         {
-          "subcapitol": "Introducere în Unghiuri",
+          "subcapitol": "Definiția unghiului și notații",
           "concepte": [
-            "Definiția unghiului ca rotație",
-            "Etichetarea unghiurilor cu litere grecești",
-            "Unghiuri pozitive (anticlockwise) și negative (clockwise)"
+            "Unghiul ca rotație între două linii cu un punct comun",
+            "Notația unghiurilor cu litere grecești (ex: θ)",
+            "Unghiuri pozitive (rotație antiorară) și negative (rotație orar)",
+            "Unități de măsură: grade și radiani"
           ]
         },
         {
-          "subcapitol": "Măsurarea în Grade",
+          "subcapitol": "Măsurarea în grade",
           "concepte": [
-            "Divizarea cercului în 360 de grade",
-            "Unghi complet (360°), unghi drept (90°), unghi întins (180°)",
+            "Cercul împărțit în 360 de grade",
+            "Unghi complet: 360°",
+            "Unghi drept: 90°",
+            "Unghi întins: 180°",
             "Minute și secunde ca fracțiuni de grad"
           ]
         },
         {
-          "subcapitol": "Măsurarea în Radiani",
+          "subcapitol": "Măsurarea în radiani",
           "concepte": [
-            "Definiția radianului ca lungimea arcului pe cercul unitar",
-            "Un cerc complet este 2π radiani",
-            "Relația dintre radiani și grade: 2π radiani = 360°"
+            "Radianul ca lungime a arcului pe cercul unitate",
+            "Unghi complet: 2π radiani",
+            "Relația între grade și radiani: 2π radiani = 360°",
+            "Utilizarea radianilor în calcul"
           ]
         }
       ]
@@ -34,16 +38,10 @@
       "capitol": "Conversia între Grade și Radiani",
       "subcapitole": [
         {
-          "subcapitol": "Formule de Conversie",
+          "subcapitol": "Formule de conversie",
           "concepte": [
-            "Conversia de la radiani la grade: y radiani = y * (180/π) grade",
-            "Conversia de la grade la radiani: y grade = y * (π/180) radiani"
-          ]
-        },
-        {
-          "subcapitol": "Exemple de Conversie",
-          "concepte": [
-            "Conversia unghiurilor comune: 180°, 90°, 60°, 45°, 30° în radiani"
+            "Conversia de la radiani la grade: y radiani = y * (180/π)°",
+            "Conversia de la grade la radiani: y° = y * (π/180) radiani"
           ]
         }
       ]
@@ -52,17 +50,18 @@
       "capitol": "Numere Reale ca Radiani",
       "subcapitole": [
         {
-          "subcapitol": "Reprezentarea pe Cercul Unitar",
+          "subcapitol": "Reprezentarea numerelor reale pe cercul unitate",
           "concepte": [
-            "Reprezentarea unghiurilor pozitive și negative pe cercul unitar",
-            "Numere reale ca multipli de 2π",
-            "Unghiuri corespondente cu diferențe multiple de 2π"
+            "Asociază fiecare număr real unui punct pe cercul unitate",
+            "Numere reale cu diferență de 2πk (k∈ℤ) corespund aceluiași punct",
+            "Reprezentarea unghiurilor pozitive și negative pe cercul unitate"
           ]
         },
         {
-          "subcapitol": "Exerciții",
+          "subcapitol": "Exemple și exerciții",
           "concepte": [
-            "Conversia unghiurilor date în grade și radiani, reprezentarea grafică"
+            "Conversia unghiurilor în grade și radiani",
+            "Reprezentarea grafică a unghiurilor pe cercul unitate"
           ]
         }
       ]
