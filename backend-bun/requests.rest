@@ -34,30 +34,38 @@ POST http://localhost:3001/api/render/combine
 # Content-Type: multipart/form-data
 # file: <fișier PDF>
 
-### Flux normal de utilizare:
-# 1. POST /api/render/reset (opțional, doar dacă vrei să ștergi tot)
-# 2. POST /api/generate (din Postman, cu PDF)
-# 3. GET /api/render/status (verifică dacă scripturile au fost generate)
-# 4. POST /api/render/manim (randează scenele)
-# 5. GET /api/render/status (verifică progresul randării)
-# 6. POST /api/render/combine (combină toate în video final)
+### QUIZ ENDPOINTS ###
+
+### Generează quiz-uri pentru structura curentă
+# Trebuie rulat după /api/generate
+POST http://localhost:3001/api/quizzes/generate
+
+### Obține toate quiz-urile generate
+# Returnează quiz-urile organizate pe capitole
+GET http://localhost:3001/api/quizzes
+
+
+### FLOW COMPLET ###
+
+# 1. Reset (opțional)
+POST http://localhost:3001/api/render/reset
+
+# 2. Generare curs din PDF (din Postman)
+# POST http://localhost:3001/api/generate
+
+# 3. Generare quiz-uri
+POST http://localhost:3001/api/quizzes/generate
+
+# 4. Verificare quiz-uri
+GET http://localhost:3001/api/quizzes
+
+# 5. Randare animații
+POST http://localhost:3001/api/render/manim
+
+# 6. Combinare video final
+POST http://localhost:3001/api/render/combine
 
 ### Test Gemini API
 # Verifică dacă serviciul Gemini funcționează corect
 POST http://localhost:3001/api/render/test-gemini
-
-
-
-### Obține quiz-urile generate
-# Returnează toate quiz-urile generate anterior
-# Organizate pe capitole și subcapitole
-GET http://localhost:3001/api/quizzes
-
-### Flux complet recomandat:
-# 1. POST /api/render/reset (opțional, curăță tot)
-# 2. POST /api/generate (din Postman, cu PDF)
-# 3. POST /api/quizzes/generate (generează quiz-urile)
-# 4. GET /api/quizzes (verifică quiz-urile generate)
-# 5. POST /api/render/manim (randează animațiile)
-# 6. POST /api/render/combine (combină videoclipurile)
 

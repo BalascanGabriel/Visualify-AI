@@ -3,24 +3,11 @@ const path = require('path');
 const { sendToGemini } = require('../../services/geminiService');
 
 const TEMPLATE = (sceneName, geminiCode) => {
-  // Curățăm codul primit de la Gemini
-  const cleanedCode = geminiCode
-    .split('\n')
-    .map(line => line.trim()) // Eliminăm spațiile de la început și sfârșit
-    .filter(line => line) // Eliminăm liniile goale
-    .join('\n');
-
   return `from manim import *
-
-config.tex_template.add_to_preamble(r"""
-\\usepackage{amsmath}
-\\usepackage{amssymb}
-""")
 
 class ${sceneName}(Scene):
     def construct(self):
-${cleanedCode.split('\n').map(line => '        ' + line).join('\n')}
-`;
+${geminiCode}`;
 };
 
 const slugify = (text) => {
@@ -35,69 +22,121 @@ const slugify = (text) => {
     .slice(0, 50);
 };
 
-const cleanPythonCode = (code) => {
-  // Verificăm dacă avem răspuns de la Gemini în format obiect
-  if (typeof code === 'object') {
-    if (code.raw) {
-      code = code.raw;
-    } else if (code.text) {
-      code = code.text;
-    }
-  }
-  
-  // Ne asigurăm că avem un string
-  code = String(code);
-
-  // Extragem codul Python dintre marcaje ```python
-  const pythonMatch = code.match(/```python\n?([\s\S]*?)\n?```/);
-  if (pythonMatch) {
-    return pythonMatch[1].trim();
-  }
-
-  // Dacă nu găsim marcaje, returnăm codul așa cum e
-  return code.trim();
-};
-
 const getPromptForConcept = (conceptText) => {
-  return `Generează cod Python Manim pentru a explica conceptul: "${conceptText}".
-Folosește MathTex pentru formule matematice și Text pentru text normal.
+  return `Generează cod Python Manim pentru conceptul: "${conceptText}".
+Folosește doar acest format simplu și asigură-te că elementele nu se suprapun:
 
-Exemplu format corect:
-# Titlu
-title = Text("${conceptText}", color=BLUE_A)
-title.scale(1.2).to_edge(UP)
-self.play(Write(title))
-
-# Explicație
-explanation = Text("Explicație simplă", color=WHITE)
-explanation.next_to(title, DOWN)
-self.play(FadeIn(explanation))
-
-# Formule matematice (folosește MathTex, nu Tex)
-formula = MathTex(r"\\sin(\\theta) = \\frac{a}{c}")
-formula.next_to(explanation, DOWN)
-self.play(Write(formula))
-
-# Demonstrație
-circle = Circle(color=YELLOW)
-self.play(Create(circle))
-
-# Final
-self.wait()
-self.play(
-    FadeOut(title),
-    FadeOut(explanation),
-    FadeOut(formula),
-    FadeOut(circle)
-)
+        # Titlu
+        title = Text("${conceptText}", font_size=40, color=BLUE)
+        title.to_edge(UP, buff=1)
+        
+        # Prima explicație
+        explanation1 = Text(
+            "Prima parte a explicației",
+            font_size=32,
+            color=WHITE
+        ).next_to(title, DOWN, buff=1)
+        
+        self.play(Write(title))
+        self.wait(0.5)
+        self.play(FadeIn(explanation1))
+        self.wait(2)
+        
+        # Curățăm prima explicație înainte de demonstrație
+        self.play(FadeOut(explanation1))
+        
+        # Demonstrație
+        demo = VGroup(
+            Circle(radius=2, color=BLUE),
+            Arrow(LEFT*2, RIGHT*2, color=WHITE)
+        ).arrange(RIGHT, buff=1)
+        demo.next_to(title, DOWN, buff=1.5)
+        
+        self.play(Create(demo))
+        self.wait(2)
+        
+        # Curățăm demonstrația înainte de concluzie
+        self.play(FadeOut(demo))
+        
+        # Concluzie
+        conclusion = Text(
+            "Concluzie finală",
+            font_size=32,
+            color=GREEN
+        ).next_to(title, DOWN, buff=1)
+        
+        self.play(FadeIn(conclusion))
+        self.wait(2)
+        self.play(
+            FadeOut(title),
+            FadeOut(conclusion)
+        )
+        self.wait()
 
 IMPORTANT:
-1. Folosește MathTex pentru ORICE formulă matematică
-2. Folosește Text pentru text normal
-3. Pune întotdeauna r"" pentru stringurile LaTeX
-4. Include \\ înainte de simbolurile LaTeX (\\sin, \\cos, \\tan, etc.)
+- Elimină fiecare element înainte de a introduce următorul
+- Folosește spațiere mare între elemente (buff=1 sau mai mare)
+- Nu afișa mai mult de 2-3 elemente simultan
+- Curăță scena complet la final
 
-Returnează DOAR codul Python pentru interiorul metodei construct(), fără alte elemente.`;
+Returnează DOAR codul Python, fără explicații sau comentarii extra.`;
+};
+
+const cleanPythonCode = (code) => {
+  try {
+    if (typeof code === 'object') {
+      code = code.raw || code.text || JSON.stringify(code);
+    }
+    code = String(code);
+    
+    // Extragem codul dintre ```python și ```
+    const match = code.match(/```python\s*([\s\S]*?)\s*```/);
+    if (match) {
+      code = match[1];
+    }
+
+    // Eliminăm diacriticele și caracterele speciale din text
+    code = code.replace(/Text\("([^"]+)"/g, (match, text) => {
+      return `Text("${text
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^\x00-\x7F]/g, '')}"`;
+    });
+
+    // Eliminăm def construct duplicat dacă există
+    code = code.replace(/def construct\(self\):\s*/g, '');
+
+    // Curățăm și indentăm codul corect
+    const cleanedCode = code
+      .split('\n')
+      .map(line => line.trim()) // Eliminăm spațiile existente
+      .filter(line => {
+        return line && 
+          !line.startsWith('from') && 
+          !line.startsWith('class') &&
+          !line.startsWith('def');
+      })
+      .map(line => ' '.repeat(8) + line) // Exact 8 spații pentru indentare
+      .join('\n');
+
+    // Verificăm dacă avem elementele necesare
+    if (!cleanedCode.includes('title =') || 
+        !cleanedCode.includes('self.play(') || 
+        !cleanedCode.includes('self.wait')) {
+      throw new Error('Cod invalid - lipsesc elemente esențiale');
+    }
+
+    return cleanedCode;
+  } catch (error) {
+    console.error('❌ Eroare la curățarea codului:', error);
+    // Template de backup fără diacritice și cu indentare corectă
+    return `        title = Text("${conceptText
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')}", font_size=40)
+        title.to_edge(UP)
+        self.play(Write(title))
+        self.wait(2)`;
+  }
 };
 
 const generateManimScenes = async (concepts = []) => {
@@ -108,63 +147,36 @@ const generateManimScenes = async (concepts = []) => {
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
-    console.log('📁 Director output:', outputDir);
 
     const sceneOrder = [];
     const generatedFiles = [];
 
     for (const [index, concept] of concepts.entries()) {
+      const sceneNumber = String(index + 1).padStart(2, '0');
+      const conceptText = concept.text || concept;
+      const sceneName = `Scene${sceneNumber}_${slugify(conceptText)}`;
+      
+      console.log(`\n🎯 Generare scenă ${sceneNumber}: ${conceptText}`);
+      
       try {
-        const sceneNumber = String(index + 1).padStart(2, '0');
-        const conceptText = concept.text || concept;
-        const sceneName = `Scene${sceneNumber}_${slugify(conceptText)}`;
-        console.log(`\n🎯 Generare scenă ${sceneNumber}: ${conceptText}`);
-
         const prompt = getPromptForConcept(conceptText);
-        console.log('📝 Trimitere prompt către Gemini...');
+        const geminiResponse = await sendToGemini(prompt);
+        const pythonCode = TEMPLATE(sceneName, cleanPythonCode(geminiResponse));
         
-        let attempts = 0;
-        let pythonCode;
-        
-        while (attempts < 3) {
-          try {
-            const geminiResponse = await sendToGemini(prompt);
-            const cleanCode = cleanPythonCode(geminiResponse);
-            
-            // Verificăm dacă avem cod Python valid
-            if (cleanCode && cleanCode.includes('title =') && !cleanCode.includes('[object Object]')) {
-              pythonCode = TEMPLATE(sceneName, cleanCode);
-              break;
-            }
-            throw new Error('Cod Python invalid');
-          } catch (error) {
-            attempts++;
-            console.log(`⚠️ Încercare ${attempts}/3 eșuată:`, error.message);
-            await new Promise(resolve => setTimeout(resolve, 1000));
-          }
-        }
-
-        if (!pythonCode) {
-          throw new Error('Nu s-a putut genera cod Python valid după 3 încercări');
-        }
-
         const outputFile = path.join(outputDir, `${sceneName}.py`);
         fs.writeFileSync(outputFile, pythonCode);
-        console.log(`✅ Script generat: ${outputFile}`);
         
         generatedFiles.push(outputFile);
         sceneOrder.push({
           sceneName,
           concept: conceptText,
-          filePath: outputFile,
-          context: {
-            capitol: concept.capitol,
-            subcapitol: concept.subcapitol
-          }
+          filePath: outputFile
         });
-
+        
+        console.log(`✅ Script generat: ${sceneName}.py`);
       } catch (error) {
-        console.error(`❌ Eroare la generarea scenei ${index + 1}:`, error);
+        console.error(`❌ Eroare la scena ${sceneNumber}:`, error.message);
+        // Continuăm cu următoarea scenă
       }
     }
 
@@ -173,11 +185,6 @@ const generateManimScenes = async (concepts = []) => {
       path.join(outputDir, 'scene_order.json'),
       JSON.stringify(sceneOrder, null, 2)
     );
-
-    console.log('\n✨ Generare completă:');
-    console.log('- Scene generate:', sceneOrder.length);
-    console.log('- Fișiere Python:', generatedFiles.length);
-    console.log('- Fișiere generate:', generatedFiles);
 
     return sceneOrder;
   } catch (error) {
