@@ -1,10 +1,15 @@
 {
+<<<<<<< HEAD
   "rezumat": "Acest material didactic explică măsurarea unghiurilor în grade și radiani.  Se definește radianul ca lungimea arcului de cerc unitate corespunzător unghiului.  Se prezintă conversia între grade și radiani, cu exemple și exerciții. Se subliniază importanța radianilor în calcul diferențial și integral și se arată cum se reprezintă numere reale ca măsuri în radiani, asociind fiecare număr real unui punct pe cercul unitate.",
+=======
+  "rezumat": "Acest ghid introduce funcțiile trigonometrice (cosinus, sinus și tangentă), extinzându-le dincolo de definițiile inițiale din triunghiuri dreptunghice.  Explică măsurarea unghiurilor în radiani și grade, conversia între ele, și prezintă graficul funcțiilor trigonometrice.  De asemenea, acoperă derivarea acestor funcții (necesită cunoștințe de calcul diferențial) și funcțiile trigonometrice inverse.",
+>>>>>>> d57fc7feeafd3e68933d22e771703bab8be08d9e
   "structura": [
     {
-      "capitol": "Măsurarea Unghiurilor",
+      "capitol": "Introducere",
       "subcapitole": [
         {
+<<<<<<< HEAD
           "subcapitol": "Definiția unghiului și notații",
           "concepte": [
             "Unghiul ca rotație între două linii cu un punct comun",
@@ -30,26 +35,86 @@
             "Unghi complet: 2π radiani",
             "Relația între grade și radiani: 2π radiani = 360°",
             "Utilizarea radianilor în calcul"
+=======
+          "subcapitol": "Utilizarea ghidului",
+          "concepte": [
+            "Învățarea matematicii este activă, nu pasivă.",
+            "Rezolvarea exercițiilor este esențială."
+          ]
+        },
+        {
+          "subcapitol": "Obiective",
+          "concepte": [
+            "Conversia între radiani și grade.",
+            "Definiția cosinusului, sinusului și tangentei în triunghiuri dreptunghice.",
+            "Calculul cosinusului, sinusului și tangentei pentru unghiuri specifice (π/6, π/4, π/2).",
+            "Definiția cosinusului, sinusului și tangentei pentru toate numerele reale.",
+            "Reprezentarea grafică a funcțiilor trigonometrice.",
+            "Derivarea funcțiilor trigonometrice.",
+            "Funcțiile trigonometrice inverse."
+>>>>>>> d57fc7feeafd3e68933d22e771703bab8be08d9e
           ]
         }
       ]
     },
     {
-      "capitol": "Conversia între Grade și Radiani",
+      "capitol": "Unghiuri și Măsura Unghiulară",
       "subcapitole": [
         {
+<<<<<<< HEAD
           "subcapitol": "Formule de conversie",
           "concepte": [
             "Conversia de la radiani la grade: y radiani = y * (180/π)°",
             "Conversia de la grade la radiani: y° = y * (π/180) radiani"
+=======
+          "subcapitol": "Măsurarea Unghiurilor",
+          "concepte": [
+            "Unghiuri pozitive (anticloc) și negative (cloc).",
+            "Măsurarea în grade (360° completă rotație).",
+            "Măsurarea în minute și secunde."
+          ]
+        },
+        {
+          "subcapitol": "Radianii",
+          "concepte": [
+            "Definiția radianului ca lungimea arcului pe un cerc unitate.",
+            "Relația între radiani și grade (2π radiani = 360°).",
+            "Conversia între radiani și grade."
+          ]
+        },
+        {
+          "subcapitol": "Numere Reale ca Radiani",
+          "concepte": [
+            "Reprezentarea numerelor reale pe cercul unitate.",
+            "Unghiuri pozitive și negative ca rotații pe cercul unitate."
+          ]
+        },
+        {
+          "subcapitol": "Exerciții",
+          "concepte": [
+            "Conversia între grade și radiani pentru unghiuri date."
           ]
         }
       ]
     },
     {
-      "capitol": "Numere Reale ca Radiani",
+      "capitol": "Rapoarte Trigonometrice în Triunghiuri Dreptunghice",
       "subcapitole": [
         {
+          "subcapitol": "Definiția Sinusului, Cosinusului și Tangentei",
+          "concepte": [
+            "Ipotenuză, catetă opusă, catetă adiacentă.",
+            "Definițiile cosθ, sinθ și tanθ ca rapoarte ale laturilor unui triunghi dreptunghic."
+>>>>>>> d57fc7feeafd3e68933d22e771703bab8be08d9e
+          ]
+        }
+      ]
+    },
+    {
+      "capitol": "Extensia Definiției Funcțiilor Trigonometrice (Capitolele 4, 5, 6, 7 - descriere generală)",
+      "subcapitole": [
+        {
+<<<<<<< HEAD
           "subcapitol": "Reprezentarea numerelor reale pe cercul unitate",
           "concepte": [
             "Asociază fiecare număr real unui punct pe cercul unitate",
@@ -62,6 +127,29 @@
           "concepte": [
             "Conversia unghiurilor în grade și radiani",
             "Reprezentarea grafică a unghiurilor pe cercul unitate"
+=======
+          "subcapitol": "Funcții Trigonometrice pentru Numere Reale",
+          "concepte": [
+            "Extinderea definiției funcțiilor trigonometrice la toate numerele reale."
+          ]
+        },
+        {
+          "subcapitol": "Graficele Funcțiilor Trigonometrice",
+          "concepte": [
+            "Reprezentarea grafică a funcțiilor cosinus, sinus și tangentă."
+          ]
+        },
+        {
+          "subcapitol": "Derivarea Funcțiilor Trigonometrice",
+          "concepte": [
+            "Derivatele funcțiilor cosinus, sinus și tangentă (necesită cunoștințe de calcul)."
+          ]
+        },
+        {
+          "subcapitol": "Funcții Trigonometrice Inverse",
+          "concepte": [
+            "Definiția funcțiilor inverse (arccos, arcsin, arctan)."
+>>>>>>> d57fc7feeafd3e68933d22e771703bab8be08d9e
           ]
         }
       ]

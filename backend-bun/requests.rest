@@ -45,3 +45,19 @@ POST http://localhost:3001/api/render/combine
 ### Test Gemini API
 # Verifică dacă serviciul Gemini funcționează corect
 POST http://localhost:3001/api/render/test-gemini
+
+
+
+### Obține quiz-urile generate
+# Returnează toate quiz-urile generate anterior
+# Organizate pe capitole și subcapitole
+GET http://localhost:3001/api/quizzes
+
+### Flux complet recomandat:
+# 1. POST /api/render/reset (opțional, curăță tot)
+# 2. POST /api/generate (din Postman, cu PDF)
+# 3. POST /api/quizzes/generate (generează quiz-urile)
+# 4. GET /api/quizzes (verifică quiz-urile generate)
+# 5. POST /api/render/manim (randează animațiile)
+# 6. POST /api/render/combine (combină videoclipurile)
+

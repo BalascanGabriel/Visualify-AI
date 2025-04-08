@@ -22,6 +22,9 @@ app.use('/api/generate', generateRoutes);
 const renderRoutes = require('./routes/render');
 app.use('/api/render', renderRoutes);
 
+const quizRoutes = require('./routes/quizzes');
+app.use('/api/quizzes', quizRoutes);
+
 // Health check
 app.get('/', (req, res) => {
   res.send('🚀 Backend is alive!');
