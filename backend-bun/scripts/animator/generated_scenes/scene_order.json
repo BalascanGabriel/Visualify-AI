@@ -1,93 +1,93 @@
 [
   {
-    "sceneName": "Scene01_unghi_ca_rotatie",
-    "concept": "Unghi ca rotație",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene01_unghi_ca_rotatie.py"
+    "sceneName": "Scene01_definitia_unghiului_ca_rotatie",
+    "concept": "Definiția unghiului ca rotație",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene01_definitia_unghiului_ca_rotatie.py"
   },
   {
-    "sceneName": "Scene02_masurarea_in_grade_360_complet_180_drept_90_drept_",
-    "concept": "Măsurarea în grade (360° complet, 180° drept, 90° drept)",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene02_masurarea_in_grade_360_complet_180_drept_90_drept_.py"
+    "sceneName": "Scene02_etichetarea_unghiurilor_cu_litere_grecesti",
+    "concept": "Etichetarea unghiurilor cu litere grecești",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene02_etichetarea_unghiurilor_cu_litere_grecesti.py"
   },
   {
-    "sceneName": "Scene03_masurarea_in_minute_si_secunde",
-    "concept": "Măsurarea în minute și secunde",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene03_masurarea_in_minute_si_secunde.py"
+    "sceneName": "Scene03_unghiuri_pozitive_anticlockwise_si_negative_clockw",
+    "concept": "Unghiuri pozitive (anticlockwise) și negative (clockwise)",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene03_unghiuri_pozitive_anticlockwise_si_negative_clockw.py"
   },
   {
-    "sceneName": "Scene04_unghiuri_pozitive_anticlocwise_si_negative_clocwis",
-    "concept": "Unghiuri pozitive (anticlocwise) și negative (clocwise)",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene04_unghiuri_pozitive_anticlocwise_si_negative_clocwis.py"
+    "sceneName": "Scene04_masurarea_in_grade_si_radiani",
+    "concept": "Măsurarea în grade și radiani",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene04_masurarea_in_grade_si_radiani.py"
   },
   {
-    "sceneName": "Scene05_definitia_radianului_lungimea_arcului_pe_cercul_un",
-    "concept": "Definiția radianului (lungimea arcului pe cercul unitate)",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene05_definitia_radianului_lungimea_arcului_pe_cercul_un.py"
+    "sceneName": "Scene05_revolutie_completa_360_",
+    "concept": "Revoluție completă = 360°",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene05_revolutie_completa_360_.py"
   },
   {
-    "sceneName": "Scene06_2_radiani_360_",
-    "concept": "2π radiani = 360°",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene06_2_radiani_360_.py"
+    "sceneName": "Scene06_unghi_drept_90_",
+    "concept": "Unghi drept = 90°",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene06_unghi_drept_90_.py"
   },
   {
-    "sceneName": "Scene07_radianul_ca_unitate_naturala_in_calcul",
-    "concept": "Radianul ca unitate naturală în calcul",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene07_radianul_ca_unitate_naturala_in_calcul.py"
+    "sceneName": "Scene07_unghi_intins_180_",
+    "concept": "Unghi întins = 180°",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene07_unghi_intins_180_.py"
   },
   {
-    "sceneName": "Scene08_conversie_de_la_radiani_la_grade_y_radiani_y_180_",
-    "concept": "Conversie de la radiani la grade: y radiani = y * (180/π)°",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene08_conversie_de_la_radiani_la_grade_y_radiani_y_180_.py"
+    "sceneName": "Scene08_minute_si_secunde_ca_fractiuni_de_grad",
+    "concept": "Minute și secunde ca fracțiuni de grad",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene08_minute_si_secunde_ca_fractiuni_de_grad.py"
   },
   {
-    "sceneName": "Scene09_conversie_de_la_grade_la_radiani_y_y_180_radiani",
-    "concept": "Conversie de la grade la radiani: y° = y * (π/180) radiani",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene09_conversie_de_la_grade_la_radiani_y_y_180_radiani.py"
+    "sceneName": "Scene09_definitia_radianului_ca_lungime_a_arcului_pe_cercu",
+    "concept": "Definiția radianului ca lungime a arcului pe cercul unitate",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene09_definitia_radianului_ca_lungime_a_arcului_pe_cercu.py"
   },
   {
-    "sceneName": "Scene10_utilizarea_calculatorului_pentru_",
-    "concept": "Utilizarea calculatorului pentru π",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene10_utilizarea_calculatorului_pentru_.py"
+    "sceneName": "Scene10_revolutie_completa_2_radiani",
+    "concept": "Revoluție completă = 2π radiani",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene10_revolutie_completa_2_radiani.py"
   },
   {
-    "sceneName": "Scene11_180_radiani",
-    "concept": "180° = π radiani",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene11_180_radiani.py"
+    "sceneName": "Scene11_relatia_dintre_grade_si_radiani_radiani_180_",
+    "concept": "Relația dintre grade și radiani: π radiani = 180°",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene11_relatia_dintre_grade_si_radiani_radiani_180_.py"
   },
   {
-    "sceneName": "Scene12_90_2_radiani",
-    "concept": "90° = π/2 radiani",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene12_90_2_radiani.py"
+    "sceneName": "Scene12_formule_de_conversie_intre_grade_si_radiani",
+    "concept": "Formule de conversie între grade și radiani",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene12_formule_de_conversie_intre_grade_si_radiani.py"
   },
   {
-    "sceneName": "Scene13_60_3_radiani",
-    "concept": "60° = π/3 radiani",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene13_60_3_radiani.py"
+    "sceneName": "Scene13_utilizarea_calculatorului_pentru_conversie",
+    "concept": "Utilizarea calculatorului pentru conversie",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene13_utilizarea_calculatorului_pentru_conversie.py"
   },
   {
-    "sceneName": "Scene14_45_4_radiani",
-    "concept": "45° = π/4 radiani",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene14_45_4_radiani.py"
+    "sceneName": "Scene14_importanta_radianilor_in_calcul",
+    "concept": "Importanța radianilor în calcul",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene14_importanta_radianilor_in_calcul.py"
   },
   {
-    "sceneName": "Scene15_30_6_radiani",
-    "concept": "30° = π/6 radiani",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene15_30_6_radiani.py"
+    "sceneName": "Scene15_valori_importante_in_radiani_2_3_4_6_",
+    "concept": "Valori importante în radiani (π/2, π/3, π/4, π/6)",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene15_valori_importante_in_radiani_2_3_4_6_.py"
   },
   {
-    "sceneName": "Scene16_reprezentarea_numerelor_reale_ca_multipli_de_2_",
-    "concept": "Reprezentarea numerelor reale ca multipli de 2π",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene16_reprezentarea_numerelor_reale_ca_multipli_de_2_.py"
+    "sceneName": "Scene16_reprezentarea_numerelor_reale_pe_cercul_unitate",
+    "concept": "Reprezentarea numerelor reale pe cercul unitate",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene16_reprezentarea_numerelor_reale_pe_cercul_unitate.py"
   },
   {
-    "sceneName": "Scene17_reprezentarea_grafica_pe_cercul_unitate",
-    "concept": "Reprezentarea grafică pe cercul unitate",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene17_reprezentarea_grafica_pe_cercul_unitate.py"
+    "sceneName": "Scene17_unghiuri_pozitive_si_negative_in_radiani",
+    "concept": "Unghiuri pozitive și negative în radiani",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene17_unghiuri_pozitive_si_negative_in_radiani.py"
   },
   {
-    "sceneName": "Scene18_numere_negative_si_rotatie_in_sensul_acelor_de_cea",
-    "concept": "Numere negative și rotație în sensul acelor de ceasornic",
-    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene18_numere_negative_si_rotatie_in_sensul_acelor_de_cea.py"
+    "sceneName": "Scene18_numere_reale_cu_diferenta_de_2_k_k_z_corespund_ace",
+    "concept": "Numere reale cu diferența de 2πk (k∈Z) corespund aceluiași punct pe cercul unitate",
+    "filePath": "C:\\Users\\balas\\Desktop\\Visualify\\Visualify Project\\backend-bun\\scripts\\animator\\generated_scenes\\Scene18_numere_reale_cu_diferenta_de_2_k_k_z_corespund_ace.py"
   },
   {
     "sceneName": "Scene19_conversia_unghiurilor_din_grade_in_radiani_si_inve",

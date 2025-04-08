@@ -24,46 +24,73 @@ const slugify = (text) => {
 
 const getPromptForConcept = (conceptText) => {
   return `Generează cod Python Manim pentru conceptul: "${conceptText}".
-Folosește doar acest format simplu și asigură-te că elementele nu se suprapun:
+Folosește acest format pentru a asigura că totul se încadrează în ecran (854x480):
 
-        # Titlu
-        title = Text("${conceptText}", font_size=40, color=BLUE)
-        title.to_edge(UP, buff=1)
+        # Setăm dimensiunea scenei și calculăm proporțiile
+        FRAME_WIDTH = config.frame_width
+        FRAME_HEIGHT = config.frame_height
         
-        # Prima explicație
-        explanation1 = Text(
+        # Împărțim scena în zone pentru organizare mai bună
+        TOP_SECTION = FRAME_HEIGHT * 0.2      # 20% pentru titlu
+        MIDDLE_SECTION = FRAME_HEIGHT * 0.6   # 60% pentru demonstrație
+        BOTTOM_SECTION = FRAME_HEIGHT * 0.2   # 20% pentru text explicativ
+        
+        # Titlu - scalat automat să încapă pe un rând
+        title = Text(
+            "${conceptText}",
+            font_size=36,
+            color=BLUE
+        )
+        title.scale_to_fit_width(FRAME_WIDTH * 0.9)  # Folosim 90% din lățime
+        title.to_edge(UP, buff=0.5)
+        
+        # Explicație inițială - scalată proporțional
+        explanation = Text(
             "Prima parte a explicației",
-            font_size=32,
+            font_size=28,
             color=WHITE
-        ).next_to(title, DOWN, buff=1)
+        )
+        explanation.scale_to_fit_width(FRAME_WIDTH * 0.8)  # Folosim 80% din lățime
+        explanation.next_to(title, DOWN, buff=0.8)
         
         self.play(Write(title))
         self.wait(0.5)
-        self.play(FadeIn(explanation1))
+        self.play(FadeIn(explanation))
         self.wait(2)
+        self.play(FadeOut(explanation))
         
-        # Curățăm prima explicație înainte de demonstrație
-        self.play(FadeOut(explanation1))
+        # Demonstrație - centrată și scalată în secțiunea din mijloc
+        demo_container = Rectangle(
+            width=FRAME_WIDTH * 0.8,
+            height=MIDDLE_SECTION * 0.8,
+            stroke_opacity=0
+        ).move_to(ORIGIN)
         
-        # Demonstrație
         demo = VGroup(
             Circle(radius=2, color=BLUE),
             Arrow(LEFT*2, RIGHT*2, color=WHITE)
         ).arrange(RIGHT, buff=1)
-        demo.next_to(title, DOWN, buff=1.5)
+        
+        # Scalăm demonstrația să se încadreze în container
+        demo.move_to(demo_container.get_center())
+        scale_factor = min(
+            demo_container.width / demo.width,
+            demo_container.height / demo.height
+        ) * 0.9
+        demo.scale(scale_factor)
         
         self.play(Create(demo))
         self.wait(2)
-        
-        # Curățăm demonstrația înainte de concluzie
         self.play(FadeOut(demo))
         
-        # Concluzie
+        # Concluzie - scalată și poziționată în partea de jos
         conclusion = Text(
             "Concluzie finală",
-            font_size=32,
+            font_size=28,
             color=GREEN
-        ).next_to(title, DOWN, buff=1)
+        )
+        conclusion.scale_to_fit_width(FRAME_WIDTH * 0.8)
+        conclusion.next_to(title, DOWN, buff=0.8)
         
         self.play(FadeIn(conclusion))
         self.wait(2)
@@ -74,10 +101,11 @@ Folosește doar acest format simplu și asigură-te că elementele nu se suprapu
         self.wait()
 
 IMPORTANT:
-- Elimină fiecare element înainte de a introduce următorul
-- Folosește spațiere mare între elemente (buff=1 sau mai mare)
-- Nu afișa mai mult de 2-3 elemente simultan
-- Curăță scena complet la final
+- Împarte scena în secțiuni proporționale (20-60-20)
+- Scalează textele relativ la lățimea frame-ului (90% titlu, 80% text)
+- Centrează și scalează demonstrațiile în containerul lor
+- Menține spațiere consistentă între elemente
+- Asigură-te că nimic nu iese din frame
 
 Returnează DOAR codul Python, fără explicații sau comentarii extra.`;
 };
