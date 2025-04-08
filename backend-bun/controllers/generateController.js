@@ -5,6 +5,7 @@ const pdfParser = require('../utils/pdfParser');
 const wordParser = require('../utils/wordParser');
 const parserAgent = require('../agents/parserAgent');
 const { buildMindMap } = require('../utils/mindmapUtils');
+const { generateQuizzes } = require('../agents/quizGenerator');
 
 exports.generateCourseFromFile = async (req, res) => {
   try {
@@ -87,6 +88,18 @@ exports.generateCourseFromFile = async (req, res) => {
       );
       console.log('💾 Structură salvată în temp/last_structure.json');
 
+      // Generăm quiz-urile aici
+      console.log('📝 Începe generarea quiz-urilor...');
+      const quizzes = await generateQuizzes(parsedData.structura);
+      console.log('✅ Quiz-uri generate');
+
+      // Salvăm quiz-urile
+      fs.writeFileSync(
+        path.join(tempDir, 'generated_quizzes.json'),
+        JSON.stringify(quizzes, null, 2)
+      );
+      console.log('💾 Quiz-uri salvate în temp/generated_quizzes.json');
+
       // Generăm animațiile Manim
       console.log('🎬 Începe generarea scripturilor Manim...');
       const conceptMapperAgent = require('../agents/conceptMapperAgent');
@@ -133,8 +146,9 @@ exports.generateCourseFromFile = async (req, res) => {
           structura: parsedData.structura,
           mindmap,
           scenes,
+          quizzes,
           generatedFiles,
-          message: "Animațiile Manim au fost generate cu succes!"
+          message: "Conținutul a fost generat cu succes!"
         });
       } catch (error) {
         console.error('❌ Eroare la generarea animațiilor:', error);
