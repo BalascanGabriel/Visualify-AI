@@ -1,0 +1,49 @@
+1) Începem cu un PDF care e procesat de parserAgent.js care:
+Extrage textul
+Îl structurează în capitole/subcapitole
+Identifică conceptele cheie
+Salvează structura în temp/last_structure.json
+
+2)Apoi conceptMapperAgent.js:
+Preia conceptele din structură
+Le filtrează (elimină exerciții, aplicații etc)
+Le pregătește pentru animare
+
+3)manimAgent.js:
+Primește conceptele filtrate
+Generează scene Manim pentru fiecare concept
+Salvează scenele în scripts/animator/generated_scenes/
+Menține ordinea în scene_order.json
+
+4)renderController.js:
+Procesează scenele generate
+Randează animațiile
+Combină videoclipurile
+Acum am înțeles mai bine - totul începe de la un PDF educațional din care extragem conceptele pentru animare. 
+
+
+TODO : 
+1) Validare pentru fișierele generate:
+Nu verificăm dacă scenele Python chiar sunt valide înainte de randare
+Ar trebui să avem un sistem de retry pentru scenele eșuate
+Poate un mecanism de caching pentru scenele generate cu succes
+
+2) Logging și monitorizare:
+Nu avem un sistem centralizat de logging
+Nu știm exact câte scene au fost generate cu succes vs eșec
+Nu avem metrici despre timpul de generare/randare
+
+3) Error handling mai robust:
+Tratarea erorilor de la Gemini e basic
+Nu avem fallback pentru când un concept nu poate fi animat
+Nu salvăm erorile pentru debugging ulterior
+
+4) Configurare:
+Multe valori sunt hardcodate (paths, dimensiuni, timings)
+Ar fi util un config.js centralizat
+Posibilitatea de a customiza template-urile per concept
+
+5) Testing:
+unit tests
+Lipsesc integration tests pentru flow-ul complet
+Nu avem validation tests pentru scenele generate
