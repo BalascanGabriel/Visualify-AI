@@ -1,68 +1,146 @@
 {
-  "rezumat": "Acest ghid introduce funcțiile trigonometrice cosinus, sinus și tangentă, extinzând definiția lor din triunghiul dreptunghic la numere reale.  Se explică măsurarea unghiurilor în radiani și grade, conversia între ele, și se prezintă proprietățile grafice și derivatele funcțiilor trigonometrice.  Ghidul include exerciții pentru a consolida înțelegerea conceptelor.",
+  "rezumat": "Acest text prezintă o introducere în Legile lui Newton, subliniind rolul matematicii și al unităților SI în fizică. Se definesc concepte fundamentale precum coordonatele, unitățile de măsură (metru, secundă, kilogram), legile lui Newton (inerție, dinamică, reacțiune), sistemele de referință inerțiale și diferite tipuri de forțe (gravitație, elasticitate, frecare, presiune, rezistență fluidică).  Se explică că legile fizicii sunt postulate matematice care permit predicții verificabile experimental, iar știința este un proces adaptativ și auto-corector.",
   "structura": [
     {
-      "capitol": "Introducere",
+      "capitol": "Introducere în Fizică",
       "subcapitole": [
         {
-          "subcapitol": "Cum să utilizați acest ghid",
+          "subcapitol": "Fizica ca limbaj",
           "concepte": [
-            "Învățarea matematicii este activă, nu pasivă.",
-            "Rezolvarea exercițiilor este esențială."
+            "Fizica ca limbaj al unei viziuni asupra lumii",
+            "Matematica ca limbaj al fizicii",
+            "Semantica",
+            "Ontologia"
           ]
         },
         {
-          "subcapitol": "Obiective",
+          "subcapitol": "Coordonate și Unități",
           "concepte": [
-            "Înțelegerea radianilor și conversia între grade și radiani.",
-            "Definiția cosinusului, sinusului și tangentei în triunghiul dreptunghic.",
-            "Calculul cosinusului, sinusului și tangentei pentru unghiuri specifice (π/6, π/4, π/2).",
-            "Extinderea definiției funcțiilor trigonometrice la numere reale.",
-            "Reprezentarea grafică a funcțiilor trigonometrice.",
-            "Derivatele funcțiilor trigonometrice.",
-            "Funcțiile trigonometrice inverse."
+            "Coordonate fundamentale",
+            "Unități SI (metru, secundă, kilogram)",
+            "Unități derivate"
           ]
         }
       ]
     },
     {
-      "capitol": "Unghiuri și Măsura Unghiulară",
+      "capitol": "Legile lui Newton",
       "subcapitole": [
         {
-          "subcapitol": "Măsurarea Unghiurilor",
+          "subcapitol": "Legile Naturii",
           "concepte": [
-            "Unghiuri pozitive (anticlockwise) și negative (clockwise).",
-            "Măsurarea în grade (360° pentru o rotație completă).",
-            "Minute și secunde ca fracțiuni de grad."
+            "Legile naturii ca postulate matematice",
+            "Predicții și observații experimentale",
+            "Știința ca proces adaptativ și auto-corector"
           ]
         },
         {
-          "subcapitol": "Radianii",
+          "subcapitol": "Legea Inerției",
           "concepte": [
-            "Definiția radianului ca lungimea arcului pe cercul unitate.",
-            "O rotație completă este 2π radiani.",
-            "Conversia între radiani și grade.",
-            "Reprezentarea numerelor reale ca radiani."
+            "Inerție",
+            "Sistem de referință inerțial",
+            "Forță rezultantă",
+            "Viteză constantă"
           ]
         },
         {
-          "subcapitol": "Exerciții",
+          "subcapitol": "Legea Dinamicii",
           "concepte": [
-            "Conversia unghiurilor între grade și radiani și reprezentarea grafică."
+            "Forță netă",
+            "Accelerație",
+            "Masă",
+            "Momentum"
+          ]
+        },
+        {
+          "subcapitol": "Legea Acțiunii și Reacțiunii",
+          "concepte": [
+            "Acțiune și reacțiune",
+            "Forțe interne",
+            "Sistem închis"
+          ]
+        },
+        {
+          "subcapitol": "Sisteme de Referință Inerțiale",
+          "concepte": [
+            "Sistem de referință inerțial",
+            "Pseudoforțe",
+            "Forțe de interacțiune"
           ]
         }
       ]
     },
     {
-      "capitol": "Rapoarte Trigonometrice în Triunghiul Dreptunghic",
+      "capitol": "Forțe în Natură",
       "subcapitole": [
         {
-          "subcapitol": "Definiția Sinusului, Cosinusului și Tangentei",
+          "subcapitol": "Tipuri de Forțe",
           "concepte": [
-            "Ipotenuză, catetă opusă, catetă adiacentă.",
-            "cosθ = catetă adiacentă / ipotenuză",
-            "sinθ = catetă opusă / ipotenuză",
-            "tanθ = catetă opusă / catetă adiacentă"
+            "Gravitație",
+            "Forța nucleară slabă",
+            "Forța electromagnetică",
+            "Forța nucleară tare",
+            "Forța ca vector (magnitudine și direcție)"
+          ]
+        },
+        {
+          "subcapitol": "Forța Gravitațională",
+          "concepte": [
+            "Forța gravitațională lângă suprafața Pământului",
+            "Accelerația gravitațională (g)"
+          ]
+        },
+        {
+          "subcapitol": "Forța Elastică (Legea lui Hooke)",
+          "concepte": [
+            "Legea lui Hooke",
+            "Constanta elastică (k)",
+            "Deplasare (Δx)"
+          ]
+        },
+        {
+          "subcapitol": "Forța Normală",
+          "concepte": [
+            "Forța normală",
+            "Forță de constrângere"
+          ]
+        },
+        {
+          "subcapitol": "Tensiunea într-un șir",
+          "concepte": [
+            "Tensiune (T)",
+            "Forță de constrângere"
+          ]
+        },
+        {
+          "subcapitol": "Frecarea statică",
+          "concepte": [
+            "Frecare statică",
+            "Coeficient de frecare statică (μs)",
+            "Forță de constrângere"
+          ]
+        },
+        {
+          "subcapitol": "Frecarea cinetică",
+          "concepte": [
+            "Frecare cinetică",
+            "Coeficient de frecare cinetică (μk)"
+          ]
+        },
+        {
+          "subcapitol": "Forțele fluidelor și presiunea",
+          "concepte": [
+            "Presiune (P)",
+            "Forța datorată presiunii",
+            "Aria (A)"
+          ]
+        },
+        {
+          "subcapitol": "Forțele de rezistență",
+          "concepte": [
+            "Forța de rezistență (Fd)",
+            "Viteza (v)",
+            "Exponentul n"
           ]
         }
       ]
