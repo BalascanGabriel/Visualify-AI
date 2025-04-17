@@ -1,24 +1,32 @@
 {
-  "rezumat": "Acest text prezintă o introducere în Legile lui Newton, subliniind rolul matematicii și al unităților SI în fizică. Se definesc concepte fundamentale precum coordonatele, unitățile de măsură (metru, secundă, kilogram), legile lui Newton (inerție, dinamică, reacțiune), sistemele de referință inerțiale și diferite tipuri de forțe (gravitație, elasticitate, frecare, presiune, rezistență fluidică).  Se explică că legile fizicii sunt postulate matematice care permit predicții verificabile experimental, iar știința este un proces adaptativ și auto-corector.",
+  "rezumat": "Acest material introductiv în fizică prezintă legile lui Newton ca postulate matematice care permit predicții despre mișcarea obiectelor.  Se subliniază importanța matematicii ca limbaj al fizicii și se definesc concepte fundamentale precum coordonate, unități (SI), și sisteme de referință inerțiale.  Legile lui Newton (inerției, dinamicii și reacțiunii) sunt explicate matematic și conceptual, împreună cu diverse tipuri de forțe (gravitație, elasticitate, frecare, presiune, rezistență fluidică), fiecare cu formula și direcția sa.",
   "structura": [
     {
-      "capitol": "Introducere în Fizică",
+      "capitol": "Introducere în Fizică și Limbajul ei",
       "subcapitole": [
         {
-          "subcapitol": "Fizica ca limbaj",
+          "subcapitol": "Fizica ca Limbaj și Viziune asupra Lumii",
           "concepte": [
-            "Fizica ca limbaj al unei viziuni asupra lumii",
-            "Matematica ca limbaj al fizicii",
+            "Fizica ca limbaj",
+            "Viziunea asupra lumii",
             "Semantica",
             "Ontologia"
           ]
         },
         {
-          "subcapitol": "Coordonate și Unități",
+          "subcapitol": "Matematica în Fizică",
           "concepte": [
-            "Coordonate fundamentale",
-            "Unități SI (metru, secundă, kilogram)",
-            "Unități derivate"
+            "Matematica ca limbaj al fizicii",
+            "Coordonate",
+            "Unități SI (metru, secundă, kilogram)"
+          ]
+        },
+        {
+          "subcapitol": "Legile Naturii și Metoda Științifică",
+          "concepte": [
+            "Legile naturii ca postulate matematice",
+            "Predicții și observații experimentale",
+            "Caracterul adaptiv al cunoașterii științifice"
           ]
         }
       ]
@@ -27,120 +35,74 @@
       "capitol": "Legile lui Newton",
       "subcapitole": [
         {
-          "subcapitol": "Legile Naturii",
-          "concepte": [
-            "Legile naturii ca postulate matematice",
-            "Predicții și observații experimentale",
-            "Știința ca proces adaptativ și auto-corector"
-          ]
-        },
-        {
           "subcapitol": "Legea Inerției",
           "concepte": [
-            "Inerție",
+            "Legea inerției",
             "Sistem de referință inerțial",
-            "Forță rezultantă",
-            "Viteză constantă"
+            "Viteza constantă",
+            "Forță rezultantă nulă"
           ]
         },
         {
           "subcapitol": "Legea Dinamicii",
           "concepte": [
-            "Forță netă",
+            "Legea dinamicii",
+            "Forță rezultantă",
+            "Masa",
             "Accelerație",
-            "Masă",
-            "Momentum"
+            "Moment"
           ]
         },
         {
           "subcapitol": "Legea Acțiunii și Reacțiunii",
           "concepte": [
-            "Acțiune și reacțiune",
+            "Legea acțiunii și reacțiunii",
+            "Forțe de interacțiune",
             "Forțe interne",
-            "Sistem închis"
+            "Sisteme închise"
           ]
         },
         {
           "subcapitol": "Sisteme de Referință Inerțiale",
           "concepte": [
             "Sistem de referință inerțial",
-            "Pseudoforțe",
-            "Forțe de interacțiune"
+            "Forțe pseudo",
+            "Interacțiuni între particule"
           ]
         }
       ]
     },
     {
-      "capitol": "Forțe în Natură",
+      "capitol": "Forțe Fundamentale și Forțe Derivate",
       "subcapitole": [
         {
-          "subcapitol": "Tipuri de Forțe",
+          "subcapitol": "Forțele Naturii",
           "concepte": [
             "Gravitație",
             "Forța nucleară slabă",
             "Forța electromagnetică",
-            "Forța nucleară tare",
-            "Forța ca vector (magnitudine și direcție)"
+            "Forța nucleară tare"
           ]
         },
         {
-          "subcapitol": "Forța Gravitațională",
+          "subcapitol": "Forța ca Vector",
           "concepte": [
-            "Forța gravitațională lângă suprafața Pământului",
-            "Accelerația gravitațională (g)"
+            "Forța ca mărime vectorială",
+            "Modulul forței",
+            "Direcția forței"
           ]
         },
         {
-          "subcapitol": "Forța Elastică (Legea lui Hooke)",
+          "subcapitol": "Exemple de Forțe",
           "concepte": [
-            "Legea lui Hooke",
-            "Constanta elastică (k)",
-            "Deplasare (Δx)"
-          ]
-        },
-        {
-          "subcapitol": "Forța Normală",
-          "concepte": [
+            "Forța gravitațională",
+            "Forța elastică (Legea lui Hooke)",
             "Forța normală",
-            "Forță de constrângere"
-          ]
-        },
-        {
-          "subcapitol": "Tensiunea într-un șir",
-          "concepte": [
-            "Tensiune (T)",
-            "Forță de constrângere"
-          ]
-        },
-        {
-          "subcapitol": "Frecarea statică",
-          "concepte": [
-            "Frecare statică",
-            "Coeficient de frecare statică (μs)",
-            "Forță de constrângere"
-          ]
-        },
-        {
-          "subcapitol": "Frecarea cinetică",
-          "concepte": [
-            "Frecare cinetică",
-            "Coeficient de frecare cinetică (μk)"
-          ]
-        },
-        {
-          "subcapitol": "Forțele fluidelor și presiunea",
-          "concepte": [
-            "Presiune (P)",
-            "Forța datorată presiunii",
-            "Aria (A)"
-          ]
-        },
-        {
-          "subcapitol": "Forțele de rezistență",
-          "concepte": [
-            "Forța de rezistență (Fd)",
-            "Viteza (v)",
-            "Exponentul n"
+            "Tensiunea într-un fir",
+            "Frecarea statică",
+            "Frecarea cinetică",
+            "Forța de presiune",
+            "Forța de rezistență fluidică"
           ]
         }
       ]
