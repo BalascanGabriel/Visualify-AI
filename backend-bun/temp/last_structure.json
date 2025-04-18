@@ -1,0 +1,103 @@
+{
+  "rezumat": "Acest text introduce Legile lui Newton în fizică, subliniind rolul matematicii ca limbaj al fizicii. Se definesc concepte fundamentale precum coordonatele, unitățile SI (metru, secundă, kilogram), legile naturii ca postulate matematice, și se explică importanța cadrului de referință inerțial.  Se prezintă cele trei legi ale lui Newton cu exemple și se detaliază diverse tipuri de forțe (gravitație, elasticitate, frecare, forțe de presiune, rezistență fluidică), evidențiind natura vectorială a forței și metodele de determinare a magnitudinii și direcției acesteia. Se subliniază caracterul evolutiv și auto-corectiv al științei.",
+  "structura": [
+    {
+      "capitol": "Introducere în Fizică și Matematică",
+      "subcapitole": [
+        {
+          "subcapitol": "Fizica ca Limbaj",
+          "concepte": [
+            "Fizica ca limbaj al unei viziuni asupra lumii",
+            "Rolul matematicii în fizică",
+            "Semantica",
+            "Ontologia"
+          ]
+        },
+        {
+          "subcapitol": "Coordonate și Unități",
+          "concepte": [
+            "Coordonate ca modificatori adjectivali fundamentali",
+            "Unități SI (metru, secundă, kilogram)",
+            "Unități derivate"
+          ]
+        },
+        {
+          "subcapitol": "Legile Naturii",
+          "concepte": [
+            "Legile naturii ca postulate matematice",
+            "Predicții și observații experimentale",
+            "Caracterul evolutiv al cunoașterii științifice"
+          ]
+        }
+      ]
+    },
+    {
+      "capitol": "Legile lui Newton",
+      "subcapitole": [
+        {
+          "subcapitol": "Legea Inerției",
+          "concepte": [
+            "Legea inerției",
+            "Cadru de referință inerțial",
+            "Viteză constantă",
+            "Forță netă nulă"
+          ]
+        },
+        {
+          "subcapitol": "Legea Dinamicii",
+          "concepte": [
+            "Legea dinamicii",
+            "Forța netă",
+            "Masă",
+            "Accelerație",
+            "Moment"
+          ]
+        },
+        {
+          "subcapitol": "Legea Acțiunii și Reacțiunii",
+          "concepte": [
+            "Legea acțiunii și reacțiunii",
+            "Forțe egale și opuse",
+            "Forțe interne într-un sistem închis"
+          ]
+        },
+        {
+          "subcapitol": "Cadrul de Referință Inerțial",
+          "concepte": [
+            "Definiția cadrului de referință inerțial",
+            "Pseudoforțe",
+            "Interacțiuni între particule"
+          ]
+        }
+      ]
+    },
+    {
+      "capitol": "Forțe în Natură",
+      "subcapitole": [
+        {
+          "subcapitol": "Tipuri de Forțe",
+          "concepte": [
+            "Gravitație",
+            "Forța nucleară slabă",
+            "Forța electromagnetică",
+            "Forța nucleară tare",
+            "Forța ca vector"
+          ]
+        },
+        {
+          "subcapitol": "Reguli ale Forțelor",
+          "concepte": [
+            "Gravitație (aproape de suprafața Pământului)",
+            "Legea lui Hooke (forța elastică)",
+            "Forța normală",
+            "Tensiunea într-un fir",
+            "Frecarea statică",
+            "Frecarea cinetică",
+            "Forțe de presiune în fluide",
+            "Forțe de rezistență"
+          ]
+        }
+      ]
+    }
+  ]
+}

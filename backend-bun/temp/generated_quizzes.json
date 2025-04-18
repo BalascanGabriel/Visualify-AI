@@ -1,0 +1,1983 @@
+{
+  "capitole": [
+    {
+      "capitol": "Introducere în Fizică și Matematică",
+      "subcapitole": [
+        {
+          "subcapitol": "Fizica ca Limbaj",
+          "concepte": [
+            {
+              "concept": "Fizica ca limbaj al unei viziuni asupra lumii",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații reflectă cel mai bine ideea că fizica este un limbaj al unei viziuni asupra lumii?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Fizica oferă un set de instrumente matematice pentru a descrie și prezice fenomene naturale.",
+                    "B. Fizica este o disciplină strict experimentală, independentă de interpretările filosofice.",
+                    "C. Modelele fizice reflectă presupuneri și concepții despre univers, influențând felul în care percepem realitatea.",
+                    "D. Fizica este pur și simplu o colecție de fapte și legi, fără implicații filosofice."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Răspunsul A este corect deoarece subliniază capacitatea fizicii de a descrie lumea, ceea ce este esențial pentru funcția sa de limbaj. Răspunsul C este corect pentru că evidențiază faptul că modelele fizice nu sunt neutre, ci reflectă o viziune asupra lumii.  Acestea sunt construite pe baza unor presupuneri filozofice despre natură, influențând modul în care înțelegem și interpretăm realitatea. Opțiunile B și D prezintă o viziune prea simplistă și reductivă asupra fizicii, ignorând dimensiunea interpretativă și filosofică."
+                },
+                {
+                  "question": "Cum contribuie fizica la formarea unei viziuni asupra lumii?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Oferind un set de reguli imuabile și absolute despre univers.",
+                    "B. Permițând o înțelegere mai profundă a funcționării universului și a locului nostru în el.",
+                    "C. Limitând perspectivele noastre la ceea ce poate fi măsurat și cuantificat.",
+                    "D. Promovând o viziune complet obiectivă și detașată de contextul cultural.",
+                    "E. Stimulând gândirea critică și dezvoltarea de noi metode de investigare a realității."
+                  ],
+                  "correct_answers": [
+                    "B",
+                    "E"
+                  ],
+                  "explanation": "Răspunsul B este corect deoarece fizica, prin modelele și teoriile sale, ne ajută să înțelegem mai bine funcționarea lumii, inclusiv rolul nostru în ea.  Răspunsul E este corect deoarece procesul științific, la baza fizicii, implică gândirea critică și dezvoltarea de noi metode de investigare. Opțiunile A, C și D sunt incorecte, deoarece prezintă o imagine simplificată și uneori eronată asupra fizicii. Fizica nu oferă reguli absolute (A), nu se limitează la aspecte măsurabile (C) și nu poate fi complet obiectivă și detașată de contextul cultural (D)."
+                },
+                {
+                  "question": "Care este rolul matematicii în fizică, în contextul viziunii asupra lumii?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Matematica este doar un instrument util, fără nicio influență asupra viziunii asupra lumii.",
+                    "B. Matematica impune limite și constrângeri asupra modului în care putem concepe universul.",
+                    "C. Matematica oferă un limbaj precis pentru a exprima și manipula conceptele fizice, influențând felul în care înțelegem lumea.",
+                    "D. Matematica este o reflectare perfectă a realității fizice."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Răspunsul C este corect. Matematica oferă un limbaj precis și riguros pentru formularea legilor fizicii și construirea de modele.  Modul în care folosim matematica pentru a reprezenta fenomenele fizice influențează inevitabil modul în care înțelegem și interpretăm universul.  Opțiunile A, B și D sunt incorecte, deoarece prezintă o viziune prea simplistă sau eronată asupra relației dintre matematică și fizică. Matematica nu este doar un instrument neutru (A), nu impune constrângeri definitive (B) și nu este o reflectare perfectă a realității (D)."
+                }
+              ]
+            },
+            {
+              "concept": "Rolul matematicii în fizică",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații descriu cel mai bine rolul matematicii în fizică?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Matematica oferă un limbaj precis pentru exprimarea legilor fizicii și pentru modelarea fenomenelor naturale.",
+                    "B. Matematica este un instrument opțional în fizică, utilizat doar pentru calcule simple.",
+                    "C. Matematica permite predicții cantitative și testarea experimentală a teoriilor fizice.",
+                    "D. Matematica este independentă de fizică și nu influențează dezvoltarea teoriilor fizice."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Matematica este esențială în fizică, oferind un limbaj precis și consistent pentru formularea legilor fizice (A).  Ea permite nu doar descrierea calitativă, ci și predicții cantitative precise despre comportamentul sistemelor fizice, ceea ce este crucial pentru testarea experimentală a teoriilor (C).  Opțiunea B este incorectă, deoarece matematica este fundamentală în aproape toate ramurile fizicii, nu doar pentru calcule simple.  Opțiunea D este greșită, deoarece matematica și fizica sunt strâns interconectate, iar progresele în matematică au adesea condus la progrese în fizică și invers."
+                },
+                {
+                  "question": "Cum contribuie matematica la dezvoltarea teoriilor fizice?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Permite formularea legilor fizice într-o manieră abstractă și generală.",
+                    "B. Limitează aplicabilitatea teoriilor fizice la cazuri particulare.",
+                    "C. Permite utilizarea de instrumente computaționale pentru simularea sistemelor complexe.",
+                    "D. Împiedică dezvoltarea unor noi teorii prin impunerea de restricții matematice.",
+                    "E. Permite verificarea experimentală a teoriilor prin intermediul predicțiilor cantitative."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C",
+                    "E"
+                  ],
+                  "explanation": "Matematica permite o formulare abstractă și generală a legilor fizice, extinzându-le dincolo de observațiile empirice imediate (A).  Instrumentele computaționale, bazate pe metode matematice, sunt esențiale pentru simularea sistemelor complexe în fizică (C).  În sfârșit, matematica este crucială pentru generarea de predicții cantitative care pot fi testate experimental, validând sau infirmând teoriile (E). Opțiunile B și D sunt incorecte, deoarece matematica extinde și nu limitează aplicabilitatea teoriilor fizice, și nu împiedică dezvoltarea de noi teorii, ci dimpotrivă, o facilitează."
+                },
+                {
+                  "question": "Care este rolul ecuațiilor matematice în descrierea fenomenelor fizice?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Reprezintă o simplificare excesivă a realității, ignorând detalii importante.",
+                    "B. Oferă o descriere precisă și cuantificabilă a relațiilor dintre mărimi fizice.",
+                    "C. Sunt doar un instrument didactic, fără aplicabilitate practică în fizică.",
+                    "D. Permit predicții precise despre comportamentul viitor al sistemelor fizice."
+                  ],
+                  "correct_answers": [
+                    "B",
+                    "D"
+                  ],
+                  "explanation": "Ecuațiile matematice în fizică oferă o descriere precisă și cuantificabilă a relațiilor dintre mărimi fizice, exprimând legile naturale într-un limbaj formal (B).  Această precizie permite, de asemenea, predicții precise despre comportamentul viitor al sistemelor fizice, un aspect crucial pentru testarea teoriilor și pentru aplicațiile practice (D). Opțiunea A este parțial adevărată, dar simplificarea este necesară pentru a crea modele matematice tratabile; totuși, modelele bune captează aspectele esențiale. Opțiunea C este falsă, deoarece ecuațiile matematice sunt fundamentale pentru progresul și aplicațiile fizicii."
+                }
+              ]
+            },
+            {
+              "concept": "Semantica",
+              "questions": [
+                {
+                  "question": "În contextul fizicii ca limbaj, care dintre următoarele aspecte se încadrează în domeniul semantic al unei ecuații fizice?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Relația dintre mărimi fizice reprezentate de simboluri.",
+                    "B. Ordinea operațiilor matematice din ecuație.",
+                    "C. Înțelesul fizic al ecuației și al constantelor implicate.",
+                    "D. Unitățile de măsură utilizate în ecuație.",
+                    "E. Forma grafică a ecuației."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C",
+                    "D"
+                  ],
+                  "explanation": "Răspunsurile corecte sunt A, C și D.  A se referă la relațiile dintre mărimi, ceea ce este esența semnificației ecuației. C se concentrează pe înțelesul fizic, adică interpretarea fizică a ecuației și a constantelor. D este important deoarece unitățile de măsură contribuie la înțelegerea dimensională a ecuației și a semnificației ei fizice.  B este mai degrabă un aspect sintactic (referitor la structura ecuației), iar E este o reprezentare vizuală, nu un aspect semantic al ecuației în sine."
+                },
+                {
+                  "question": "Care dintre următoarele afirmații referitoare la semantica în fizică este corectă?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Semantica se referă doar la definițiile exacte ale termenilor.",
+                    "B. Semantica nu este relevantă pentru înțelegerea modelelor fizice.",
+                    "C. Semantica explică relațiile dintre conceptele fizice.",
+                    "D. Semantica se referă la modul în care simbolurile sunt aranjate într-o ecuație.",
+                    "E. Semantica este independentă de contextul fizic."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Doar opțiunea C este corectă. Semantica, în contextul fizicii, se referă la înțelesul și relațiile dintre conceptele fizice. Opțiunea A este prea restrictivă, B este incorectă (semantica este crucială pentru înțelegerea modelelor), D se referă la sintaxă, iar E este falsă deoarece semantica este strâns legată de contextul fizic."
+                },
+                {
+                  "question": "Un exemplu de ambiguitate semantică în fizică ar putea fi:",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Utilizarea unor constante fizice universale cu valori precise.",
+                    "B. Folosirea aceluiași simbol pentru mărimi fizice diferite în contexte diferite.",
+                    "C. Aplicarea unor unități de măsură standard.",
+                    "D. Definirea precisă a termenilor.",
+                    "E. Utilizarea unor diagrame clare și concise."
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Opțiunea B ilustrează ambiguitatea semantică. Utilizarea aceluiași simbol pentru mărimi diferite poate duce la confuzie și la interpretări greșite. Celelalte opțiuni contribuie la claritatea și precizia exprimării în fizică, prevenind ambiguitatea semantică."
+                }
+              ]
+            },
+            {
+              "concept": "Ontologia",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații descriu corect rolul ontologiei în contextul fizicii ca limbaj?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Ontologia definește natura fundamentală a entităților și a relațiilor dintre ele în cadrul unui model fizic.",
+                    "B. Ontologia este un instrument matematic strict, independent de interpretarea fizică a lumii.",
+                    "C. Ontologia clarifică ce tipuri de obiecte sau proprietăți sunt asumate ca existente într-o teorie fizică.",
+                    "D. Ontologia nu are nicio relevanță în formularea sau interpretarea teoriilor fizice."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Răspunsurile A și C sunt corecte. Ontologia se ocupă cu natura existenței și a relațiilor dintre entități. În fizică, aceasta înseamnă definirea obiectelor fundamentale (particule, câmpuri etc.) și a relațiilor dintre ele (interacțiuni, legi de conservare etc.)  asumate de o teorie.  Opțiunea B este incorectă, deoarece ontologia influențează interpretarea matematică a fizicii. Opțiunea D este incorectă, deoarece ontologia este fundamentală pentru claritatea și consistența oricărei teorii fizice."
+                },
+                {
+                  "question": "Cum contribuie ontologia la clarificarea comunicării în fizică?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Permite o comunicare mai clară prin definirea precisă a termenilor și conceptelor utilizate.",
+                    "B. Elimină complet ambiguitățile și diferențele de interpretare în fizică.",
+                    "C. Permite o comparație mai ușoară între diferite teorii fizice, prin identificarea elementelor comune și a diferențelor ontologice.",
+                    "D.  Face fizica mai accesibilă publicului larg, eliminând necesitatea unei înțelegeri matematice profunde."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Răspunsurile A și C sunt corecte. O ontologie bine definită permite o comunicare mai clară prin eliminarea ambiguităților legate de termenii și conceptele utilizate.  De asemenea, oferă un cadru comun pentru compararea diferitelor teorii, evidențiind similaritățile și diferențele în ceea ce privește entitățile și relațiile fundamentale asumate. Opțiunea B este incorectă, deoarece chiar și cu o ontologie clară, pot exista multiple interpretări ale aceleiași teorii. Opțiunea D este incorectă, deoarece ontologia, deși ajută la clarificare, nu elimină necesitatea unei înțelegeri matematice în fizică."
+                },
+                {
+                  "question": "Care dintre următoarele exemple ilustrează o problemă ontologică în fizică?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Dezvoltarea unei noi ecuații matematice pentru a descrie un fenomen fizic.",
+                    "B. Discuția despre natura reală a spațiului-timp, este el continuu sau discret?",
+                    "C. Calcularea vitezei unei particule folosind legile mecanicii clasice.",
+                    "D. Crearea unui nou model pentru a explica comportamentul unui sistem complex."
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Doar răspunsul B ilustrează o problemă ontologică.  Întrebarea despre natura spațiu-timpului se referă direct la ceea ce există fundamental (continuu sau discret), ceea ce este esența ontologiei. Opțiunile A, C și D se referă la aspecte metodologice sau matematice ale fizicii, nu la natura fundamentală a entităților."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subcapitol": "Coordonate și Unități",
+          "concepte": [
+            {
+              "concept": "Coordonate ca modificatori adjectivali fundamentali",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații descriu corect rolul coordonatelor ca modificatori adjectivali fundamentali în descrierea unui punct în spațiu?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Coordonatele specifică poziția unui punct relativ la un sistem de referință.",
+                    "B. Coordonatele definesc proprietățile fizice ale unui punct (masă, temperatură etc.).",
+                    "C. Coordonatele acționează ca adjective care califică sau descriu poziția punctului.",
+                    "D. Coordonatele sunt independente de alegerea sistemului de referință."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Răspunsurile A și C sunt corecte.  A este corectă deoarece coordonatele sunt esențiale pentru a localiza un punct în spațiu, oferind poziția sa relativă la un sistem de referință. C este corectă deoarece coordonatele pot fi văzute ca adjective care descriu poziția punctului; de exemplu, 'punctul cu coordonatele (2,3)' descrie punctul specificând poziția lui.  B este incorectă deoarece coordonatele nu descriu proprietățile fizice ale punctului. D este incorectă deoarece coordonatele depind în mod direct de alegerea sistemului de referință."
+                },
+                {
+                  "question": "Cum se manifestă caracterul adjectival fundamental al coordonatelor în ecuațiile fizice?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Coordonatele apar ca argumente în funcții care descriu mărimi fizice.",
+                    "B. Coordonatele definesc operatorii matematici utilizați în ecuații.",
+                    "C. Coordonatele modifică sau specifică valoarea altor mărimi fizice în ecuații.",
+                    "D. Coordonatele sunt independente de valorile altor mărimi fizice."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A și C sunt corecte. Coordonatele apar ca argumente în funcții care descriu mărimi fizice (ex: funcția de densitate ρ(x,y,z)), modificând implicit valoarea mărimii descrise. Astfel, coordonatele acționează ca adjective care precizează valoarea mărimii fizice în acel punct din spațiu.  B este incorectă deoarece coordonatele nu definesc operatorii matematici. D este incorectă deoarece coordonatele sunt interdependente cu valorile altor mărimi fizice în majoritatea cazurilor."
+                },
+                {
+                  "question": "Care dintre următoarele exemple ilustrează cel mai bine utilizarea coordonatelor ca modificatori adjectivali fundamentali?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. 'Temperatura la coordonatele (0,0,0) este de 25°C'.",
+                    "B. 'Masa obiectului este de 10 kg'.",
+                    "C. 'Viteza obiectului este de 5 m/s'.",
+                    "D. 'Forța aplicată este de 10 N'."
+                  ],
+                  "correct_answers": [
+                    "A"
+                  ],
+                  "explanation": "Doar A ilustrează corect utilizarea coordonatelor ca modificatori adjectivali.  Coordonatele (0,0,0) modifică sau specifică valoarea temperaturii, indicând temperatura într-un anumit punct din spațiu.  Celelalte opțiuni descriu proprietăți fizice fără a specifica o locație spațială, deci coordonatele nu acționează ca modificatori adjectivali."
+                }
+              ]
+            },
+            {
+              "concept": "Unități SI (metru, secundă, kilogram)",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele mărimi fizice sunt măsurate în unități SI de bază?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Lungimea",
+                    "B. Forța",
+                    "C. Masa",
+                    "D. Viteza",
+                    "E. Temperatura"
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Lungimea este măsurată în metri (m), o unitate SI de bază. Masa este măsurată în kilograme (kg), de asemenea o unitate SI de bază. Forța (B), viteza (D) și temperatura (E) sunt mărimi derivate, calculate folosind unități SI de bază."
+                },
+                {
+                  "question": "Care este unitatea SI pentru timp?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Metrul",
+                    "B. Kilogramul",
+                    "C. Secunda",
+                    "D. Amperul",
+                    "E. Kelvinul"
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Unitatea SI pentru timp este secunda (s). Metrul (A) este unitatea pentru lungime, kilogramul (B) pentru masă, amperul (D) pentru curent electric și Kelvinul (E) pentru temperatură termodinamică."
+                },
+                {
+                  "question": "Alegeți afirmațiile corecte referitoare la unitățile SI de bază metru, secundă și kilogram:",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Metrul este unitatea pentru masă.",
+                    "B. Kilogramul este unitatea pentru lungime.",
+                    "C. Secunda este unitatea pentru timp.",
+                    "D. Metrul, kilogramul și secunda sunt unități fundamentale în Sistemul Internațional de Unități.",
+                    "E. Kilogramul este o unitate derivată."
+                  ],
+                  "correct_answers": [
+                    "C",
+                    "D"
+                  ],
+                  "explanation": "Afirmația C este corectă: secunda este unitatea de bază pentru timp în SI. Afirmația D este corectă: metrul (lungime), kilogramul (masă) și secunda (timp) sunt unități fundamentale în SI. Afirmațiile A, B și E sunt incorecte: metrul este unitatea pentru lungime, kilogramul pentru masă (și este o unitate de bază, nu derivată)."
+                }
+              ]
+            },
+            {
+              "concept": "Unități derivate",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele sunt unități derivate în Sistemul Internațional (SI)?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Metrul (m)",
+                    "B. Kilogramul (kg)",
+                    "C. Newtonul (N)",
+                    "D. Secunda (s)",
+                    "E. Kelvinul (K)"
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Newtonul (N) este o unitate derivată, reprezentând forța.  Se definește ca kg⋅m/s², fiind derivată din unitățile de bază kilogram (kg), metru (m) și secundă (s).  Metrul, kilogramul, secunda și Kelvinul sunt unități de bază în SI."
+                },
+                {
+                  "question": "Care dintre următoarele exprimă corect unitatea derivată pentru viteză?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. kg/m",
+                    "B. m/s",
+                    "C. s/m",
+                    "D. kg⋅m/s",
+                    "E. m⋅s"
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Viteza este definită ca distanță/timp.  În Sistemul Internațional, distanța se măsoară în metri (m) și timpul în secunde (s).  Prin urmare, unitatea derivată pentru viteză este m/s."
+                },
+                {
+                  "question": "Ce unități derivate sunt necesare pentru a exprima densitatea?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Metri cubi (m³)",
+                    "B. Kilograme (kg)",
+                    "C. Metri (m)",
+                    "D. Secunde (s)",
+                    "E. Kilograme pe metru cub (kg/m³)"
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "B",
+                    "E"
+                  ],
+                  "explanation": "Densitatea este definită ca masa pe unitatea de volum.  Masa se măsoară în kilograme (kg), iar volumul în metri cubi (m³).  Prin urmare, unitatea derivată pentru densitate este kg/m³.  Opțiunea E este unitatea derivată completă, în timp ce A și B reprezintă unitățile de bază din care este derivată."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subcapitol": "Legile Naturii",
+          "concepte": [
+            {
+              "concept": "Legile naturii ca postulate matematice",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații reflectă cel mai bine ideea că legile naturii pot fi exprimate ca postulate matematice?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Legile naturii sunt descrieri calitative ale fenomenelor observate.",
+                    "B. Legile naturii sunt independente de sistemul de unități de măsură folosit.",
+                    "C. Legile naturii pot fi formulate ca ecuații matematice care prezic comportamentul sistemelor fizice.",
+                    "D. Legile naturii sunt deductibile logic din principii filosofice fundamentale.",
+                    "E. Legile naturii se schimbă în funcție de locația geografică."
+                  ],
+                  "correct_answers": [
+                    "B",
+                    "C"
+                  ],
+                  "explanation": "Afirmația B este corectă deoarece, deși valorile numerice pot varia în funcție de sistemul de unități, relațiile matematice care descriu legile naturii rămân invariante.  Afirmația C este corectă deoarece o caracteristică cheie a abordării matematice în fizică este capacitatea de a exprima legile naturii sub formă de ecuații care permit predicții cantitative.  Afirmațiile A, D și E sunt incorecte.  A descrie doar o abordare calitativă, D sugerează o derivare filosofică în locul unei axiomatizări matematice, iar E contrazice universalitatea legilor naturii."
+                },
+                {
+                  "question": "Ce rol joacă matematica în formularea legilor naturii ca postulate?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Matematica oferă doar un instrument de calcul pentru datele experimentale.",
+                    "B. Matematica oferă un limbaj precis și concis pentru exprimarea legilor naturii.",
+                    "C. Matematica impune restricții asupra tipurilor de legi naturale posibile.",
+                    "D. Matematica este irelevanta în înțelegerea legilor naturii."
+                  ],
+                  "correct_answers": [
+                    "B",
+                    "C"
+                  ],
+                  "explanation": "Afirmația B este corectă deoarece matematica oferă un cadru formal pentru exprimarea legilor, asigurând precizie și consistență. Afirmația C este corectă deoarece structura matematică utilizată poate influența forma și natura legilor naturale care pot fi formulate. De exemplu, utilizarea geometriei euclidiene versus geometria neeuclidiană va conduce la legi diferite. Afirmația A este parțial corectă, dar nu reflectă rolul complet al matematicii ca limbaj fundamental. Afirmația D este complet incorectă."
+                },
+                {
+                  "question": "Care dintre următoarele exemple ilustrează cel mai bine conceptul de lege a naturii ca postulat matematic?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Observația că apa fierbe la 100°C la presiunea atmosferică standard.",
+                    "B. Formularea legii gravitației universale a lui Newton (F = GmM/r²).",
+                    "C. Descrierea calitativă a comportamentului unui pendul.",
+                    "D.  Explicația filozofică a originii universului."
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Afirmația B este corectă deoarece ecuația lui Newton este un postulat matematic care descrie o lege a naturii. Această ecuație poate fi utilizată pentru a prezice comportamentul obiectelor sub influența gravitației. Afirmațiile A și C sunt observații și descrieri calitative, neformulate matematic ca postulate. Afirmația D este o explicație filozofică, nu o lege a naturii exprimată matematic."
+                }
+              ]
+            },
+            {
+              "concept": "Predicții și observații experimentale",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații descriu corect relația dintre predicții și observații experimentale în știință?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Predicțiile sunt ipoteze bazate pe teorii existente, iar observațiile experimentale le verifică sau le infirmă.",
+                    "B. Observațiile experimentale sunt întotdeauna independente de predicții și formează baza pentru noi teorii.",
+                    "C. O discrepanță între predicții și observații poate indica necesitatea revizuirii teoriei sau a metodei experimentale.",
+                    "D. Predicțiile perfecte sunt întotdeauna posibile în știință, iar orice discrepanță este un semn de eroare experimentală."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A este corect deoarece predicțiile sunt generate pe baza unor modele teoretice existente, iar experimentele servesc la validarea sau infirmarea acestor predicții. C este corect deoarece o nepotrivire între predicții și rezultatele experimentale semnalează necesitatea unei analize mai profunde, fie a teoriei din care s-au generat predicțiile, fie a metodelor experimentale utilizate. B este incorect, deoarece observațiile sunt adesea ghidate de predicții și de întrebări specifice, iar rezultatele experimentale sunt interpretate în contextul teoriei existente. D este incorect, deoarece predicțiile perfecte sunt rare în știință, iar discrepanțele între predicții și observații sunt o parte integrantă a procesului științific, care conduce la o mai bună înțelegere a fenomenelor studiate."
+                },
+                {
+                  "question": "Un experiment este conceput pentru a testa predicția că o anumită substanță va conduce electricitatea. Care dintre următoarele rezultate ar putea fi considerate observații experimentale?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Substanța s-a încălzit ușor în timpul experimentului.",
+                    "B. Substanța a produs un curent electric măsurabil.",
+                    "C. Experimentatorul a observat o schimbare de culoare a substanței.",
+                    "D. Substanța s-a topit la o temperatură specifică.",
+                    "E. Experimentatorul a visat că substanța conduce electricitatea."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                  ],
+                  "explanation": "Toate opțiunile A, B, C și D sunt observații experimentale care pot fi înregistrate și analizate în contextul experimentului.  A, C și D sunt observații colaterale, care pot fi relevante pentru înțelegerea fenomenului. B este observația direct relevantă pentru predicție. E este un element irelevant și nu este o observație experimentală."
+                },
+                {
+                  "question": "Ce rol joacă observațiile experimentale în procesul științific?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Furnizează date pentru a testa ipoteze și teorii.",
+                    "B. Permit formularea de predicții precise.",
+                    "C. Generează noi întrebări de cercetare.",
+                    "D. Confirmă întotdeauna ipotezele inițiale.",
+                    "E. Sunt complet independente de cadrul teoretic existent."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A este corect deoarece observațiile experimentale oferă datele empirice necesare pentru a valida sau infirma ipotezele și teoriile științifice. C este corect deoarece observațiile neașteptate sau rezultatele care contrazic predicțiile pot genera noi întrebări de cercetare și direcții de investigare. B este parțial corect, dar observațiile nu permit formularea de predicții *precize* în sine; ele sunt folosite pentru a rafina predicțiile ulterioare. D este incorect, deoarece observațiile pot infirma ipotezele inițiale, ducând la revizuirea teoriei. E este incorect, deoarece observațiile sunt întotdeauna interpretate în contextul unui cadru teoretic existent."
+                }
+              ]
+            },
+            {
+              "concept": "Caracterul evolutiv al cunoașterii științifice",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații ilustrează cel mai bine caracterul evolutiv al cunoașterii științifice?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Teoriile științifice sunt imuabile și rămân neschimbate odată formulate.",
+                    "B. Cunoașterea științifică este un proces static, bazat pe descoperiri izolate.",
+                    "C. Teoriile științifice sunt rafinate și modificate în lumina unor noi dovezi și descoperiri.",
+                    "D. Legile naturii sunt absolute și nu pot fi niciodată contestate sau modificate."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Răspunsul corect este C. Cunoașterea științifică este un proces dinamic și evolutiv.  Noile descoperiri și tehnologii duc la rafinarea sau chiar înlocuirea teoriilor existente.  Opțiunile A, B și D prezintă perspective învechite sau incorecte asupra naturii cunoașterii științifice.  Știința este un proces continuu de testare, revizuire și îmbunătățire a teoriilor."
+                },
+                {
+                  "question": "Cum se manifestă caracterul evolutiv al cunoașterii științifice în contextul legilor naturii?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Legile naturii rămân constante și invariabile în timp și spațiu.",
+                    "B. Înțelegerea noastră despre legile naturii rămâne statică, neinfluențată de progresele științifice.",
+                    "C. Înțelegerea noastră despre legile naturii se îmbunătățește și se rafinează pe măsură ce acumulăm noi date și dezvoltăm noi instrumente de cercetare.",
+                    "D. Legile naturii sunt simple și ușor de înțeles chiar de la începutul studiului lor.",
+                    "E.  Explicațiile științifice despre legile naturii sunt definitive și nu mai necesită revizuiri ulterioare."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Răspunsul corect este C.  Chiar dacă legile naturii în sine sunt constante, înțelegerea noastră despre ele evoluează odată cu dezvoltarea științei.  Noi tehnologii, experimente și date ne permit să înțelegem mai bine aceste legi, să le formulăm mai precis și să le aplicăm într-un spectru mai larg de situații. Opțiunile A, B, D și E prezintă concepții greșite, sugerând o înțelegere statică sau simplă a legilor naturii, ignorând complexitatea cercetării științifice și caracterul ei iterativ."
+                },
+                {
+                  "question": "Care dintre exemplele următoare ilustrează cel mai bine natura evolutivă a unei teorii științifice?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A.  Modelul heliocentric al sistemului solar a înlocuit modelul geocentric, demonstrând evoluția cunoașterii astronomice.",
+                    "B.  Legea gravitației universale a lui Newton a rămas neschimbată de la formularea sa.",
+                    "C.  Teoria atomului a rămas constantă de la descoperirea sa.",
+                    "D.  Formularea inițială a teoriei relativității a lui Einstein a fost imediat acceptată de comunitatea științifică fără modificări ulterioare."
+                  ],
+                  "correct_answers": [
+                    "A"
+                  ],
+                  "explanation": "Răspunsul corect este A.  Tranziția de la modelul geocentric (Pământul în centrul sistemului solar) la modelul heliocentric (Soarele în centrul sistemului solar) este un exemplu clasic al evoluției cunoașterii științifice.  Opțiunile B, C și D sunt incorecte, deoarece fiecare dintre teoriile menționate au suferit rafinări și extinderi de-a lungul timpului, în lumina unor noi dovezi și descoperiri.  Evoluția cunoașterii științifice este un proces continuu de adaptare și perfecționare."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "capitol": "Legile lui Newton",
+      "subcapitole": [
+        {
+          "subcapitol": "Legea Inerției",
+          "concepte": [
+            {
+              "concept": "Legea inerției",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații descriu corect Legea inerției (prima lege a lui Newton)?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Un corp în repaus va rămâne în repaus, iar un corp în mișcare uniformă rectilinie va continua să se miște cu aceeași viteză și în aceeași direcție, cu excepția cazului în care este acționat de o forță rezultantă neechilibrată.",
+                    "B. Un corp își va schimba starea de mișcare numai dacă este acționat de o forță internă.",
+                    "C. Forța este direct proporțională cu accelerația și invers proporțională cu masa.",
+                    "D. Orice acțiune este egală și de sens contrar cu reacțiunea.",
+                    "E. Gravitația este o forță care atrage corpurile către centrul Pământului."
+                  ],
+                  "correct_answers": [
+                    "A"
+                  ],
+                  "explanation": "Doar opțiunea A descrie corect Legea inerției. Aceasta afirmă că un obiect își menține starea de mișcare (repaus sau mișcare uniformă rectilinie) atâta timp cât nu acționează asupra lui o forță rezultantă neechilibrată. Opțiunile B, C și D descriu alte legi ale lui Newton (B este o descriere inexactă, C este a doua lege, iar D este a treia lege), în timp ce E este o descriere a gravitației."
+                },
+                {
+                  "question": "Un obiect aflat în repaus pe o masă rămâne în repaus. Care dintre următoarele afirmații explică acest fenomen prin prisma Legii inerției?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Nu există nicio forță care acționează asupra obiectului.",
+                    "B. Forța gravitațională este echilibrată de forța normală exercitată de masă.",
+                    "C. Obiectul are inerție și își menține starea de repaus în absența unei forțe neechilibrate.",
+                    "D. Forța de frecare este prea mare pentru a muta obiectul."
+                  ],
+                  "correct_answers": [
+                    "B",
+                    "C"
+                  ],
+                  "explanation": "Atât B cât și C explică fenomenul.  B este corect deoarece, deși există forța gravitațională, aceasta este anihilată de forța normală a mesei, rezultând o forță rezultantă nulă. C este corect deoarece inerția obiectului tinde să-i mențină starea inițială de repaus. Opțiunea A este incorectă deoarece forța gravitațională acționează asupra obiectului. Opțiunea D este o explicație posibilă în anumite circumstanțe, dar nu este o explicație direct legată de Legea inerției."
+                },
+                {
+                  "question": "Care dintre următoarele exemple ilustrează cel mai bine conceptul de inerție?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. O minge care se rostogolește încetinește și se oprește.",
+                    "B. Un scaun rămâne nemișcat până când cineva îl împinge.",
+                    "C. Un avion accelerează pe pistă înainte de decolare.",
+                    "D. O mașină frânează brusc, iar pasagerii sunt proiectați înainte."
+                  ],
+                  "correct_answers": [
+                    "B",
+                    "D"
+                  ],
+                  "explanation": "Opțiunea B ilustrează inerția unui obiect în repaus: acesta își menține starea de repaus până când este acționat de o forță exterioară. Opțiunea D ilustrează inerția unui obiect în mișcare: pasagerii continuă să se miște înainte chiar și după ce mașina a încetinit, deoarece inerția le menține starea de mișcare inițială. Opțiunea A nu ilustrează inerția deoarece mingea încetinește din cauza forței de frecare. Opțiunea C ilustrează accelerarea, nu inerția."
+                }
+              ]
+            },
+            {
+              "concept": "Cadru de referință inerțial",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații descriu corect un cadru de referință inerțial?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Un cadru de referință în care un obiect pe care nu acționează nicio forță rezultantă rămâne în repaus sau se mișcă cu viteză constantă.",
+                    "B. Un cadru de referință atașat unui corp care se rotește cu viteză constantă.",
+                    "C. Un cadru de referință în care legile lui Newton sunt valabile.",
+                    "D. Un cadru de referință atașat unui vehicul care accelerează."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A și C sunt corecte. Un cadru de referință inerțial este definit ca un sistem de coordonate în care un obiect liber de forțe externe rămâne în repaus sau în mișcare rectilinie uniformă (legea inerției).  Legile lui Newton sunt valabile doar în cadre de referință inerțiale. Opțiunea B este incorectă deoarece rotația implică o accelerație. Opțiunea D este incorectă deoarece accelerarea vehiculului reprezintă o forță rezultantă, violând condiția de inerțialitate."
+                },
+                {
+                  "question": "Un tren se deplasează cu viteză constantă pe o linie dreaptă.  Care dintre următoarele cadre de referință pot fi considerate inerțiale în acest context?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Un cadru de referință atașat Pământului.",
+                    "B. Un cadru de referință atașat trenului.",
+                    "C. Un cadru de referință atașat unui alt tren care se deplasează paralel cu primul, cu aceeași viteză.",
+                    "D. Un cadru de referință atașat unui avion care decolează."
+                  ],
+                  "correct_answers": [
+                    "B",
+                    "C"
+                  ],
+                  "explanation": "B și C sunt corecte.  Atât trenul, cât și un alt tren care se deplasează cu aceeași viteză constantă pe aceeași direcție formează cadre de referință inerțiale, deoarece în ambele cadre un obiect lipsit de forțe externe va rămâne în repaus sau se va mișca cu viteză constantă.  A este aproximativ corect, dar Pământul nu este perfect inerțial datorită rotației și mișcării sale în jurul Soarelui. D este incorect, deoarece avionul care decolează este supus unei accelerații."
+                },
+                {
+                  "question": "Care dintre situațiile următoare descrie un cadru de referință NON-inerțial?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. O navă spațială care se deplasează cu viteză constantă în spațiul interstelar.",
+                    "B. Un carusel care se rotește.",
+                    "C. O minge de bowling care se rostogolește pe o suprafață plană cu viteză constantă.",
+                    "D. Un satelit pe orbită circulară în jurul Pământului cu viteză constantă."
+                  ],
+                  "correct_answers": [
+                    "B",
+                    "D"
+                  ],
+                  "explanation": "B și D sunt corecte.  Un carusel care se rotește este un cadru de referință non-inerțial deoarece orice obiect plasat pe el este supus unei accelerații centripete. Un satelit pe orbită circulară, deși are viteză constantă în mărime, se mișcă pe o traiectorie curbilinie, deci este supus unei accelerații centripete și, prin urmare, se află într-un cadru non-inerțial. A și C descriu cadre de referință inerțiale deoarece viteza este constantă și rectilinie."
+                }
+              ]
+            },
+            {
+              "concept": "Viteză constantă",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații descriu corect mișcarea cu viteză constantă?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Obiectul se mișcă pe o traiectorie dreaptă cu aceeași viteză.",
+                    "B. Obiectul își schimbă viteza în mod constant.",
+                    "C. Obiectul are atât viteză constantă, cât și direcție constantă.",
+                    "D. Obiectul se mișcă pe un cerc cu viteză constantă în mărime."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Răspunsurile A și C sunt corecte.  Viteza constantă înseamnă atât mărimea vitezei (rapiditatea), cât și direcția să rămână constante.  A descrie mișcarea rectilinie uniformă, iar C este o definiție mai generală, incluzând și situațiile în care direcția este constantă. Răspunsul B descrie o mișcare accelerată. Răspunsul D descrie o mișcare cu viteză constantă ca mărime, dar direcția se schimbă în mod constant, deci nu este o viteză constantă."
+                },
+                {
+                  "question": "Un automobil se deplasează pe o autostradă dreaptă cu o viteză de 60 km/h.  Care dintre următoarele afirmații sunt adevărate?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Automobilul are viteză constantă.",
+                    "B. Automobilul este supus unei forțe rezultante.",
+                    "C. Automobilul are o accelerație egală cu zero.",
+                    "D. Conform legii inerției, automobilul va continua să se miște cu viteză constantă chiar dacă motorul este oprit."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C",
+                    "D"
+                  ],
+                  "explanation": "Răspunsurile A, C și D sunt corecte. A este adevărat deoarece automobilul are o viteză constantă de 60 km/h. C este adevărat deoarece accelerația este rata de schimbare a vitezei, iar dacă viteza este constantă, accelerația este zero. D este adevărat deoarece legea inerției afirmă că un obiect în mișcare va continua să se miște cu viteză constantă în linie dreaptă, cu excepția cazului în care acționează o forță netă asupra lui. B este incorect, deoarece, pentru ca automobilul să mențină viteza constantă, trebuie să existe o forță care să compenseze forța de frecare etc. "
+                },
+                {
+                  "question": "Un corp se mișcă cu viteză constantă.  Ce putem spune despre forța rezultantă care acționează asupra corpului?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forța rezultantă este nulă.",
+                    "B. Forța rezultantă este constantă, dar nu neapărat nulă.",
+                    "C. Forța rezultantă este variabilă.",
+                    "D. Nu putem determina nimic despre forța rezultantă fără informații suplimentare."
+                  ],
+                  "correct_answers": [
+                    "A"
+                  ],
+                  "explanation": "Răspunsul corect este A.  Conform primei legi a lui Newton (legea inerției), dacă un corp se mișcă cu viteză constantă, atunci forța rezultantă care acționează asupra lui este zero.  Dacă ar exista o forță rezultantă diferită de zero, corpul și-ar schimba viteza (ar accelera)."
+                }
+              ]
+            },
+            {
+              "concept": "Forță netă nulă",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele situații descriu o forță netă nulă care acționează asupra unui obiect?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Un bloc de lemn se mișcă cu viteză constantă pe o suprafață orizontală fără frecare.",
+                    "B. O minge este aruncată în sus și atinge punctul maxim al traiectoriei sale.",
+                    "C. O carte stă nemișcată pe o masă.",
+                    "D. O mașină accelerează de la 0 la 60 km/h."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A. Dacă un bloc se mișcă cu viteză constantă, înseamnă că nu există o forță netă care să-i modifice starea de mișcare.  Legea inerției spune că un obiect în mișcare va continua să se miște cu aceeași viteză și în aceeași direcție, atâta timp cât nu acționează asupra lui o forță netă. \n C. O carte care stă nemișcată are o viteză de 0. Pentru a-și menține starea de repaus, forța netă care acționează asupra ei trebuie să fie 0.  Greutatea cărții este echilibrată de forța normală exercitată de masă."
+                },
+                {
+                  "question": "Un obiect aflat în echilibru are:",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. O viteză constantă.",
+                    "B. O accelerație diferită de zero.",
+                    "C. O forță netă nulă.",
+                    "D. O forță netă egală cu greutatea sa."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A. Un obiect aflat în echilibru poate fi în repaus sau se poate mișca cu viteză constantă. Ambele situații implică o accelerație de 0.\n C. Conform celei de-a doua legi a lui Newton (F=ma), dacă accelerația este 0, forța netă trebuie să fie 0. "
+                },
+                {
+                  "question": "Două forțe, una de 10N spre dreapta și alta de 10N spre stânga, acționează simultan asupra unui obiect. Care este forța netă asupra obiectului?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. 20N spre dreapta",
+                    "B. 10N spre dreapta",
+                    "C. 0N",
+                    "D. 20N spre stânga"
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Forțele sunt egale în mărime și opuse în direcție. Rezultanta lor este 0, ceea ce înseamnă că forța netă asupra obiectului este 0N."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subcapitol": "Legea Dinamicii",
+          "concepte": [
+            {
+              "concept": "Legea dinamicii",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații descriu corect legea dinamicii (a doua lege a lui Newton)?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Accelerația unui obiect este direct proporțională cu forța rezultantă care acționează asupra lui și invers proporțională cu masa lui.",
+                    "B. Un obiect în repaus rămâne în repaus, iar un obiect în mișcare uniformă rectilinie rămâne în mișcare uniformă rectilinie, cu excepția cazului în care este acționat de o forță rezultantă.",
+                    "C. Pentru fiecare acțiune există o reacțiune egală și de sens contrar.",
+                    "D. Energia cinetică a unui obiect este egală cu jumătate din produsul dintre masa și pătratul vitezei sale.",
+                    "E. Impulsul unui obiect este produsul dintre masa și viteza sa."
+                  ],
+                  "correct_answers": [
+                    "A"
+                  ],
+                  "explanation": "Legea dinamicii (F=ma) afirmă că accelerația (a) unui obiect este direct proporțională cu forța netă (F) care acționează asupra sa și invers proporțională cu masa (m) sa. Opțiunea B descrie prima lege a lui Newton (legea inerției), opțiunea C descrie a treia lege a lui Newton (legea acțiunii și reacțiunii), iar opțiunile D și E descriu concepte legate de energie cinetică și impuls, respectiv."
+                },
+                {
+                  "question": "Un obiect cu masa de 2 kg este supus unei forțe de 10 N. Care este accelerația obiectului?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. 20 m/s²",
+                    "B. 5 m/s²",
+                    "C. 10 m/s²",
+                    "D. 0.2 m/s²"
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Folosind legea dinamicii, F = ma, putem calcula accelerația: a = F/m = 10 N / 2 kg = 5 m/s²."
+                },
+                {
+                  "question": "Care dintre următoarele perechi de mărimi fizice sunt direct proporționale conform legii dinamicii, în condițiile în care masa obiectului rămâne constantă?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forța și masa",
+                    "B. Accelerația și masa",
+                    "C. Forța și accelerația",
+                    "D. Masa și viteza"
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Conform legii a doua a lui Newton (F=ma), dacă masa este constantă, forța (F) și accelerația (a) sunt direct proporționale.  O creștere a forței duce la o creștere proporțională a accelerației, și invers."
+                }
+              ]
+            },
+            {
+              "concept": "Forța netă",
+              "questions": [
+                {
+                  "question": "Un obiect este supus acțiunii a două forțe: o forță de 10 N spre dreapta și o forță de 5 N spre stânga. Care este forța netă care acționează asupra obiectului?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. 5 N spre dreapta",
+                    "B. 15 N spre dreapta",
+                    "C. 5 N spre stânga",
+                    "D. 15 N spre stânga"
+                  ],
+                  "correct_answers": [
+                    "A"
+                  ],
+                  "explanation": "Forța netă este suma vectorială a tuturor forțelor care acționează asupra unui obiect. În acest caz, forța de 10 N spre dreapta și forța de 5 N spre stânga au direcții opuse.  Scăzând magnitudinea forței mai mici (5 N) din magnitudinea forței mai mari (10 N), obținem o forță netă de 5 N. Direcția forței nete este aceeași cu direcția forței mai mari, adică spre dreapta."
+                },
+                {
+                  "question": "Care dintre următoarele afirmații despre forța netă este corectă?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Un obiect aflat în repaus are întotdeauna o forță netă zero care acționează asupra lui.",
+                    "B. Un obiect care se mișcă cu viteză constantă are întotdeauna o forță netă diferită de zero care acționează asupra lui.",
+                    "C. Un obiect care își schimbă viteza are întotdeauna o forță netă diferită de zero care acționează asupra lui.",
+                    "D. Forța netă este întotdeauna egală cu greutatea obiectului."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A. Este corectă conform primei legi a lui Newton (legea inerției): dacă forța netă este zero, obiectul rămâne în repaus sau continuă să se miște cu viteză constantă. C. Este corectă conform celei de-a doua legi a lui Newton (F=ma): o schimbare de viteză (accelerație) implică o forță netă diferită de zero. B este incorectă deoarece un obiect se poate mișca cu viteză constantă fără nicio forță netă. D este incorectă deoarece forța netă este suma tuturor forțelor, inclusiv greutatea, dar poate fi diferită de greutate."
+                },
+                {
+                  "question": "Două forțe, de 8 N și 6 N, acționează asupra unui obiect în aceeași direcție. Care este magnitudinea forței nete?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. 2 N",
+                    "B. 6 N",
+                    "C. 8 N",
+                    "D. 14 N",
+                    "E. 48 N"
+                  ],
+                  "correct_answers": [
+                    "D"
+                  ],
+                  "explanation": "Atunci când forțele acționează în aceeași direcție, forța netă este pur și simplu suma lor algebrica.  În acest caz, 8 N + 6 N = 14 N.  Magnitudinea forței nete este de 14 N."
+                }
+              ]
+            },
+            {
+              "concept": "Masă",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații despre masă sunt corecte în contextul Legii a II-a a lui Newton?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Masa este o măsură a inerției unui corp.",
+                    "B. Masa unui corp se schimbă în funcție de accelerația aplicată.",
+                    "C. Masa este o mărime scalară.",
+                    "D. Masa este direct proporțională cu forța necesară pentru a produce o anumită accelerație.",
+                    "E. Masa este o mărime vectorială."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C",
+                    "D"
+                  ],
+                  "explanation": "A. este corectă deoarece inerția, rezistența unui corp la schimbarea stării sale de mișcare, este direct proporțională cu masa sa.  C. este corectă deoarece masa este o mărime scalară, adică are doar magnitudine, nu și direcție. D. este corectă, conform Legii a II-a a lui Newton (F=ma), forța (F) este direct proporțională cu masa (m) pentru o accelerație (a) constantă. B. este incorectă deoarece masa este o proprietate intrinsecă a unui corp și nu se schimbă cu accelerația. E. este incorectă deoarece masa este o mărime scalară, nu vectorială."
+                },
+                {
+                  "question": "Două corpuri, A și B, sunt supuse aceleiași forțe. Corpul A are o masă dublă față de corpul B. Care afirmație este corectă despre accelerațiile lor?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Ambele corpuri au aceeași accelerație.",
+                    "B. Corpul A are o accelerație dublă față de corpul B.",
+                    "C. Corpul B are o accelerație dublă față de corpul A.",
+                    "D. Corpul A are o accelerație de patru ori mai mare decât corpul B.",
+                    "E. Corpul B are o accelerație de patru ori mai mare decât corpul A."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Conform Legii a II-a a lui Newton (F=ma), dacă forța este constantă, accelerația este invers proporțională cu masa. Deoarece corpul A are o masă dublă față de corpul B, accelerația corpului B va fi de două ori mai mare decât accelerația corpului A."
+                },
+                {
+                  "question": "Care dintre următoarele unități de măsură sunt utilizate pentru masă în Sistemul Internațional (SI)?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Newton (N)",
+                    "B. Kilogram (kg)",
+                    "C. Metru (m)",
+                    "D. Secundă (s)",
+                    "E. Joule (J)"
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Unitatea de măsură pentru masă în Sistemul Internațional (SI) este kilogramul (kg). Newton (N) este unitatea de măsură pentru forță, metrul (m) pentru lungime, secunda (s) pentru timp, iar Joule (J) pentru energie."
+                }
+              ]
+            },
+            {
+              "concept": "Accelerație",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații despre accelerație sunt corecte?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Accelerația este o mărime vectorială.",
+                    "B. Accelerația reprezintă doar o creștere a vitezei.",
+                    "C. Accelerația este rata de schimbare a vitezei în timp.",
+                    "D. O accelerație nulă indică o viteză constantă.",
+                    "E. O schimbare a direcției mișcării, chiar cu viteză constantă, implică o accelerație."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C",
+                    "D",
+                    "E"
+                  ],
+                  "explanation": "A. Accelerația este o mărime vectorială deoarece are atât mărime, cât și direcție.  C. Definiția accelerației este rata de schimbare a vitezei în timp (Δv/Δt). D. Dacă accelerația este nulă, înseamnă că viteza nu se schimbă, rămânând constantă. E. Chiar dacă magnitudinea vitezei rămâne constantă, o schimbare a direcției mișcării reprezintă o schimbare a vectorului viteză, rezultând o accelerație (accelerație centripetă)."
+                },
+                {
+                  "question": "Un obiect se mișcă cu o viteză inițială de 10 m/s și după 5 secunde viteza sa este de 30 m/s. Care este accelerația sa medie?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. 2 m/s²",
+                    "B. 4 m/s²",
+                    "C. 8 m/s²",
+                    "D. 10 m/s²"
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Accelerația medie este calculată ca schimbarea vitezei împărțită la timpul scurs: (30 m/s - 10 m/s) / 5 s = 4 m/s².  Răspunsul corect este B."
+                },
+                {
+                  "question": "Care dintre următoarele situații descrie o accelerație negativă (decelerație)?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. O mașină accelerează de la 0 la 60 km/h.",
+                    "B. Un obiect cade liber în câmp gravitațional.",
+                    "C. O minge este aruncată în sus și își încetinește mișcarea.",
+                    "D. O rachetă se deplasează cu viteză constantă în spațiu."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Accelerația negativă (decelerație) înseamnă că viteza scade. În cazul C, mingea își încetinește mișcarea pe măsură ce urcă, deci are o accelerație negativă (gravitația acționează în sens opus mișcării). A descrie o accelerație pozitivă. B descrie o accelerație pozitivă (gravitația). D descrie o lipsă de accelerație."
+                }
+              ]
+            },
+            {
+              "concept": "Moment",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele mărimi fizice influențează momentul unei forțe?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Intensitatea forței",
+                    "B. Masa obiectului asupra căruia acționează forța",
+                    "C. Brațul forței (distanța de la punctul de rotație la linia de acțiune a forței)",
+                    "D. Viteza obiectului",
+                    "E. Temperatura mediului ambiant"
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Momentul unei forțe este definit ca produsul vectorial dintre forță și brațul forței (M = F x r).  Prin urmare, atât intensitatea forței (F), cât și brațul forței (r) influențează direct momentul. Masa obiectului este relevantă pentru efectul momentului, dar nu este o mărime direct implicată în formula momentului. Viteza și temperatura mediului ambiant sunt irelevante în acest context."
+                },
+                {
+                  "question": "Două forțe de aceeași intensitate acționează asupra unui obiect. Care afirmație este corectă în ceea ce privește momentul forțelor?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Momentele forțelor sunt întotdeauna egale.",
+                    "B. Momentele forțelor sunt egale numai dacă brațele forțelor sunt egale.",
+                    "C. Momentele forțelor sunt întotdeauna diferite.",
+                    "D. Momentul forței depinde numai de direcția forței."
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Momentul unei forțe depinde atât de intensitatea forței, cât și de brațul forței.  Dacă două forțe au aceeași intensitate, dar brațele lor sunt diferite, momentele lor vor fi diferite. Doar dacă brațele forțelor sunt egale, momentele lor vor fi egale."
+                },
+                {
+                  "question": "Un șurub este strâns cu o cheie de șurub. Ce se poate face pentru a crește momentul forței aplicate?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A.  A se aplica o forță mai mică.",
+                    "B. A se utiliza o cheie de șurub mai scurtă.",
+                    "C. A se aplica forța mai aproape de capul șurubului.",
+                    "D. A se utiliza o cheie de șurub mai lungă."
+                  ],
+                  "correct_answers": [
+                    "D"
+                  ],
+                  "explanation": "Pentru a crește momentul forței, trebuie fie să măriți intensitatea forței aplicate, fie să măriți brațul forței.  Utilizarea unei chei de șurub mai lungi mărește brațul forței, crescând astfel momentul. Aplicarea forței mai aproape de capul șurubului micșorează brațul forței, scăzând momentul."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subcapitol": "Legea Acțiunii și Reacțiunii",
+          "concepte": [
+            {
+              "concept": "Legea acțiunii și reacțiunii",
+              "questions": [
+                {
+                  "question": "Un băiat împingând un zid cu o forță de 100N. Conform legii acțiunii și reacțiunii, care este forța exercitată de zid asupra băiatului?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. 0N",
+                    "B. 50N",
+                    "C. 100N",
+                    "D. 200N"
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Legea acțiunii și reacțiunii afirmă că pentru fiecare acțiune există o reacțiune egală și opusă. Dacă băiatul exercită o forță de 100N asupra zidului, zidul exercită o forță egală și opusă de 100N asupra băiatului.  Forța este aceeași în mărime, dar direcția este opusă."
+                },
+                {
+                  "question": "Care dintre următoarele perechi reprezintă acțiune și reacțiune conform celei de-a treia legi a lui Newton?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Pământul atrage un măr; mărul atrage Pământul.",
+                    "B. Un ciocan lovește un cui; cuiul se înfige în lemn.",
+                    "C. O rachetă se deplasează înainte; gazele sunt expulzate în spate.",
+                    "D. O mașină accelerează; motorul generează putere."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Opțiunea A reprezintă o pereche acțiune-reacțiune deoarece forța gravitațională este reciprocă între măr și Pământ. Opțiunea C este corectă pentru că propulsia rachetei este rezultatul expulzării gazelor; forța de reacțiune a gazelor propulsează racheta înainte.  Opțiunile B și D descriu acțiuni și efectele lor, dar nu perechi de forțe acțiune-reacțiune."
+                },
+                {
+                  "question": "Un pistol trage un glonț.  Care dintre afirmațiile următoare este ADEVĂRATĂ despre forțele implicate?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forța pistolului asupra glonțului este mai mare decât forța glonțului asupra pistolului.",
+                    "B. Forța pistolului asupra glonțului este egală cu forța glonțului asupra pistolului.",
+                    "C. Forța pistolului asupra glonțului este mai mică decât forța glonțului asupra pistolului.",
+                    "D. Nu există nicio forță implicată."
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Conform legii acțiunii și reacțiunii, forța pistolului asupra glonțului este egală în mărime și opusă în direcție forței glonțului asupra pistolului.  Deși efectele asupra celor două obiecte sunt diferite (glonțul se mișcă rapid, pistolul se mișcă puțin), forțele în sine sunt egale."
+                }
+              ]
+            },
+            {
+              "concept": "Forțe egale și opuse",
+              "questions": [
+                {
+                  "question": "Un băiat împinge un perete cu o forță de 100 N. Conform Legii Acțiunii și Reacțiunii, ce forță exercită peretele asupra băiatului?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. 0 N",
+                    "B. 50 N",
+                    "C. 100 N",
+                    "D. 200 N"
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Legea acțiunii și reacțiunii stipulează că pentru fiecare acțiune există o reacțiune egală și de sens contrar.  Dacă băiatul împinge peretele cu 100 N, peretele exercită o forță de 100 N înapoi asupra băiatului.  Forțele sunt egale ca mărime și opuse ca direcție."
+                },
+                {
+                  "question": "Care dintre următoarele perechi de forțe reprezintă exemple de forțe egale și opuse conform Legii Acțiunii și Reacțiunii?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Gravitația care acționează asupra unei mingi și forța cu care mingea este aruncată în sus.",
+                    "B. Forța de frecare dintre anvelope și asfalt și forța de accelerație a mașinii.",
+                    "C. Forța cu care o rachetă împinge gazele arse și forța cu care gazele arse împing racheta.",
+                    "D. Greutatea unui obiect și forța de susținere a unui suport."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Doar opțiunea C reprezintă o pereche de forțe de acțiune și reacțiune.  Racheta exercită o forță asupra gazelor arse, iar gazele arse exercită o forță egală și de sens contrar asupra rachetei.  Celelalte opțiuni prezintă forțe care acționează asupra aceluiași obiect, nu perechi de acțiune-reacțiune."
+                },
+                {
+                  "question": "Un caiac se deplasează pe apă. Care dintre următoarele afirmații este corectă referitor la forțele implicate?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forța cu care vâslele împung apa este mai mare decât forța cu care apa împinge vâslele.",
+                    "B. Forța cu care vâslele împung apa este egală cu forța cu care apa împinge vâslele, dar au direcții identice.",
+                    "C. Forța cu care vâslele împung apa este egală cu forța cu care apa împinge vâslele, și au direcții opuse.",
+                    "D. Nu există forțe egale și opuse implicate în mișcarea caiacului."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Conform Legii Acțiunii și Reacțiunii, forța cu care vâslele împung apa este egală și de sens contrar forței cu care apa împinge vâslele.  Această forță a apei asupra vâslelor este cea care propulsează caiacul înainte."
+                }
+              ]
+            },
+            {
+              "concept": "Forțe interne într-un sistem închis",
+              "questions": [
+                {
+                  "question": "Un sistem închis conține două bile de biliard care se ciocnesc. Care afirmație este adevărată despre forțele interne în timpul coliziunii?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forțele interne se anulează reciproc.",
+                    "B. Forța exercitată de bila 1 asupra bilei 2 este mai mare decât forța exercitată de bila 2 asupra bilei 1.",
+                    "C. Impulsul total al sistemului rămâne constant.",
+                    "D. Forțele interne modifică impulsul total al sistemului."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A este corect deoarece, conform Legii a III-a a lui Newton (acțiune-reacțiune), forțele interne acționează în perechi egale și opuse, anulate reciproc.  C este corect deoarece într-un sistem închis, forțele interne nu pot modifica impulsul total al sistemului. Impulsul poate fi transferat între părțile sistemului, dar suma vectorială a impulsurilor rămâne constantă (conservarea impulsului)."
+                },
+                {
+                  "question": "O rachetă în spațiu (considerată un sistem închis) expulzează combustibil. Care dintre următoarele afirmații referitoare la forțele interne este corectă?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forțele interne nu afectează mișcarea centrului de masă al rachetei.",
+                    "B. Forța exercitată de rachetă asupra gazelor expulzate este mai mică decât forța exercitată de gaze asupra rachetei.",
+                    "C. Forțele interne modifică energia cinetică a rachetei.",
+                    "D. Forțele interne nu contribuie la schimbarea impulsului total al rachetei.",
+                    "E. Forțele interne pot schimba viteza rachetei, dar nu și direcția acesteia."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A este corect deoarece forțele interne, prin definiție, nu afectează mișcarea centrului de masă al unui sistem închis.  C este corect deoarece expulzarea gazelor schimbă energia cinetică a rachetei; o parte din energia chimică a combustibilului este convertită în energie cinetică a rachetei și a gazelor expulzate.  Celelalte opțiuni sunt incorecte deoarece contrazic Legea a III-a a lui Newton și principiul conservării impulsului pentru sisteme închise."
+                },
+                {
+                  "question": "Două persoane se împing reciproc pe gheață, fără frecare. Considerând sistemul celor două persoane ca fiind închis, care afirmație este falsă?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forțele interne se anulează reciproc.",
+                    "B. Impulsul total al sistemului rămâne zero.",
+                    "C. Viteza centrului de masă al sistemului se schimbă.",
+                    "D. Forțele interne schimbă energia cinetică a fiecărei persoane."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "A, B și D sunt corecte. A și B sunt corecte datorită Legii a III-a a lui Newton și conservării impulsului într-un sistem închis. D este corectă deoarece interacțiunea dintre cele două persoane transferă energie cinetică între ele. C este falsă deoarece într-un sistem închis, forțele interne nu afectează viteza centrului de masă; acesta rămâne constantă (sau zero, dacă era inițial zero)."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subcapitol": "Cadrul de Referință Inerțial",
+          "concepte": [
+            {
+              "concept": "Definiția cadrului de referință inerțial",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații definesc cel mai bine un cadru de referință inerțial?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Un cadru de referință în care un corp aflat în repaus rămâne în repaus, iar un corp aflat în mișcare uniformă rectilinie își menține starea de mișcare, în absența unor forțe exterioare.",
+                    "B. Un cadru de referință atașat de un corp care se rotește cu viteză constantă.",
+                    "C. Un cadru de referință în care legile lui Newton sunt valabile.",
+                    "D. Un cadru de referință atașat de un corp aflat în mișcare accelerată."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Răspunsul A definește direct un cadru de referință inerțial prin principiul inerției.  Răspunsul C este corect deoarece legile lui Newton sunt formulate și valabile în cadrul unui sistem inerțial.  Un cadru de referință în rotație (B) sau în mișcare accelerată (D) este un cadru non-inerțial, deoarece în aceste cadre apar forțe aparente (de inerție) care nu sunt cauzate de interacțiuni fizice reale."
+                },
+                {
+                  "question": "Un tren se deplasează cu viteză constantă pe o linie dreaptă. Un pasager aruncă o minge în sus.  În raport cu ce cadru de referință mișcarea mingii este cel mai bine descrisă de legile lui Newton?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Cadrul de referință atașat de Pământ.",
+                    "B. Cadrul de referință atașat de tren.",
+                    "C. Cadrul de referință atașat de Soare.",
+                    "D. Cadrul de referință atașat unui observator aflat pe peronul gării."
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Deoarece trenul se mișcă cu viteză constantă, cadrul de referință atașat de tren este inerțial. În acest cadru, mișcarea mingii este simplă: urcă și coboară vertical.  Celelalte cadre de referință sunt non-inerțiale din cauza mișcării lor relative față de tren, ceea ce ar complica descrierea mișcării mingii folosind legile lui Newton."
+                },
+                {
+                  "question": "Care dintre următoarele exemple reprezintă cel MAI BINE un cadru de referință inerțial?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Un carusel în mișcare.",
+                    "B. Un avion care decolează.",
+                    "C. Un satelit în orbită în jurul Pământului.",
+                    "D. O rachetă care zboară în spațiu cu o accelerație constantă.",
+                    "E. Un laborator pe Pământ, departe de orice sursă de vibrații semnificative."
+                  ],
+                  "correct_answers": [
+                    "E"
+                  ],
+                  "explanation": "Un laborator pe Pământ, departe de orice sursă de vibrații semnificative, este o aproximare bună a unui cadru de referință inerțial.  Celelalte opțiuni descriu cadre de referință non-inerțiale, deoarece obiectele sunt în mișcare accelerată (carusel, avion, rachetă) sau sunt supuse unor forțe semnificative (satelit)."
+                }
+              ]
+            },
+            {
+              "concept": "Pseudoforțe",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații despre pseudoforțe sunt corecte?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Pseudoforțele apar în cadre de referință neinerțiale.",
+                    "B. Pseudoforțele sunt cauzate de interacțiuni fizice directe între obiecte.",
+                    "C. Pseudoforțele sunt necesare pentru a aplica legile lui Newton în cadre de referință neinerțiale.",
+                    "D. Pseudoforțele au aceeași natură ca forțele fundamentale (gravitațională, electromagnetică etc.).",
+                    "E.  Pseudoforțele sunt întotdeauna constante în mărime și direcție."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A este corectă deoarece pseudoforțele sunt efecte aparente care apar doar în cadre de referință neinerțiale (accelerate).  C este corectă deoarece, fără a adăuga pseudoforțele ca termeni fictivi în ecuațiile de mișcare, legile lui Newton nu se aplică corect în sisteme neinerțiale. B este incorectă deoarece pseudoforțele nu sunt cauzate de interacțiuni fizice, ci de accelerația sistemului de referință. D este incorectă deoarece pseudoforțele nu sunt forțe fundamentale; ele sunt doar o consecință matematică a utilizării unui sistem de referință neinerțial. E este incorectă deoarece mărimea și direcția pseudoforțelor depind de accelerația cadrului de referință."
+                },
+                {
+                  "question": "Un observator se află într-un carusel rotativ.  Ce pseudoforce(e) experimentează un obiect așezat pe carusel?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forța centrifugă",
+                    "B. Forța centripeta",
+                    "C. Forța Coriolis",
+                    "D. Forța gravitațională",
+                    "E. Forța de frecare"
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A este corectă: Forța centrifugă este o pseudoforce care apare în cadre de referință rotative, împingând obiectele spre exterior. C este corectă: Forța Coriolis este o pseudoforce care apare în cadre de referință rotative și afectează mișcarea obiectelor în mișcare relativ la carusel, determinând o deviație a traiectoriei lor.  B este incorectă deoarece forța centripetă este o forță reală necesară pentru a menține obiectul pe o traiectorie circulară. D și E sunt forțe reale, nu pseudoforțe, deși pot fi prezente în sistem."
+                },
+                {
+                  "question": "Care este diferența principală între o forță reală și o pseudoforce?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. O forță reală are o sursă fizică identificabilă, iar o pseudoforce nu.",
+                    "B. O forță reală respectă principiul acțiunii și reacțiunii, iar o pseudoforce nu.",
+                    "C. O forță reală este întotdeauna constantă, iar o pseudoforce poate varia.",
+                    "D. O forță reală acționează asupra unui obiect, iar o pseudoforce acționează asupra cadrului de referință.",
+                    "E. O forță reală este întotdeauna mai mare decât o pseudoforce."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "B"
+                  ],
+                  "explanation": "A este corectă, deoarece forțele reale rezultă din interacțiuni fizice între obiecte (ex. gravitație, electromagnetism), pe când pseudoforțele sunt consecințe ale accelerației cadrului de referință. B este corectă, deoarece forțele reale respectă principiul acțiunii și reacțiunii al lui Newton (pentru fiecare acțiune există o reacțiune egală și opusă),  în timp ce pseudoforțele nu au o pereche de reacție în același cadru de referință. C, D și E sunt incorecte;  forțele reale și pseudoforțele pot fi variabile sau constante, pot acționa asupra obiectelor, și nu există o relație de mărime obligatorie între ele."
+                }
+              ]
+            },
+            {
+              "concept": "Interacțiuni între particule",
+              "questions": [
+                {
+                  "question": "Două particule, cu masele m1 și m2, interacționează într-un cadru de referință inerțial.  Care dintre următoarele afirmații sunt corecte în legătură cu forțele de interacțiune dintre ele, conform celei de-a treia legi a lui Newton?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forțele de interacțiune sunt egale ca mărime și opuse ca direcție.",
+                    "B. Forța exercitată de m1 asupra lui m2 este mai mare decât forța exercitată de m2 asupra lui m1, dacă m1 > m2.",
+                    "C. Forțele de interacțiune acționează pe aceleași linii de acțiune.",
+                    "D. Forțele de interacțiune sunt independente de masele particulelor.",
+                    "E. Forțele de interacțiune sunt proporționale cu produsul maselor particulelor."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A este corectă deoarece a treia lege a lui Newton afirmă că pentru fiecare acțiune există o reacțiune egală și opusă.  C este corectă deoarece forțele de acțiune și reacțiune acționează întotdeauna pe aceeași linie de acțiune. B este incorectă deoarece forțele sunt întotdeauna egale, indiferent de masă. D este incorectă deoarece forțele depind de natura interacțiunii (de exemplu, forța gravitațională depinde de masă). E este incorectă, deși este adevărat pentru anumite tipuri de interacțiuni (gravitaționale), nu este o afirmație generală valabilă pentru toate interacțiunile dintre particule."
+                },
+                {
+                  "question": "În contextul unui cadru de referință inerțial, două bile de biliard se ciocnesc. Care dintre următoarele afirmații descriu corect interacțiunea dintre bile în timpul coliziunii?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Impulsul total al sistemului se conservă.",
+                    "B. Energia cinetică totală a sistemului se conservă întotdeauna.",
+                    "C. Forța exercitată de o bilă asupra celeilalte este egală în mărime și opusă în direcție.",
+                    "D. Impulsul fiecărei bile rămâne constant în timpul coliziunii.",
+                    "E. Vitezele bilelor rămân constante în timpul coliziunii."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A este corectă deoarece într-un sistem izolat, impulsul total se conservă.  C este corectă, reflectând a treia lege a lui Newton. B este incorectă deoarece în coliziuni inelastice, o parte din energia cinetică se transformă în alte forme de energie (căldură, sunet). D este incorectă deoarece impulsul se schimbă în timpul coliziunii. E este incorectă deoarece vitezele bilelor se modifică în timpul coliziunii."
+                },
+                {
+                  "question": "Un corp de masă m este așezat pe o suprafață orizontală.  Care dintre următoarele afirmații sunt corecte cu privire la interacțiunile dintre corp și suprafață într-un cadru de referință inerțial?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Greutatea corpului este o forță de interacțiune între corp și Pământ.",
+                    "B. Forța normală este o forță exercitată de suprafață asupra corpului.",
+                    "C. Forța normală este întotdeauna egală cu greutatea corpului.",
+                    "D. Forța de frecare este o forță de interacțiune între corp și suprafață.",
+                    "E. Forța normală și greutatea corpului sunt forțe de acțiune-reacțiune conform celei de-a treia legi a lui Newton."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "B",
+                    "D"
+                  ],
+                  "explanation": "A este corectă, greutatea este o forță gravitațională. B este corectă, forța normală este o forță de contact. D este corectă, forța de frecare apare din interacțiunea dintre suprafața corpului și suprafața orizontală. C este incorectă, forța normală este egală cu greutatea doar atunci când corpul nu este accelerat vertical. E este incorectă, forța normală și greutatea nu sunt o pereche acțiune-reacțiune; forța normală este reacțiunea la forța exercitată de corp asupra suprafeței."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "capitol": "Forțe în Natură",
+      "subcapitole": [
+        {
+          "subcapitol": "Tipuri de Forțe",
+          "concepte": [
+            {
+              "concept": "Gravitație",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații despre gravitație sunt corecte?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Gravitația este o forță de atracție între orice două obiecte cu masă.",
+                    "B. Gravitația acționează doar pe Pământ.",
+                    "C. Intensitatea gravitației este direct proporțională cu masa obiectelor.",
+                    "D. Gravitația este o forță repulsivă între obiecte cu masă."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A este corectă deoarece gravitația este o forță fundamentală care acționează între orice două obiecte cu masă, indiferent de locație. C este corectă deoarece cu cât masa obiectelor este mai mare, cu atât forța gravitațională dintre ele este mai mare. B este incorectă deoarece gravitația este o forță universală, nu doar terestră. D este incorectă deoarece gravitația este o forță de atracție, nu de respingere."
+                },
+                {
+                  "question": "Care dintre următorii factori influențează forța gravitațională dintre două obiecte?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Masa fiecărui obiect",
+                    "B. Distanța dintre centrele celor două obiecte",
+                    "C. Temperatura obiectelor",
+                    "D. Culoarea obiectelor",
+                    "E. Materialul din care sunt făcute obiectele"
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "B"
+                  ],
+                  "explanation": "A și B sunt corecte. Legea gravitației universale a lui Newton arată că forța gravitațională este direct proporțională cu produsul maselor celor două obiecte și invers proporțională cu pătratul distanței dintre centrele lor.  Temperatura, culoarea și materialul obiectelor nu influențează forța gravitațională."
+                },
+                {
+                  "question": "Ce se întâmplă cu forța gravitațională dintre două obiecte dacă dublăm masa unuia dintre ele și dublăm distanța dintre ele?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forța gravitațională rămâne aceeași.",
+                    "B. Forța gravitațională se dublează.",
+                    "C. Forța gravitațională se înjumătățește.",
+                    "D. Forța gravitațională se împarte la patru."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Răsunsul corect este C.  Forța gravitațională este direct proporțională cu masa și invers proporțională cu pătratul distanței. Dublarea masei o va dubla, dar dublarea distanței o va reduce la o pătrime (2²=4).  Deci, efectul net este o reducere la jumătate (2/4 = 1/2)."
+                }
+              ]
+            },
+            {
+              "concept": "Forța nucleară slabă",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele procese sunt mediate de forța nucleară slabă?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Dezintegrarea beta",
+                    "B. Reacțiile nucleare de fuziune",
+                    "C. Captarea electronică",
+                    "D. Reacțiile nucleare de fisiune",
+                    "E. Interacțiunile electromagnetice"
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Forța nucleară slabă este responsabilă pentru dezintegrarea beta, un proces în care un neutron se transformă într-un proton, un electron și un antineutrino electronic.  Această transformare implică schimbarea de aromă a quarkurilor. Captarea electronică este un alt proces mediat de forța nucleară slabă, în care un proton din nucleu capturează un electron, transformându-se într-un neutron și un neutrino electronic.  Reacțiile de fuziune și fisiune sunt mediate de forța nucleară tare, iar interacțiunile electromagnetice sunt mediate de foton."
+                },
+                {
+                  "question": "Care este o caracteristică distinctivă a forței nucleare slabe?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Este o forță de rază scurtă de acțiune.",
+                    "B. Este o forță de rază lungă de acțiune.",
+                    "C. Este la fel de puternică ca forța nucleară tare.",
+                    "D. Mediează interacțiuni doar între particule fără sarcină.",
+                    "E. Este responsabilă pentru stabilitatea nucleelor atomice."
+                  ],
+                  "correct_answers": [
+                    "A"
+                  ],
+                  "explanation": "Forța nucleară slabă are o rază de acțiune extrem de scurtă, mult mai mică decât cea a forței nucleare tari.  Spre deosebire de aceasta, ea nu este la fel de puternică.  De asemenea, mediază interacțiuni între particule cu și fără sarcină, iar stabilitatea nucleelor atomice este în principal datorată forței nucleare tari."
+                },
+                {
+                  "question": "Ce particule mediază interacțiunile forței nucleare slabe?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Gluoni",
+                    "B. Fotonii",
+                    "C. Bosonii W și Z",
+                    "D. Gravitonii",
+                    "E. Mesonii"
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Interacțiunile forței nucleare slabe sunt mediate de bosoni W⁺, W⁻ și Z⁰.  Gluonii mediază forța nucleară tare, fotonii mediază forța electromagnetică, iar gravitonii sunt ipoteticii mediatori ai forței gravitaționale.  Mesonii sunt particule compuse din quarkuri și antiquarkuri."
+                }
+              ]
+            },
+            {
+              "concept": "Forța electromagnetică",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele fenomene sunt exemple de manifestare a forței electromagnetice?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Atracția unui magnet asupra unui cui de fier",
+                    "B. Forța gravitațională dintre Pământ și Lună",
+                    "C. Funcționarea unui motor electric",
+                    "D. Forța nucleară tare care ține nucleul atomic unit",
+                    "E. Atracția dintre două corpuri cu mase mari"
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Forța electromagnetică este responsabilă pentru interacțiunile dintre sarcini electrice. Atracția unui magnet asupra unui cui de fier (A) este cauzată de interacțiunea magnetică, o componentă a forței electromagnetice. Funcționarea unui motor electric (C) se bazează pe interacțiunea dintre câmpuri magnetice și curenți electrici, deci este direct legată de forța electromagnetică.  Forța gravitațională (B), forța nucleară tare (D) și atracția dintre corpurile masive (E) sunt exemple de alte tipuri de forțe fundamentale."
+                },
+                {
+                  "question": "Ce particule elementare mediază interacțiunea electromagnetică?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Gluoni",
+                    "B. Fotoni",
+                    "C. Bosoni W și Z",
+                    "D. Gravitoni",
+                    "E. Leptoni"
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Interacțiunea electromagnetică este mediată de fotoni (B), particule fără masă și fără sarcină electrică. Gluonii (A) mediază interacțiunea nucleară tare, bosonii W și Z (C) mediază interacțiunea nucleară slabă, iar gravitonii (D) sunt particule ipotetice care ar media interacțiunea gravitațională. Leptonii (E) sunt particule elementare, dar nu mediază interacțiuni fundamentale."
+                },
+                {
+                  "question": "Care dintre afirmațiile următoare despre forța electromagnetică este adevărată?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Are un raza de acțiune infinită.",
+                    "B. Este o forță de atracție numai.",
+                    "C. Este mai slabă decât forța gravitațională la distanțe mari.",
+                    "D. Este responsabilă pentru legăturile chimice.",
+                    "E. Este afectată de masa obiectelor implicate."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "D"
+                  ],
+                  "explanation": "Forța electromagnetică are o rază de acțiune infinită (A), deși intensitatea ei scade cu pătratul distanței. Este atât de atracție, cât și de respingere, în funcție de sarcinile electrice implicate (B este fals).  Deși gravitația este dominantă la scări cosmice, forța electromagnetică este mult mai puternică la scară atomică și este responsabilă pentru legăturile chimice (D).  Forța electromagnetică nu este afectată de masa obiectelor (E). (C este fals, deoarece la distante mici este mult mai puternica decât gravitația)."
+                }
+              ]
+            },
+            {
+              "concept": "Forța nucleară tare",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații despre forța nucleară tare sunt corecte?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Este responsabilă pentru legarea protonilor și neutronilor în nucleul atomic.",
+                    "B. Are o rază de acțiune foarte lungă, comparabilă cu forța electromagnetică.",
+                    "C. Este mult mai puternică decât forța electromagnetică la distanțe nucleare.",
+                    "D. Este o forță repulsivă între protoni.",
+                    "E. Este mediată de gluoni."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C",
+                    "E"
+                  ],
+                  "explanation": "A. Este adevărat deoarece forța nucleară tare este responsabilă de menținerea coeziunii nucleului atomic, în ciuda forței electromagnetice repulsive dintre protoni.  C. Este adevărat, forța nucleară tare este cu mult mai intensă decât forța electromagnetică la distanțe foarte mici, de ordinul dimensiunilor nucleului atomic. E. Este adevărat, gluonii sunt particulele elementare care mediază interacțiunea nucleară tare între cuarci, constituenții protonilor și neutronilor."
+                },
+                {
+                  "question": "Ce caracteristică distinctivă are forța nucleară tare în comparație cu celelalte forțe fundamentale?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Are o rază de acțiune infinită.",
+                    "B. Este o forță de atracție numai între particule cu sarcină electrică.",
+                    "C. Are o rază de acțiune foarte scurtă, limitată la dimensiunile nucleului atomic.",
+                    "D. Este independentă de sarcina electrică a particulelor.",
+                    "E. Este mai slabă decât forța gravitațională."
+                  ],
+                  "correct_answers": [
+                    "C",
+                    "D"
+                  ],
+                  "explanation": "C. Este adevărat, forța nucleară tare acționează doar la distanțe extrem de mici, de ordinul femtometrilor (10⁻¹⁵ m), dimensiunea unui nucleu atomic. D. Este adevărat, spre deosebire de forța electromagnetică, care depinde de sarcina electrică, forța nucleară tare acționează și între particule neutre (neutroni), precum și între particule încărcate."
+                },
+                {
+                  "question": "Care dintre următoarele particule sunt afectate de forța nucleară tare?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Electroni",
+                    "B. Protoni",
+                    "C. Neutroni",
+                    "D. Neutrini",
+                    "E. Quarci"
+                  ],
+                  "correct_answers": [
+                    "B",
+                    "C",
+                    "E"
+                  ],
+                  "explanation": "B. Este adevărat, protonii sunt afectați de forța nucleară tare deoarece sunt compuși din cuarci. C. Este adevărat, neutronii sunt, de asemenea, afectați de forța nucleară tare deoarece sunt compuși din cuarci. E. Este adevărat, cuarcii sunt particulele fundamentale care simt forța nucleară tare.  Electronii și neutrinii sunt particule fundamentale care nu sunt afectate direct de această forță."
+                }
+              ]
+            },
+            {
+              "concept": "Forța ca vector",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele caracteristici descriu forța ca vector?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Are mărime (magnitudine)",
+                    "B. Are doar direcție",
+                    "C. Are direcție și sens",
+                    "D. Este o mărime scalară",
+                    "E. Poate fi reprezentată grafic printr-o săgeată"
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C",
+                    "E"
+                  ],
+                  "explanation": "Forța este o mărime vectorială, ceea ce înseamnă că este definită atât de mărime (magnitudine, reprezentând intensitatea forței), cât și de direcție și sens.  Direcția indică linia de acțiune a forței, iar sensul specifică spre care parte a liniei acționează forța.  Reprezentarea grafică printr-o săgeată ilustrează perfect aceste aspecte: lungimea săgeții reprezintă magnitudinea, iar direcția și vârful săgeții reprezintă direcția și sensul forței."
+                },
+                {
+                  "question": "Două forțe, F1 și F2, acționează asupra unui obiect.  Care dintre următoarele afirmații despre rezultanta lor (Frez) este întotdeauna adevărată?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Frez este egală cu suma aritmetică a F1 și F2.",
+                    "B. Frez este întotdeauna mai mare decât F1 și F2.",
+                    "C. Frez poate fi determinată folosind regula paralelogramului sau metoda triunghiului.",
+                    "D. Frez are întotdeauna aceeași direcție cu F1 sau F2.",
+                    "E. Frez este întotdeauna perpendiculară pe F1 sau F2."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Rezultanta a două sau mai multe forțe este forța echivalentă care produce același efect ca și forțele individuale.  Regula paralelogramului și metoda triunghiului sunt metode grafice de determinare a rezultantei a două forțe.  Opțiunile A, B, D și E sunt incorecte deoarece rezultanta depinde de direcția și magnitudinea forțelor componente. Rezultanta poate fi mai mică, mai mare sau egală cu suma aritmetică a forțelor componente, și poate avea o direcție diferită de cea a oricărei forțe componente."
+                },
+                {
+                  "question": "Un bloc este tras de două forțe egale în mărime, dar cu direcții opuse. Care este rezultanta forțelor?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. O forță dublă în mărime față de fiecare forță inițială.",
+                    "B. Zero (forța rezultantă este nulă).",
+                    "C. O forță cu aceeași mărime ca fiecare forță inițială, dar într-o direcție arbitrară.",
+                    "D. O forță de mărime infinită."
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Deoarece cele două forțe sunt egale în mărime și opuse în direcție, ele se anulează reciproc. Rezultanta este deci o forță nulă, adică nu există o forță netă care acționează asupra blocului."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subcapitol": "Reguli ale Forțelor",
+          "concepte": [
+            {
+              "concept": "Gravitație (aproape de suprafața Pământului)",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații despre gravitație, aproape de suprafața Pământului, sunt corecte?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Gravitația este o forță de atracție între două obiecte cu masă.",
+                    "B. Gravitația acționează doar asupra obiectelor în mișcare.",
+                    "C. Acceleratia gravitationala este aproximativ constantă (9.8 m/s²).",
+                    "D. Gravitația este mai puternică la ecuator decât la poli.",
+                    "E. Masa unui obiect nu influențează forța gravitațională asupra lui."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A este corectă deoarece gravitația este o forță fundamentală care atrage orice două obiecte cu masă. C este corectă deoarece, aproape de suprafața Pământului, putem aproxima accelerația gravitațională ca fiind constantă, aproximativ 9.8 m/s². B este incorectă, deoarece gravitația acționează asupra tuturor obiectelor, indiferent dacă sunt în mișcare sau staționare. D este incorectă, deoarece gravitația este ușor mai slabă la ecuator din cauza formei Pământului (el este ușor turtit la poli). E este incorectă, deoarece forța gravitațională este direct proporțională cu masa obiectului (F = mg)."
+                },
+                {
+                  "question": "Un obiect este aruncat vertical în sus.  Care dintre afirmațiile următoare despre forța gravitațională care acționează asupra obiectului sunt corecte?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forța gravitațională este constantă pe toată durata mișcării.",
+                    "B. Forța gravitațională este zero la punctul cel mai înalt al traiectoriei.",
+                    "C. Forța gravitațională acționează întotdeauna în jos.",
+                    "D. Forța gravitațională este mai mare când obiectul se apropie de Pământ.",
+                    "E. Forța gravitațională este nulă la punctul de lansare."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A este corectă deoarece, neglijând variațiile minore ale accelerației gravitaționale cu altitudinea, forța gravitațională rămâne aproape constantă pe toată durata mișcării. C este corectă, deoarece forța gravitațională este întotdeauna direcționată către centrul Pământului (în jos). B este incorectă, deoarece gravitația acționează mereu. D este incorectă, variațiile sunt neglijabile pentru obiecte aruncate la înălțimi relativ mici. E este incorectă, deoarece gravitația acționează chiar înainte ca obiectul să fie aruncat."
+                },
+                {
+                  "question": "Două obiecte, unul cu masa de 1 kg și altul cu masa de 10 kg, sunt aruncate de la aceeași înălțime.  Neglijând rezistența aerului, care dintre afirmațiile următoare este corectă?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Obiectul mai greu va atinge solul primul.",
+                    "B. Obiectul mai ușor va atinge solul primul.",
+                    "C. Ambele obiecte vor atinge solul simultan.",
+                    "D. Timpul de cădere depinde de forma obiectelor.",
+                    "E. Obiectul mai greu va avea o accelerație mai mare."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "C este corectă.  În absența rezistenței aerului, accelerația gravitațională este aceeași pentru ambele obiecte, deci vor atinge solul simultan.  A, B și E sunt incorecte deoarece ignoră principiul de echivalență al masei inerțiale și gravitaționale; masa nu afectează timpul de cădere în vid. D este incorectă deoarece neglijăm rezistența aerului. "
+                }
+              ]
+            },
+            {
+              "concept": "Legea lui Hooke (forța elastică)",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații descriu corect Legea lui Hooke?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forța elastică este direct proporțională cu alungirea sau compresia unui corp elastic.",
+                    "B. Forța elastică este invers proporțională cu alungirea sau compresia unui corp elastic.",
+                    "C. Constanta elastică (k) reprezintă rigiditatea corpului elastic și este o constantă specifică materialului.",
+                    "D. Legea lui Hooke este valabilă pentru orice mărime a deformării elastice.",
+                    "E.  Forța elastică are întotdeauna aceeași direcție cu deformarea."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C",
+                    "E"
+                  ],
+                  "explanation": "A. este corectă deoarece Legea lui Hooke stabilește o relație direct proporțională între forță și deformare.  C. este corectă, deoarece constanta elastică (k) este o măsură a rigidității materialului și este specifică acestuia.  E este corectă, deoarece forța elastică se opune întotdeauna deformării, având direcția opusă acesteia."
+                },
+                {
+                  "question": "Un arc cu constanta elastică k = 20 N/m este întins cu 5 cm. Care este forța elastică exercitată de arc?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. 1 N",
+                    "B. 10 N",
+                    "C. 100 N",
+                    "D. 0.25 N"
+                  ],
+                  "correct_answers": [
+                    "A"
+                  ],
+                  "explanation": "Aplicând Legea lui Hooke (F = k * x), unde F este forța elastică, k este constanta elastică (20 N/m) și x este alungirea (5 cm = 0.05 m), obținem F = 20 N/m * 0.05 m = 1 N.  Așadar, forța elastică exercitată de arc este de 1 N."
+                },
+                {
+                  "question": "Două arcuri identice, fiecare cu constanta elastică k, sunt conectate în serie. Care este constanta elastică echivalentă a sistemului?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. k/2",
+                    "B. 2k",
+                    "C. k",
+                    "D. 4k"
+                  ],
+                  "correct_answers": [
+                    "A"
+                  ],
+                  "explanation": "Atunci când două arcuri identice sunt conectate în serie, constanta elastică echivalentă este dată de formula 1/k_ech = 1/k + 1/k, ceea ce rezultă k_ech = k/2.  Prin urmare, constanta elastică echivalentă a sistemului este k/2."
+                }
+              ]
+            },
+            {
+              "concept": "Forța normală",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații despre forța normală sunt corecte?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forța normală este întotdeauna perpendiculară pe suprafața de contact.",
+                    "B. Forța normală este întotdeauna egală cu greutatea obiectului.",
+                    "C. Forța normală este o forță de reacțiune la forța aplicată asupra suprafeței.",
+                    "D. Mărimea forței normale este direct proporțională cu masa obiectului.",
+                    "E. Forța normală este o forță de atracție gravitațională."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C",
+                    "D"
+                  ],
+                  "explanation": "A este corect deoarece forța normală este definită ca fiind perpendiculară pe suprafața de contact.  C este corect deoarece forța normală este o forță de reacțiune, conform celei de-a treia legi a lui Newton (acțiune-reacțiune).  D este corect, deoarece o masă mai mare duce la o forță gravitațională mai mare, care necesită o forță normală mai mare pentru a echilibra. B este incorect deoarece forța normală este egală cu greutatea numai atunci când obiectul este în repaus pe o suprafață orizontală și nu există alte forțe verticale aplicate. E este incorect, deoarece forța normală nu este o forță gravitațională, ci o forță de contact."
+                },
+                {
+                  "question": "Un bloc este așezat pe o suprafață înclinată.  Cum se modifică forța normală în funcție de unghiul de înclinare?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forța normală rămâne constantă indiferent de unghi.",
+                    "B. Forța normală crește odată cu creșterea unghiului de înclinare.",
+                    "C. Forța normală scade odată cu creșterea unghiului de înclinare.",
+                    "D. Forța normală este independentă de masa blocului.",
+                    "E. Forța normală este întotdeauna egală cu greutatea blocului."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "C este corect. Pe măsură ce unghiul de înclinare crește, componenta greutății perpendiculară pe suprafață scade, rezultând o forță normală mai mică. A, B și E sunt incorecte, deoarece forța normală se modifică cu unghiul de înclinare. D este incorect deoarece forța normală depinde de masa blocului, deoarece aceasta determină mărimea greutății."
+                },
+                {
+                  "question": "Un om stă pe un lift care accelerează în sus. Cum se compară forța normală cu greutatea omului?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forța normală este mai mică decât greutatea.",
+                    "B. Forța normală este egală cu greutatea.",
+                    "C. Forța normală este mai mare decât greutatea.",
+                    "D. Forța normală este zero.",
+                    "E. Depinde de masa omului."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "C este corect. Atunci când liftul accelerează în sus, forța normală trebuie să fie mai mare decât greutatea pentru a produce accelerația ascendentă.  A, B și D sunt incorecte, deoarece forța normală trebuie să compenseze atât greutatea, cât și accelerația liftului. E este incorect, deoarece, deși masa omului contribuie la greutatea lui, diferența dintre forța normală și greutate este dată de accelerația liftului."
+                }
+              ]
+            },
+            {
+              "concept": "Tensiunea într-un fir",
+              "questions": [
+                {
+                  "question": "Un fir inextensibil este folosit pentru a suspenda o greutate de 10 N. Care dintre următoarele afirmații despre tensiunea din fir este adevărată?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Tensiunea din fir este de 10 N.",
+                    "B. Tensiunea din fir este de 5 N.",
+                    "C. Tensiunea din fir este egală cu greutatea obiectului.",
+                    "D. Tensiunea din fir este de 0 N dacă firul este perfect vertical."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Tensiunea din fir este o forță care acționează de-a lungul firului, contracarând greutatea obiectului suspendat.  Într-un sistem în echilibru static, tensiunea din fir trebuie să fie egală cu greutatea obiectului pentru a-l menține suspendat.  Deci, tensiunea este de 10 N, egală cu greutatea obiectului. Opțiunea D este incorectă pentru că, chiar și vertical, firul trebuie să suporte greutatea obiectului."
+                },
+                {
+                  "question": "Două greutăți identice, fiecare de 5 N, sunt suspendate de un fir inextensibil care trece peste o scripete fără frecare. Care este tensiunea în fir?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. 2.5 N",
+                    "B. 5 N",
+                    "C. 10 N",
+                    "D. 0 N"
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Deoarece scripeta este fără frecare, tensiunea în fir este constantă pe toată lungimea sa.  Fiecare jumătate a firului susține o greutate de 5 N, deci tensiunea în fiecare jumătate a firului este de 5 N.  "
+                },
+                {
+                  "question": "Un fir este legat la două puncte și este supus unei forțe de tragere orizontală.  Care dintre afirmațiile următoare este corecta în ceea ce privește tensiunea în fir?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Tensiunea este zero.",
+                    "B. Tensiunea este egală cu forța de tragere.",
+                    "C. Tensiunea este jumătate din forța de tragere.",
+                    "D. Tensiunea este dublu forței de tragere.",
+                    "E. Tensiunea depinde de unghiul firului față de orizontală."
+                  ],
+                  "correct_answers": [
+                    "E",
+                    "D"
+                  ],
+                  "explanation": "Tensiunea în fir nu este pur și simplu egală cu forța de tragere, ci depinde de unghiul firului față de orizontală.  Dacă firul este perfect orizontal, tensiunea este infinită (ideal).  În practică, pentru a menține echilibrul cu o forță orizontală, trebuie ca tensiunea să aibă componente orizontale egale în ambele capete, care compensează forța aplicată. Forța rezultantă este de 0, dar tensiunea este mai mare decât forța aplicată. Pentru a echilibra o forță aplicată orizontală, tensiunea este mai mare și are componente atât orizontale, cât și verticale.  Tensiunea este dublă forței aplicate pentru unghiuri apropiate de 0. Tensiunea este mai mare de 2F pentru unghiuri mai mari decât 0. Cu cât unghiul este mai mare, cu atât tensiunea este mai mică."
+                }
+              ]
+            },
+            {
+              "concept": "Frecarea statică",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații despre frecarea statică este corectă?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Frecarea statică se opune mișcării unui obiect.",
+                    "B. Frecarea statică este întotdeauna mai mică decât frecarea cinetică.",
+                    "C. Frecarea statică este forța care împiedică un obiect să înceapă să se miște.",
+                    "D. Frecarea statică este independentă de natura suprafețelor în contact."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Răspunsul A este corect deoarece frecarea statică acționează împotriva oricărei forțe care încearcă să pună un obiect în mișcare. Răspunsul C este corect deoarece definirea frecarii statice este tocmai forța care împiedică un obiect să înceapă să se miște. Răspunsul B este incorect deoarece frecarea statică poate fi mai mare decât frecarea cinetică. Răspunsul D este incorect, deoarece frecarea statică depinde de rugozitatea suprafețelor în contact și de materialele din care sunt făcute."
+                },
+                {
+                  "question": "Un bloc de lemn este așezat pe o suprafață orizontală.  Care dintre factorii următori influențează magnitudinea forței de frecare statică maximă?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Masa blocului de lemn",
+                    "B. Viteza blocului de lemn",
+                    "C. Aria suprafeței de contact dintre bloc și suprafață",
+                    "D. Materialul din care sunt confecționate blocul și suprafața"
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "D"
+                  ],
+                  "explanation": "Răspunsul A este corect, deoarece forța de frecare statică maximă este direct proporțională cu forța normală, care la rândul ei este proporțională cu masa blocului.  Răspunsul D este corect deoarece tipul de material influențează coeficientul de frecare statică, un factor crucial în determinarea magnitudinii forței. Răspunsul B este incorect, deoarece viteza se aplică la frecarea cinetică, nu la cea statică. Răspunsul C are o influență minoră,  în general coeficientul de frecare este destul de independent de suprafața de contact."
+                },
+                {
+                  "question": "O carte este așezată pe o masă. Aplici o forță orizontală mică asupra cărții, dar aceasta rămâne nemișcată. Ce fel de frecare acționează asupra cărții?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Frecare cinetică",
+                    "B. Frecare statică",
+                    "C. Frecare fluidă",
+                    "D. Frecare de rostogolire"
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Răspunsul corect este B.  Atâta timp cât cartea rămâne nemișcată, chiar dacă este aplicată o forță, frecarea care acționează este frecarea statică.  Aceasta se opune forței aplicate, împiedicând mișcarea.  Celelalte opțiuni descriu alte tipuri de frecare care acționează în alte situații."
+                }
+              ]
+            },
+            {
+              "concept": "Frecarea cinetică",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații despre frecarea cinetică este/sunt adevărată/adevărate?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Frecarea cinetică acționează asupra unui obiect în mișcare, opunându-se mișcării sale.",
+                    "B. Mărimea frecării cinetice este direct proporțională cu viteza obiectului.",
+                    "C. Frecarea cinetică depinde de natura suprafețelor în contact.",
+                    "D. Frecarea cinetică este întotdeauna mai mare decât frecarea statică pentru aceleași suprafețe."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "A este corectă deoarece definiția frecării cinetice este forța care se opune mișcării unui obiect în mișcare. C este corectă deoarece tipul de materiale în contact influențează magnitudinea forței de frecare. B este incorectă deoarece frecarea cinetică este relativ independentă de viteză, variind ușor cu viteza în unele cazuri. D este incorectă deoarece frecarea cinetică este, în general, mai mică decât frecarea statică pentru aceleași suprafețe."
+                },
+                {
+                  "question": "Cum se poate reduce frecarea cinetică între două suprafețe?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Mărindu-se rugozitatea suprafețelor.",
+                    "B. Folosind un lubrifiant între suprafețe.",
+                    "C. Mărind forța normală dintre suprafețe.",
+                    "D. Alegând materiale cu un coeficient de frecare cinetică mai mare."
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "B este corectă deoarece lubrifianții reduc frecarea prin crearea unui strat subțire între suprafețe, reducând astfel contactul direct dintre ele. A este incorectă deoarece o rugozitate mai mare crește frecarea. C este incorectă deoarece o forță normală mai mare crește frecarea. D este incorectă deoarece un coeficient de frecare cinetică mai mic reduce frecarea."
+                },
+                {
+                  "question": "Un bloc alunecă pe o suprafață orizontală. Ce forțe acționează asupra blocului, ignorând rezistența aerului?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forța gravitațională și forța normală.",
+                    "B. Forța gravitațională, forța normală și forța de frecare cinetică.",
+                    "C. Numai forța de frecare cinetică.",
+                    "D. Forța gravitațională și forța de frecare cinetică."
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "B este corectă deoarece, pe lângă forța gravitațională (greutatea blocului) și forța normală (exercitata de suprafața pe bloc), există și forța de frecare cinetică care se opune mișcării blocului. A și D sunt incorecte deoarece omit forța normală, respectiv forța normală. C este incorect deoarece ignoră forța gravitațională și forța normală."
+                }
+              ]
+            },
+            {
+              "concept": "Forțe de presiune în fluide",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele afirmații despre presiunea într-un fluid sunt corecte?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Presiunea într-un fluid este independentă de forma recipientului.",
+                    "B. Presiunea într-un fluid crește liniar cu adâncimea.",
+                    "C. Presiunea într-un fluid acționează în toate direcțiile.",
+                    "D. Presiunea într-un fluid este direct proporțională cu densitatea fluidului.",
+                    "E. Presiunea într-un fluid este invers proporțională cu accelerația gravitațională."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                  ],
+                  "explanation": "A este corectă deoarece presiunea hidrostatică depinde doar de adâncime și densitate, nu de forma vasului. B este corectă, deoarece presiunea crește liniar cu adâncimea (P = ρgh). C este corectă, deoarece presiunea într-un fluid este o forță distribuită uniform în toate direcțiile. D este corectă, deoarece presiunea este direct proporțională cu densitatea fluidului (P = ρgh). E este incorectă; presiunea este direct proporțională cu accelerația gravitațională."
+                },
+                {
+                  "question": "Un submarin se află la o adâncime de 100 m sub suprafața oceanului.  Ce se întâmplă cu presiunea asupra submarinului dacă acesta se deplasează la o adâncime de 50 m?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Presiunea rămâne constantă.",
+                    "B. Presiunea crește.",
+                    "C. Presiunea descrește.",
+                    "D. Presiunea se dublează.",
+                    "E. Presiunea se înjumătățește."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Presiunea într-un fluid crește cu adâncimea.  Prin urmare, dacă submarinul se deplasează de la 100 m la 50 m, presiunea asupra lui va descrește.  Formula presiunii hidrostatice este P = ρgh, unde ρ este densitatea, g este accelerația gravitațională și h este adâncimea.  Scăderea lui h duce la scăderea presiunii."
+                },
+                {
+                  "question": "Care dintre următoarele exemple demonstrează principiul Pascal?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Plutirea unui vas.",
+                    "B. Funcționarea unui cric hidraulic.",
+                    "C. Mișcarea unui avion.",
+                    "D. Efectul Bernoulli.",
+                    "E. Forța arhimedeană."
+                  ],
+                  "correct_answers": [
+                    "B"
+                  ],
+                  "explanation": "Principiul lui Pascal afirmă că o schimbare de presiune într-un punct al unui fluid incompresibil închis se transmite nemodificată în toate punctele fluidului. Un cric hidraulic exploatează acest principiu pentru a multiplica forța. A, D, și E descriu alte principii fizice. C este legat de aerodinamică, nu de principiul Pascal."
+                }
+              ]
+            },
+            {
+              "concept": "Forțe de rezistență",
+              "questions": [
+                {
+                  "question": "Care dintre următoarele sunt exemple de forțe de rezistență?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Frecarea dintre anvelopele unei mașini și asfalt",
+                    "B. Forța gravitațională care acționează asupra unui obiect",
+                    "C. Rezistența aerului asupra unei mingi de baseball",
+                    "D. Forța musculară folosită pentru a ridica o greutate"
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "C"
+                  ],
+                  "explanation": "Frecarea dintre anvelopele unei mașini și asfalt este o forță de rezistență care se opune mișcării mașinii.  Rezistența aerului asupra unei mingi de baseball este, de asemenea, o forță de rezistență care se opune mișcării mingii prin aer.  Forța gravitațională este o forță de atracție, iar forța musculară este o forță aplicată, nu o forță de rezistență."
+                },
+                {
+                  "question": "Cum influențează forma unui obiect forțele de rezistență?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. O formă aerodinamică reduce forța de rezistență.",
+                    "B. O formă neregulată crește forța de rezistență.",
+                    "C. Forma obiectului nu are nicio influență asupra forțelor de rezistență.",
+                    "D. O formă sferică are întotdeauna cea mai mică rezistență."
+                  ],
+                  "correct_answers": [
+                    "A",
+                    "B"
+                  ],
+                  "explanation": "Un obiect cu o formă aerodinamică (ex: picătura de apă) reduce rezistența fluidului (aer sau apă) prin minimizarea turbulențelor.  O formă neregulată, dimpotrivă, crește rezistența datorită turbulențelor create. Deși o sferă poate avea o rezistență mai mică decât forme neregulate, nu este întotdeauna cea mai mică posibilă. Forma optimă depinde de context."
+                },
+                {
+                  "question": "Care dintre următoarele afirmații despre forțele de rezistență este corectă?",
+                  "type": "multiple_choice",
+                  "options": [
+                    "A. Forțele de rezistență sunt întotdeauna proporționale cu viteza obiectului.",
+                    "B. Forțele de rezistență acționează întotdeauna în direcția mișcării obiectului.",
+                    "C. Forțele de rezistență depind de suprafața obiectului în contact cu mediul.",
+                    "D. Forțele de rezistență sunt constante indiferent de viteza obiectului."
+                  ],
+                  "correct_answers": [
+                    "C"
+                  ],
+                  "explanation": "Forțele de rezistență, precum frecarea, depind de suprafața obiectului în contact cu mediul (mai multă suprafață, mai multă rezistență).  A este incorect deoarece relația dintre forța de rezistență și viteză este complexă și depinde de regimul de curgere (ex: rezistență liniară la viteze mici, rezistență pătratică la viteze mari). B este incorect deoarece forțele de rezistență acționează întotdeauna în sens opus mișcării. D este incorect, forța de rezistență variază cu viteza."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
