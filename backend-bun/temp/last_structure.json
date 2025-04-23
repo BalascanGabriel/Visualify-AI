@@ -1,100 +1,218 @@
 {
-  "rezumat": "Acest text introduce Legile lui Newton în fizică, subliniind rolul matematicii ca limbaj al fizicii. Se definesc concepte fundamentale precum coordonatele, unitățile SI (metru, secundă, kilogram), legile naturii ca postulate matematice, și se explică importanța cadrului de referință inerțial.  Se prezintă cele trei legi ale lui Newton cu exemple și se detaliază diverse tipuri de forțe (gravitație, elasticitate, frecare, forțe de presiune, rezistență fluidică), evidențiind natura vectorială a forței și metodele de determinare a magnitudinii și direcției acesteia. Se subliniază caracterul evolutiv și auto-corectiv al științei.",
+  "rezumat": "Acest program de onboarding pentru vânzări este structurat pe 7 capitole, acoperind etapele de la oferirea contractului de muncă până la integrarea completă în echipă și dezvoltarea carierei.  Programul include pregătire tehnică (CRM, instrumente de vânzări), instruire despre produs și piață, formare în metodologii de vânzări, evaluări de cunoștințe, și un plan de dezvoltare pe termen lung, cu milestone-uri la 30, 60 și 90 de zile.",
   "structura": [
     {
-      "capitol": "Introducere în Fizică și Matematică",
+      "capitol": "Pre-Onboarding",
       "subcapitole": [
         {
-          "subcapitol": "Fizica ca Limbaj",
+          "subcapitol": "Oferirea și Documentație",
           "concepte": [
-            "Fizica ca limbaj al unei viziuni asupra lumii",
-            "Rolul matematicii în fizică",
-            "Semantica",
-            "Ontologia"
+            "Contract de muncă",
+            "Documente necesare (ID, informații fiscale, detalii bancare, acorduri de confidențialitate)"
           ]
         },
         {
-          "subcapitol": "Coordonate și Unități",
+          "subcapitol": "Configurarea IT și Sistemelor",
           "concepte": [
-            "Coordonate ca modificatori adjectivali fundamentali",
-            "Unități SI (metru, secundă, kilogram)",
-            "Unități derivate"
+            "Email corporatist",
+            "Conturi Slack/Teams",
+            "Laptop, telefon (dacă este necesar)",
+            "Software (CRM, instrumente de vânzări)",
+            "Acces HRIS, LMS, CRM"
           ]
         },
         {
-          "subcapitol": "Legile Naturii",
+          "subcapitol": "Bun venit și Comunicare Prima Zi",
           "concepte": [
-            "Legile naturii ca postulate matematice",
-            "Predicții și observații experimentale",
-            "Caracterul evolutiv al cunoașterii științifice"
+            "Email de bun venit",
+            "Agenda primei zile",
+            "Manualul companiei",
+            "Rezumat beneficii",
+            "Onboarding buddy"
           ]
         }
       ]
     },
     {
-      "capitol": "Legile lui Newton",
+      "capitol": "Orientare Companie și Cultură (Ziua 1-2)",
       "subcapitole": [
         {
-          "subcapitol": "Legea Inerției",
+          "subcapitol": "Prezentare Generală a Companiei",
           "concepte": [
-            "Legea inerției",
-            "Cadru de referință inerțial",
-            "Viteză constantă",
-            "Forță netă nulă"
+            "Mesaj de bun venit CEO",
+            "Istoric",
+            "Misiune",
+            "Valori",
+            "Viziune",
+            "Structură de conducere"
           ]
         },
         {
-          "subcapitol": "Legea Dinamicii",
+          "subcapitol": "Politici Corporative și Conformitate",
           "concepte": [
-            "Legea dinamicii",
-            "Forța netă",
-            "Masă",
-            "Accelerație",
-            "Moment"
+            "Conduită la locul de muncă",
+            "Etică",
+            "Securitatea informațiilor",
+            "Confidențialitatea datelor",
+            "Anti-hărțuire",
+            "Formare DEI"
           ]
         },
         {
-          "subcapitol": "Legea Acțiunii și Reacțiunii",
+          "subcapitol": "Esențiale HR",
           "concepte": [
-            "Legea acțiunii și reacțiunii",
-            "Forțe egale și opuse",
-            "Forțe interne într-un sistem închis"
-          ]
-        },
-        {
-          "subcapitol": "Cadrul de Referință Inerțial",
-          "concepte": [
-            "Definiția cadrului de referință inerțial",
-            "Pseudoforțe",
-            "Interacțiuni între particule"
+            "Salariu",
+            "Beneficii",
+            "Politica de concediu",
+            "Ciclul de evaluare a performanței",
+            "Canale de suport angajați"
           ]
         }
       ]
     },
     {
-      "capitol": "Forțe în Natură",
+      "capitol": "Integrare în Departamentul de Vânzări (Săptămâna 1)",
       "subcapitole": [
         {
-          "subcapitol": "Tipuri de Forțe",
+          "subcapitol": "Prezentări Echipă",
           "concepte": [
-            "Gravitație",
-            "Forța nucleară slabă",
-            "Forța electromagnetică",
-            "Forța nucleară tare",
-            "Forța ca vector"
+            "Director de Vânzări",
+            "Sales Ops",
+            "Marketing",
+            "RevOps",
+            "Colaborare interfuncțională"
           ]
         },
         {
-          "subcapitol": "Reguli ale Forțelor",
+          "subcapitol": "Clarificarea Rolului",
           "concepte": [
-            "Gravitație (aproape de suprafața Pământului)",
-            "Legea lui Hooke (forța elastică)",
-            "Forța normală",
-            "Tensiunea într-un fir",
-            "Frecarea statică",
-            "Frecarea cinetică",
-            "Forțe de presiune în fluide",
-            "Forțe de rezistență"
+            "Responsabilități SDR, AE, Manager Vânzări",
+            "Obiective de vânzări",
+            "KPI-uri",
+            "Structuri de comision"
+          ]
+        },
+        {
+          "subcapitol": "Instruire Instrumente și Sisteme",
+          "concepte": [
+            "CRM (Salesforce, HubSpot)",
+            "Instrumente de vânzări (Outreach, Salesloft, Gong)",
+            "Instrumente de comunicare (LinkedIn Sales Navigator, ZoomInfo)"
+          ]
+        }
+      ]
+    },
+    {
+      "capitol": "Instruire Produs și Piață (Săptămânile 2-3)",
+      "subcapitole": [
+        {
+          "subcapitol": "Analiză Detaliată a Produsului",
+          "concepte": [
+            "Funcții",
+            "Beneficii",
+            "Diferențiatori competitivi",
+            "Probleme comune ale clienților",
+            "Foaia de parcurs"
+          ]
+        },
+        {
+          "subcapitol": "Piață și ICP",
+          "concepte": [
+            "Profilul Clientului Ideal (ICP)",
+            "Persoanele cumpărătorului",
+            "Tendințe de piață",
+            "Analiza concurenței"
+          ]
+        },
+        {
+          "subcapitol": "Cazuri de Utilizare și Studii de Caz",
+          "concepte": [
+            "Studii de caz reale",
+            "Strategii de vânzări specifice verticalelor"
+          ]
+        }
+      ]
+    },
+    {
+      "capitol": "Proces și Metodologie de Vânzări (Săptămânile 3-4)",
+      "subcapitole": [
+        {
+          "subcapitol": "Etapele Păunii de Vânzări",
+          "concepte": [
+            "Calificarea potențialilor clienți",
+            "Descoperire",
+            "Demo-uri",
+            "Propunere",
+            "Închidere",
+            "Urmărire CRM"
+          ]
+        },
+        {
+          "subcapitol": "Metodologia de Vânzări",
+          "concepte": [
+            "Metodologie standard (MEDDIC, SPIN, Challenger)",
+            "Scenarii de joc de rol"
+          ]
+        },
+        {
+          "subcapitol": "Urmărire și Apeluri Live",
+          "concepte": [
+            "Urmărirea performanților",
+            "Debriefing și feedback"
+          ]
+        }
+      ]
+    },
+    {
+      "capitol": "Certificare și Integrare (Săptămânile 4-8)",
+      "subcapitole": [
+        {
+          "subcapitol": "Evaluări de Cunoștințe",
+          "concepte": [
+            "Chestionare interne",
+            "Prezentări mock"
+          ]
+        },
+        {
+          "subcapitol": "Certificare",
+          "concepte": [
+            "Certificare \"Sales Ready\"",
+            "Leaderboard intern"
+          ]
+        },
+        {
+          "subcapitol": "Lansare Soft",
+          "concepte": [
+            "Gestionarea tranzacțiilor mici",
+            "Verificări săptămânale"
+          ]
+        }
+      ]
+    },
+    {
+      "capitol": "Milestone-uri de Performanță și Creștere (Continuare)",
+      "subcapitole": [
+        {
+          "subcapitol": "Evaluări 30/60/90 Zile",
+          "concepte": [
+            "Metrici de integrare",
+            "Eficacitatea prospecțiunii",
+            "Cunoașterea produsului",
+            "Cote"
+          ]
+        },
+        {
+          "subcapitol": "Dezvoltare Continuă",
+          "concepte": [
+            "Workshop-uri lunare",
+            "Cursuri externe"
+          ]
+        },
+        {
+          "subcapitol": "Dezvoltare de Carieră",
+          "concepte": [
+            "Căi de carieră",
+            "Plan anual de dezvoltare"
           ]
         }
       ]
