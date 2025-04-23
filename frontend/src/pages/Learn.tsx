@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Mindmap from '@/components/Mindmap';
+import Roadmap from '@/components/Roadmap';
 
 const Learn = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -16,6 +17,8 @@ const Learn = () => {
     linksData: any[];
   }>(null);
   const { toast } = useToast();
+  const [viewMode, setViewMode] = useState<'mindmap' | 'roadmap'>('mindmap');
+
 
   // 🔄 Load from localStorage on mount
   useEffect(() => {
@@ -134,7 +137,7 @@ const Learn = () => {
 
         <section className="py-12">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="max-w-3xl mx-auto">
+            <div className="w-full max-w-[1600px] mx-auto">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -173,6 +176,14 @@ const Learn = () => {
                     {isUploading ? "Processing..." : "Process Document"}
                   </Button>
 
+                  <Button
+                    variant="outline"
+                    onClick={() => setViewMode(viewMode === 'mindmap' ? 'roadmap' : 'mindmap')}
+                  >
+                    {viewMode === 'mindmap' ? 'Switch to Roadmap' : 'Switch to Mindmap'}
+                  </Button>
+
+
                   {mindmapData && (
                     <Button onClick={handleReset} variant="destructive">
                       <RefreshCw className="w-4 h-4 mr-2" /> Reset
@@ -183,15 +194,25 @@ const Learn = () => {
 
               {mindmapData && (
                 <div className="mt-10">
-                  <h2 className="text-2xl font-bold text-center mb-4">Mindmap Generat</h2>
+                  <h2 className="text-2xl font-bold text-center mb-4">
+                    {viewMode === 'mindmap' ? 'Mindmap Generat' : 'Roadmap Generat'}
+                  </h2>
                   <div className="min-h-[950px] w-full border rounded-lg shadow-lg overflow-hidden">
-                    <Mindmap
-                      nodesData={mindmapData.nodesData}
-                      linksData={mindmapData.linksData}
-                    />
+                    {viewMode === 'mindmap' ? (
+                      <Mindmap
+                        nodesData={mindmapData.nodesData}
+                        linksData={mindmapData.linksData}
+                      />
+                    ) : (
+                      <Roadmap
+                        nodesData={mindmapData.nodesData}
+                        linksData={mindmapData.linksData}
+                      />
+                    )}
                   </div>
                 </div>
               )}
+
             </div>
           </div>
         </section>

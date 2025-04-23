@@ -130,7 +130,7 @@ const MindmapContent: React.FC<MindmapProps> = ({ nodesData, linksData }) => {
             border: '1px solid #ccc',
             borderRadius: 12,
             padding: 10,
-            fontSize: 14,
+            fontSize: 30,
             boxShadow: '0 4px 14px rgba(0,0,0,0.1)',
             minWidth: 150,
             textAlign: 'center',
